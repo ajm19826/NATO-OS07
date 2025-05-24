@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Full-Screen 360 Image Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            background-color: black;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .scene {
+            width: 100vw; /* Fullscreen width */
+            height: 100vh; /* Fullscreen height */
+            perspective: 1000px; /* 3D perspective */
+            position: relative;
+            cursor: grab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sphere-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: transform 0.1s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sphere {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('iss.png');
+            background-size: cover;
+            background-position: center;
+            transform: rotateY(180deg);
+            border-radius: 50%;
+            transform-origin: center;
+            position: absolute;
+            box-sizing: border-box;
+        }
+
+        .scene:active {
+            cursor: grabbing;
+        }
+
+        img {
+            user-drag: none;
+            -webkit-user-drag: none;
+            drag-drop: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene" id="scene">
+        <div class="sphere-container" id="sphereContainer">
+            <div class="sphere" id="sphere"></div>
+        </div>
+    </div>
+
+    <script>
+        const scene = document.getElementById('scene');
+        const sphereContainer = document.getElementById('sphereContainer');
+        let isMouseDown = false;
+        let startX, startY, initialRotateX, initialRotateY;
+
+        scene.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX;
+            startY = e.pageY;
+            initialRotateX = parseInt(sphereContainer.style.transform.split('rotateX(')[1]?.split('deg')[0] || 0);
+            initialRotateY = parseInt(sphereContainer.style.transform.split('rotateY(')[1]?.split('deg')[0] || 0);
+            scene.style.cursor = 'grabbing';
+        });
+
+        scene.addEventListener('mouseup', () => {
+            isMouseDown = false;
+            scene.style.cursor = 'grab';
+        });
+
+        scene.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+            scene.style.cursor = 'grab';
+        });
+
+        scene.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            const diffX = e.pageX - startX;
+            const diffY = e.pageY - startY;
+
+            const rotateY = initialRotateY + diffX * 0.2; // Horizontal rotation speed
+            const rotateX = initialRotateX - diffY * 0.2; // Vertical rotation speed
+
+            // Apply the rotation to the sphere container (the "camera" inside the sphere)
+            sphereContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Optional: Adding touch support for mobile devices
+        scene.addEventListener('touchstart', (e) => {
+            isMouseDown = true;
+            startX = e.touches[0].pageX;
+            startY = e.touches[0].pageY;
+            initialRotateX = parseInt(sphereContainer.style.transform.split('rotateX(')[1]?.split('deg')[0] || 0);
+            initialRotateY = parseInt(sphereContainer.style.transform.split('rotateY(')[1]?.split('deg')[0] || 0);
+            scene.style.cursor = 'grabbing';
+        });
+
+        scene.addEventListener('touchend', () => {
+            isMouseDown = false;
+            scene.style.cursor = 'grab';
+        });
+
+        scene.addEventListener('touchmove', (e) => {
+            if (!isMouseDown) return;
+            const diffX = e.touches[0].pageX - startX;
+            const diffY = e.touches[0].pageY - startY;
+
+            const rotateY = initialRotateY + diffX * 0.2;
+            const rotateX = initialRotateX - diffY * 0.2;
+
+            sphereContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    </script>
+
+</body>
+</html>

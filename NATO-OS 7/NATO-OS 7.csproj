@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D977D15E-124F-4D51-9AC0-D6948E90A6B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NATO_OS_7</RootNamespace>
+    <AssemblyName>NATO-OS 7</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ConnectToInternet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>OS\SYSTEM FILES\WebcamDll\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>OS\SYSTEM FILES\WebcamDll\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>OS\SYSTEM FILES\WebcamDll\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="ExCSS, Version=4.2.3.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExCSS.4.2.3\lib\netstandard2.0\ExCSS.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.68.0\lib\netstandard2.0\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.68.0\lib\netstandard2.0\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.68.0\lib\netstandard2.0\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Translate.v2, Version=1.68.0.875, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Translate.v2.1.68.0.875\lib\netstandard2.0\Google.Apis.Translate.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagedBass, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ManagedBass.3.1.1\lib\net45\ManagedBass.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=4.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.4.13.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=4.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.4.13.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting, Version=4.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Scripting.4.13.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting, Version=4.13.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Scripting.Common.4.13.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.71.2.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.71.2-preview\lib\netstandard2.0\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.35.0\lib\net461\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.2\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenGL.Net, Version=0.8.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenGL.Net.0.8.4\lib\net461\OpenGL.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.3.2.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.3.2\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="runtime.osx.10.10-x64.CoreCompat.System.Drawing, Version=5.8.64.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\runtime.osx.10.10-x64.CoreCompat.System.Drawing.5.8.64\lib\netstandard2.0\runtime.osx.10.10-x64.CoreCompat.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL, Version=3.1.1.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpGL.3.1.1\lib\net45\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Converters.Wpf, Version=1.8.4.2, Culture=neutral, PublicKeyToken=b532964b8548be77, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Converters.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Core, Version=1.8.4.2, Culture=neutral, PublicKeyToken=7407205e337c98ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Css, Version=1.8.4.2, Culture=neutral, PublicKeyToken=7a46e3f532fdb787, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Css.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Dom, Version=1.8.4.2, Culture=neutral, PublicKeyToken=517340b6277b1a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Dom.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Model, Version=1.8.4.2, Culture=neutral, PublicKeyToken=2236cfc76b505845, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Rendering.Gdi, Version=1.8.4.2, Culture=neutral, PublicKeyToken=03902092284347e3, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Rendering.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Rendering.Wpf, Version=1.8.4.2, Culture=neutral, PublicKeyToken=d0902381100df30e, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Rendering.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpVectors.Runtime.Wpf, Version=1.8.4.2, Culture=neutral, PublicKeyToken=d16e717f0a981fb9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpVectors.1.8.4.2\lib\net46\SharpVectors.Runtime.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=3.4.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.3.4.7\lib\netstandard2.0\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.7.0.0\lib\netstandard2.0\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Management.7.0.2\lib\netstandard2.0\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.8.0.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.7.0.0\lib\netstandard2.0\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blender.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="left.cs" />
+    <Compile Include="LoginInterfacePostBookOneMedia.cs" />
+    <Compile Include="PostBookAppDataIDReader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="LICENSE.md" />
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\FAVLOGO.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SYSIMG\TASKMGR\MGRTRK.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SYSIMG\RDP-SERVER\RDP.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\IMG-BackgChoser\IMG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\IMG-Sketch%2515\IMG1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\SPOTIFY\IMG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\IMG-CHROME\IMG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\App Shop\MoreApp-IMGBASE\DownloadIMG\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\Chromium\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\Spotify\HEAD%2864%29\KSI\KSIMAIN.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\Spotify\HEAD%2864%29\Taylor-Swift\SMAIN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\BackgroundChanger\DefaultImage1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\BackgroundChanger\DefaultImage2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\BackgroundChanger\DefaultImage3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\BackgroundChanger\DefaultImage4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\%25App%25\BackgroundChanger\DefaultImage5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\New_NATO_SearchIco.FavoriteIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\New_Internet.GlobeIcon_Favico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\Ico1.Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\Ico2.Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\Ico3.Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\Ico.HTML.Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\B5\Installer.Internet_OfflineInstaller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Toolstrip.Reload_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.Messenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.NotePad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Icon_MovieViewer.InternetRequired.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.Planner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_PhoneLink.InternetRequired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\Icon_Contacts.InternetNoRequired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\New.SendMessageBTNIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceholderCalendar.NoInternet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceHolderForm.NoInternet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceholderReport.NoInternet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceHolderApplicationImage.NoInternet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\ReportPlaceholderIMG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\ICO2.MovieViewer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\FAVLOGO.Startup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\NatoDesigner.FavIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\System.WelcomeCenter\System.PlaceholderIcon_CameraNoInternetNoAvalible.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\System.WelcomeCenter\System.PlaceholderIcon_CodeIcoNoInternetNoAvalible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODesigner\FavIcoDesignerSignIn.FavIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\Properties.Mail\Mail.TitleBarImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\web\Plot1!10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\vbnet\vb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\serverscript\favico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\lower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\upper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\namespace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\HomeParagraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\2HomeParagraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\Placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\SystemApps.FN\Camera\take.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\newSoftwareOptimizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\iexplorerback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\iexplorerfr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\Internet.Ixview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OS\SYSTEM FILES\PrintToPDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConnectToInternet.ico" />
+    <None Include="OS\SYSTEM FILES\NatoWidgets\FishGame\WidgetImage.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\CodeSnippet.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\Calendar.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\Slideshow.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\StickyNote.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\PuzzlePictureIcon.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\ClockIcon.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\RSSFeedIcon.png" />
+    <None Include="OS\SYSTEM FILES\New.SystemIcons\Widgets\MediaIcon.png" />
+    <None Include="OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\EventFlyer.png" />
+    <None Include="OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\Blank11x8.5.png" />
+    <None Include="OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\Blank8.5x11.png" />
+    <None Include="OS\SYSTEM FILES\ExtentionApps\Microsoft Word 2013\BlankDocument.png" />
+    <None Include="OS\SYSTEM FILES\ExtentionApps\Microsoft Excel 2013\BlankWorkbook.png" />
+    <None Include="OS\SYSTEM FILES\Blender\SolarView\Earth.ClickFront.png" />
+    <None Include="OS\SYSTEM FILES\Blender\SolarView\Angle.Earth.png" />
+    <None Include="OS\SYSTEM FILES\Blender\StartScreen\BlenderPayload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.11.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.11.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

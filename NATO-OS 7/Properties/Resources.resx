@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_Internet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\New_Internet.GlobeIcon_Favico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MediaIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\MediaIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico2.Internet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico2.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="System.PlaceholderIcon_CodeIcoNoInternetNoAvalible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\System.WelcomeCenter\System.PlaceholderIcon_CodeIcoNoInternetNoAvalible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\Calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReportPlaceholderIMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\ReportPlaceholderIMG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KSIMAIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\Spotify\HEAD(64)\KSI\KSIMAIN.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico3.Internet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico3.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Toolstrip.Reload_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Toolstrip.Reload_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlankDocument" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\ExtentionApps\Microsoft Word 2013\BlankDocument.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="favico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\serverscript\favico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FAVLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\FAVLOGO.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FavIcoDesignerSignIn.FavIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\FavIcoDesignerSignIn.FavIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Live_PhoneLink.InternetRequired" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_PhoneLink.InternetRequired.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="System.PlaceholderIcon_CameraNoInternetNoAvalible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\System.WelcomeCenter\System.PlaceholderIcon_CameraNoInternetNoAvalible.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mail.TitleBarImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\Properties.Mail\Mail.TitleBarImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlaceHolderForm.NoInternet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceHolderForm.NoInternet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\BackgroundChanger\DefaultImage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\IMG-Sketch%15\IMG1.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blank8.5x11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\Blank8.5x11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultImage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\BackgroundChanger\DefaultImage2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SMAIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\Spotify\HEAD(64)\Taylor-Swift\SMAIN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlankWorkbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\ExtentionApps\Microsoft Excel 2013\BlankWorkbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrintToPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\PrintToPDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\Chromium\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlaceholderReport.NoInternet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceholderReport.NoInternet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Installer.Internet_OfflineInstaller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Installer.Internet_OfflineInstaller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RDP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SYSIMG\RDP-SERVER\RDP.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico1.Internet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico1.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blank11x8.5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\Blank11x8.5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Live_InternetRequired.Planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.Planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\DownloadIMG\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Live_InternetRequired.Messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.Messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\Placeholder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iexplorerback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\iexplorerback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New.SendMessageBTNIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\New.SendMessageBTNIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NatoDesigner.FavIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NatoDesigner.FavIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico.HTML2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico.HTML.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICO2.MovieViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\ICO2.MovieViewer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico.HTML.Internet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico.HTML.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\IMG-BackgChoser\IMG1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_MovieViewer.InternetRequired" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Icon_MovieViewer.InternetRequired.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2HomeParagraph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\2HomeParagraph.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\SPOTIFY\IMG1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomeParagraph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemApps.FN\TextDesignerApp.AODESIGNER\HomeParagraph.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\vbnet\vb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Live_InternetRequired.NotePad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Live_InternetRequired.NotePad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\DownloadIMG\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newSoftwareOptimizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\newSoftwareOptimizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_Internet.GlobeIcon_Favico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\New_Internet.GlobeIcon_Favico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultImage4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\BackgroundChanger\DefaultImage4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\lower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_NATO_SearchIco.FavoriteIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\New_NATO_SearchIco.FavoriteIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Slideshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\Slideshow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CodeSnippet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\CodeSnippet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earth.ClickFront" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\Blender\SolarView\Earth.ClickFront.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Internet.Ixview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\Internet.Ixview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ico.HTML1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\B5\Ico.HTML.Internet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultImage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\BackgroundChanger\DefaultImage3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="namespace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\namespace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\IMG-CHROME\IMG1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\App Shop\MoreApp-IMGBASE\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="take" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemApps.FN\Camera\take.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iexplorerfr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\iexplorerfr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\cs\upper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RSSFeedIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\RSSFeedIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Angle.Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\Blender\SolarView\Angle.Earth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FAVLOGO.Startup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\FAVLOGO.Startup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EventFlyer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\ExtentionApps\Microsoft Publisher 2013\EventFlyer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MGRTRK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SYSIMG\TASKMGR\MGRTRK.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Contacts.InternetNoRequired" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\Icon_Contacts.InternetNoRequired.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultImage5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\%App%\BackgroundChanger\DefaultImage5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlaceHolderApplicationImage.NoInternet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceHolderApplicationImage.NoInternet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plot1!10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODeveloper\ImageSlideshows\web\Plot1!10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlaceholderCalendar.NoInternet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\SystemIcons.NATODesigner\NewFiles\PlaceholderCalendar.NoInternet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StickyNote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\StickyNote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlenderPayload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\Blender\StartScreen\BlenderPayload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PuzzlePictureIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\PuzzlePictureIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClockIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\New.SystemIcons\Widgets\ClockIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WidgetImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\OS\SYSTEM FILES\NatoWidgets\FishGame\WidgetImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

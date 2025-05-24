@@ -1,0 +1,28 @@
+<MESSAGE>
+{
+    with OS.Forms;
+    with OS.Obj.MessageBox
+
+
+    name a;
+    //Blender for NATO OS-7 (Version 1.0)
+    void SystemMessageBox = MessageBox errormsg;
+    for errormsg
+    {
+        new void Icon = System.Library.Icons;
+        name Title;
+        name Description;
+        name Icon;
+        name Button(Clone(OS.Forms.Button),[repeat+1])
+temp name "title";
+temp name "desc";
+with Title title (OS.Obj.MessageBox) => SystemLayout.MessageBox.Title;
+with Description desc (OS.Obj.MessageBox) => SystemLayout.MessageBox.MBDescription;
+
+    }
+    include upload;
+@upload "ui",
+@upload "openui";
+    //Error List
+
+}

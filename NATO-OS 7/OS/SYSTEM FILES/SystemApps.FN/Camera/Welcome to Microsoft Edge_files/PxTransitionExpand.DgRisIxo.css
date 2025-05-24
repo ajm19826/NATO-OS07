@@ -1,0 +1,1 @@
+.px-transition-expand-enter-active,.px-transition-expand-leave-active{transition:height .5s cubic-bezier(.215,.61,.355,1),opacity .5s cubic-bezier(.215,.61,.355,1)}.px-transition-expand-enter,.px-transition-expand-enter-from,.px-transition-expand-leave-to{height:0;opacity:0}
