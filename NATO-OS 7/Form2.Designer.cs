@@ -400,6 +400,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.syslabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.natotutoriallink = new System.Windows.Forms.LinkLabel();
             this.allappslink = new System.Windows.Forms.LinkLabel();
             this.welcomemsglink = new System.Windows.Forms.LinkLabel();
             this.NATODesigner = new System.Windows.Forms.LinkLabel();
@@ -1274,41 +1275,13 @@
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.defualtGreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsoleAndShareBoxDesignerCode = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.ContactsTextDesignerCode = new System.Windows.Forms.Label();
-            this.LogsListBoxDesignerBox = new System.Windows.Forms.ListBox();
-            this.HideConsoleAndShareDesignerCodeBox = new System.Windows.Forms.Button();
-            this.ExtentionBoxDesignerCode = new System.Windows.Forms.GroupBox();
-            this.AdditionalExtentionsBoxDesigner = new System.Windows.Forms.CheckedListBox();
-            this.SelfInstalledExtentionsDesignerCode = new System.Windows.Forms.CheckedListBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label179 = new System.Windows.Forms.Label();
-            this.SearchExtentionsDesignerCode = new System.Windows.Forms.Button();
-            this.FindExtentionsDesignerCode = new System.Windows.Forms.TextBox();
-            this.HideExtentionBox = new System.Windows.Forms.Button();
+            this.designercopilotboxdesignercode = new System.Windows.Forms.GroupBox();
+            this.hidedesignercopilot = new System.Windows.Forms.Button();
+            this.responcetextdesignercopilot = new System.Windows.Forms.Label();
+            this.sendpromptdesignercopilot = new System.Windows.Forms.PictureBox();
+            this.prompdesignercopilot = new System.Windows.Forms.TextBox();
+            this.DesignerCopilotDesignerCode = new System.Windows.Forms.LinkLabel();
             this.ProgrammingLanguageTypeDesignerCode = new System.Windows.Forms.Label();
-            this.ProgrammingLanguageBoxDesignerCode = new System.Windows.Forms.GroupBox();
-            this.windowsformsDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.XMLDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.label178 = new System.Windows.Forms.Label();
-            this.PHPDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.PythonDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.JSONDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.JavascriptDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.JavaDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.HTMLDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.GroovyDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.GoDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CUDACplusplusDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CSSDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CoffeeScriptDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.ClojureDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CPlusPlusDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CSharpDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.CDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.BatchDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.HideProgrammingLanguageListDesignerCodeBtn = new System.Windows.Forms.Button();
             this.ProgrammingLanguageDesignerCodeBox = new System.Windows.Forms.Button();
             this.SaveDesignerCode = new System.Windows.Forms.Button();
             this.ShareDesignerCode = new System.Windows.Forms.Button();
@@ -1334,6 +1307,40 @@
             this.label173 = new System.Windows.Forms.Label();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.HideDesignerCode = new System.Windows.Forms.Button();
+            this.ConsoleAndShareBoxDesignerCode = new System.Windows.Forms.GroupBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.ContactsTextDesignerCode = new System.Windows.Forms.Label();
+            this.LogsListBoxDesignerBox = new System.Windows.Forms.ListBox();
+            this.HideConsoleAndShareDesignerCodeBox = new System.Windows.Forms.Button();
+            this.ExtentionBoxDesignerCode = new System.Windows.Forms.GroupBox();
+            this.AdditionalExtentionsBoxDesigner = new System.Windows.Forms.CheckedListBox();
+            this.SelfInstalledExtentionsDesignerCode = new System.Windows.Forms.CheckedListBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label179 = new System.Windows.Forms.Label();
+            this.SearchExtentionsDesignerCode = new System.Windows.Forms.Button();
+            this.FindExtentionsDesignerCode = new System.Windows.Forms.TextBox();
+            this.HideExtentionBox = new System.Windows.Forms.Button();
+            this.ProgrammingLanguageBoxDesignerCode = new System.Windows.Forms.GroupBox();
+            this.windowsformsDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.XMLDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.label178 = new System.Windows.Forms.Label();
+            this.PHPDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.PythonDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.JSONDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.JavascriptDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.JavaDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.HTMLDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.GroovyDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.GoDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CUDACplusplusDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CSSDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CoffeeScriptDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.ClojureDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CPlusPlusDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CSharpDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.CDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.BatchDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.HideProgrammingLanguageListDesignerCodeBtn = new System.Windows.Forms.Button();
             this.DebugWindowDesignerCode = new System.Windows.Forms.GroupBox();
             this.RefreshDebugWindowDesigner = new System.Windows.Forms.Button();
             this.FowardDebugWindowDesignerCode = new System.Windows.Forms.Button();
@@ -2301,7 +2308,6 @@
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.hidepostbookonemediabox = new System.Windows.Forms.Button();
-            this.natotutoriallink = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuimg)).BeginInit();
             this.systeminfobox.SuspendLayout();
@@ -2482,10 +2488,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             this.DesignerCode.SuspendLayout();
             this.DesignerCodeMenuStrip.SuspendLayout();
+            this.designercopilotboxdesignercode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sendpromptdesignercopilot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             this.ConsoleAndShareBoxDesignerCode.SuspendLayout();
             this.ExtentionBoxDesignerCode.SuspendLayout();
             this.ProgrammingLanguageBoxDesignerCode.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             this.DebugWindowDesignerCode.SuspendLayout();
             this.RightClickMenuNATO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.natotutorialsplayer)).BeginInit();
@@ -2768,6 +2776,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // natotutoriallink
+            // 
+            this.natotutoriallink.AutoSize = true;
+            this.natotutoriallink.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.natotutoriallink.LinkColor = System.Drawing.Color.Red;
+            this.natotutoriallink.Location = new System.Drawing.Point(59, 162);
+            this.natotutoriallink.Name = "natotutoriallink";
+            this.natotutoriallink.Size = new System.Drawing.Size(79, 13);
+            this.natotutoriallink.TabIndex = 26;
+            this.natotutoriallink.TabStop = true;
+            this.natotutoriallink.Text = "System Tutorial";
+            this.toolTip1.SetToolTip(this.natotutoriallink, "Provides a system tutorial for your NATO-OS 7");
             // 
             // allappslink
             // 
@@ -12054,10 +12075,9 @@
             // 
             this.DesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.DesignerCode.ContextMenuStrip = this.DesignerCodeMenuStrip;
-            this.DesignerCode.Controls.Add(this.ConsoleAndShareBoxDesignerCode);
-            this.DesignerCode.Controls.Add(this.ExtentionBoxDesignerCode);
+            this.DesignerCode.Controls.Add(this.designercopilotboxdesignercode);
+            this.DesignerCode.Controls.Add(this.DesignerCopilotDesignerCode);
             this.DesignerCode.Controls.Add(this.ProgrammingLanguageTypeDesignerCode);
-            this.DesignerCode.Controls.Add(this.ProgrammingLanguageBoxDesignerCode);
             this.DesignerCode.Controls.Add(this.ProgrammingLanguageDesignerCodeBox);
             this.DesignerCode.Controls.Add(this.SaveDesignerCode);
             this.DesignerCode.Controls.Add(this.ShareDesignerCode);
@@ -12084,7 +12104,7 @@
             this.DesignerCode.Controls.Add(this.pictureBox49);
             this.DesignerCode.Controls.Add(this.HideDesignerCode);
             this.DesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DesignerCode.Location = new System.Drawing.Point(61, 13);
+            this.DesignerCode.Location = new System.Drawing.Point(778, 516);
             this.DesignerCode.Name = "DesignerCode";
             this.DesignerCode.Size = new System.Drawing.Size(687, 404);
             this.DesignerCode.TabIndex = 96;
@@ -12145,164 +12165,72 @@
             this.defualtGreyToolStripMenuItem.Text = "Defualt (Grey)";
             this.defualtGreyToolStripMenuItem.Click += new System.EventHandler(this.defualtGreyToolStripMenuItem_Click);
             // 
-            // ConsoleAndShareBoxDesignerCode
+            // designercopilotboxdesignercode
             // 
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.checkedListBox2);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.ContactsTextDesignerCode);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.LogsListBoxDesignerBox);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.HideConsoleAndShareDesignerCodeBox);
-            this.ConsoleAndShareBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ConsoleAndShareBoxDesignerCode.Location = new System.Drawing.Point(223, 2);
-            this.ConsoleAndShareBoxDesignerCode.Name = "ConsoleAndShareBoxDesignerCode";
-            this.ConsoleAndShareBoxDesignerCode.Size = new System.Drawing.Size(286, 297);
-            this.ConsoleAndShareBoxDesignerCode.TabIndex = 29;
-            this.ConsoleAndShareBoxDesignerCode.TabStop = false;
-            this.ConsoleAndShareBoxDesignerCode.Text = "UAFD";
+            this.designercopilotboxdesignercode.BackColor = System.Drawing.Color.Gray;
+            this.designercopilotboxdesignercode.Controls.Add(this.hidedesignercopilot);
+            this.designercopilotboxdesignercode.Controls.Add(this.responcetextdesignercopilot);
+            this.designercopilotboxdesignercode.Controls.Add(this.sendpromptdesignercopilot);
+            this.designercopilotboxdesignercode.Controls.Add(this.prompdesignercopilot);
+            this.designercopilotboxdesignercode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.designercopilotboxdesignercode.Location = new System.Drawing.Point(484, 29);
+            this.designercopilotboxdesignercode.Name = "designercopilotboxdesignercode";
+            this.designercopilotboxdesignercode.Size = new System.Drawing.Size(200, 326);
+            this.designercopilotboxdesignercode.TabIndex = 29;
+            this.designercopilotboxdesignercode.TabStop = false;
+            this.designercopilotboxdesignercode.Text = "Designer Copilot";
             // 
-            // checkedListBox2
+            // hidedesignercopilot
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "PostBook / postbook@postbook.net / +1 (800) 400 - 8080"});
-            this.checkedListBox2.Location = new System.Drawing.Point(8, 42);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(269, 244);
-            this.checkedListBox2.TabIndex = 3;
-            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
+            this.hidedesignercopilot.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hidedesignercopilot.Location = new System.Drawing.Point(168, 2);
+            this.hidedesignercopilot.Name = "hidedesignercopilot";
+            this.hidedesignercopilot.Size = new System.Drawing.Size(32, 23);
+            this.hidedesignercopilot.TabIndex = 3;
+            this.hidedesignercopilot.Text = "X";
+            this.hidedesignercopilot.UseVisualStyleBackColor = true;
+            this.hidedesignercopilot.Click += new System.EventHandler(this.hidedesignercopilot_Click);
             // 
-            // ContactsTextDesignerCode
+            // responcetextdesignercopilot
             // 
-            this.ContactsTextDesignerCode.AutoSize = true;
-            this.ContactsTextDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactsTextDesignerCode.Location = new System.Drawing.Point(8, 24);
-            this.ContactsTextDesignerCode.Name = "ContactsTextDesignerCode";
-            this.ContactsTextDesignerCode.Size = new System.Drawing.Size(76, 18);
-            this.ContactsTextDesignerCode.TabIndex = 2;
-            this.ContactsTextDesignerCode.Text = "Contacts";
+            this.responcetextdesignercopilot.AutoSize = true;
+            this.responcetextdesignercopilot.Location = new System.Drawing.Point(2, 39);
+            this.responcetextdesignercopilot.Name = "responcetextdesignercopilot";
+            this.responcetextdesignercopilot.Size = new System.Drawing.Size(147, 26);
+            this.responcetextdesignercopilot.TabIndex = 2;
+            this.responcetextdesignercopilot.Text = "Welcome to Designer Copilot!\r\nAsk anything...";
             // 
-            // LogsListBoxDesignerBox
+            // sendpromptdesignercopilot
             // 
-            this.LogsListBoxDesignerBox.FormattingEnabled = true;
-            this.LogsListBoxDesignerBox.Location = new System.Drawing.Point(4, 28);
-            this.LogsListBoxDesignerBox.Name = "LogsListBoxDesignerBox";
-            this.LogsListBoxDesignerBox.Size = new System.Drawing.Size(278, 264);
-            this.LogsListBoxDesignerBox.TabIndex = 1;
+            this.sendpromptdesignercopilot.Image = global::NATO_OS_7.Properties.Resources.New_SendMessageBTNIcon;
+            this.sendpromptdesignercopilot.Location = new System.Drawing.Point(154, 277);
+            this.sendpromptdesignercopilot.Name = "sendpromptdesignercopilot";
+            this.sendpromptdesignercopilot.Size = new System.Drawing.Size(45, 43);
+            this.sendpromptdesignercopilot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sendpromptdesignercopilot.TabIndex = 1;
+            this.sendpromptdesignercopilot.TabStop = false;
+            this.sendpromptdesignercopilot.Click += new System.EventHandler(this.sendpromptdesignercopilot_Click);
             // 
-            // HideConsoleAndShareDesignerCodeBox
+            // prompdesignercopilot
             // 
-            this.HideConsoleAndShareDesignerCodeBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideConsoleAndShareDesignerCodeBox.Location = new System.Drawing.Point(252, 5);
-            this.HideConsoleAndShareDesignerCodeBox.Name = "HideConsoleAndShareDesignerCodeBox";
-            this.HideConsoleAndShareDesignerCodeBox.Size = new System.Drawing.Size(34, 23);
-            this.HideConsoleAndShareDesignerCodeBox.TabIndex = 0;
-            this.HideConsoleAndShareDesignerCodeBox.Text = "X";
-            this.HideConsoleAndShareDesignerCodeBox.UseVisualStyleBackColor = true;
-            this.HideConsoleAndShareDesignerCodeBox.Click += new System.EventHandler(this.HideConsoleAndShareDesignerCodeBox_Click);
+            this.prompdesignercopilot.Location = new System.Drawing.Point(5, 277);
+            this.prompdesignercopilot.Multiline = true;
+            this.prompdesignercopilot.Name = "prompdesignercopilot";
+            this.prompdesignercopilot.Size = new System.Drawing.Size(148, 43);
+            this.prompdesignercopilot.TabIndex = 0;
             // 
-            // ExtentionBoxDesignerCode
+            // DesignerCopilotDesignerCode
             // 
-            this.ExtentionBoxDesignerCode.Controls.Add(this.AdditionalExtentionsBoxDesigner);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.SelfInstalledExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.groupBox7);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.label179);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.SearchExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.FindExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.HideExtentionBox);
-            this.ExtentionBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExtentionBoxDesignerCode.Location = new System.Drawing.Point(214, 22);
-            this.ExtentionBoxDesignerCode.Name = "ExtentionBoxDesignerCode";
-            this.ExtentionBoxDesignerCode.Size = new System.Drawing.Size(285, 307);
-            this.ExtentionBoxDesignerCode.TabIndex = 28;
-            this.ExtentionBoxDesignerCode.TabStop = false;
-            this.ExtentionBoxDesignerCode.Text = "Extentions";
-            // 
-            // AdditionalExtentionsBoxDesigner
-            // 
-            this.AdditionalExtentionsBoxDesigner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AdditionalExtentionsBoxDesigner.ForeColor = System.Drawing.Color.Lime;
-            this.AdditionalExtentionsBoxDesigner.FormattingEnabled = true;
-            this.AdditionalExtentionsBoxDesigner.Items.AddRange(new object[] {
-            "Author: Sarah Lim / Batch Runner / Size: 791KB",
-            "Author: Nils Soderman / Better C++ Syntax / Size: 1.5MB",
-            "Author: Brandon Fowler / exe Runner/ Size: 208KB",
-            "Author: Christoph Schlosser / Jupyter Cell Tags / Size: 997KB",
-            "Author: Xdebug / PHP Debug / Size: 3.07MB",
-            "Author: Eno Yao / Open Browser Preview / Size: 103KB",
-            "Author: twxs / CMake Tools / Size: 1.0MB",
-            "Author: Jeff Hykin / Dev Containers / Size: 2.8MB",
-            "Author: Vadim Chugunov / CodeLLDB / Size: 5.3MB",
-            "Author: DEVSENSE / Composer / Size: 4.0MB",
-            "Author: Jon Joshuana / XML Tools / Size: 1.4MB",
-            "Author: Danjael Matkhovic / Designer Toolbars / Size: 4.7MB",
-            "Author: chjkl / Prettier / Size: 406KB",
-            "Author: Yu Zhang / Java all in one / Size: 2.2MB",
-            "Author: nanlei / All Autocomplete / Size: 738MB",
-            "Author: iOSComp / iOs & Android Editor / Size: 28.6MB",
-            "Author: Benjamin Jain / Vue 3 Support - All in one / Size: 23.1MB"});
-            this.AdditionalExtentionsBoxDesigner.Location = new System.Drawing.Point(3, 98);
-            this.AdditionalExtentionsBoxDesigner.Name = "AdditionalExtentionsBoxDesigner";
-            this.AdditionalExtentionsBoxDesigner.Size = new System.Drawing.Size(282, 199);
-            this.AdditionalExtentionsBoxDesigner.TabIndex = 6;
-            this.AdditionalExtentionsBoxDesigner.SelectedIndexChanged += new System.EventHandler(this.AdditionalExtentionsBoxDesigner_SelectedIndexChanged);
-            // 
-            // SelfInstalledExtentionsDesignerCode
-            // 
-            this.SelfInstalledExtentionsDesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SelfInstalledExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.Window;
-            this.SelfInstalledExtentionsDesignerCode.FormattingEnabled = true;
-            this.SelfInstalledExtentionsDesignerCode.Items.AddRange(new object[] {
-            "Author: NATO / Programming Extentions / Size: 5.24MB",
-            "Author: NATO / Debug Window / Size: 12.7MB"});
-            this.SelfInstalledExtentionsDesignerCode.Location = new System.Drawing.Point(3, 67);
-            this.SelfInstalledExtentionsDesignerCode.Name = "SelfInstalledExtentionsDesignerCode";
-            this.SelfInstalledExtentionsDesignerCode.Size = new System.Drawing.Size(283, 34);
-            this.SelfInstalledExtentionsDesignerCode.TabIndex = 5;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Location = new System.Drawing.Point(2, 54);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(147, 10);
-            this.groupBox7.TabIndex = 4;
-            this.groupBox7.TabStop = false;
-            // 
-            // label179
-            // 
-            this.label179.AutoSize = true;
-            this.label179.Location = new System.Drawing.Point(2, 40);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(76, 13);
-            this.label179.TabIndex = 3;
-            this.label179.Text = "My Extentions:";
-            // 
-            // SearchExtentionsDesignerCode
-            // 
-            this.SearchExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchExtentionsDesignerCode.Location = new System.Drawing.Point(189, 9);
-            this.SearchExtentionsDesignerCode.Name = "SearchExtentionsDesignerCode";
-            this.SearchExtentionsDesignerCode.Size = new System.Drawing.Size(61, 23);
-            this.SearchExtentionsDesignerCode.TabIndex = 2;
-            this.SearchExtentionsDesignerCode.Text = "Search";
-            this.SearchExtentionsDesignerCode.UseVisualStyleBackColor = true;
-            this.SearchExtentionsDesignerCode.Click += new System.EventHandler(this.SearchExtentionsDesignerCode_Click);
-            // 
-            // FindExtentionsDesignerCode
-            // 
-            this.FindExtentionsDesignerCode.Location = new System.Drawing.Point(1, 13);
-            this.FindExtentionsDesignerCode.Name = "FindExtentionsDesignerCode";
-            this.FindExtentionsDesignerCode.Size = new System.Drawing.Size(182, 20);
-            this.FindExtentionsDesignerCode.TabIndex = 1;
-            // 
-            // HideExtentionBox
-            // 
-            this.HideExtentionBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideExtentionBox.Location = new System.Drawing.Point(260, 9);
-            this.HideExtentionBox.Name = "HideExtentionBox";
-            this.HideExtentionBox.Size = new System.Drawing.Size(23, 23);
-            this.HideExtentionBox.TabIndex = 0;
-            this.HideExtentionBox.Text = "X";
-            this.HideExtentionBox.UseVisualStyleBackColor = true;
-            this.HideExtentionBox.Click += new System.EventHandler(this.HideExtentionBox_Click);
+            this.DesignerCopilotDesignerCode.AutoSize = true;
+            this.DesignerCopilotDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DesignerCopilotDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.DesignerCopilotDesignerCode.Location = new System.Drawing.Point(5, 293);
+            this.DesignerCopilotDesignerCode.Name = "DesignerCopilotDesignerCode";
+            this.DesignerCopilotDesignerCode.Size = new System.Drawing.Size(117, 16);
+            this.DesignerCopilotDesignerCode.TabIndex = 28;
+            this.DesignerCopilotDesignerCode.TabStop = true;
+            this.DesignerCopilotDesignerCode.Text = "Designer Copilot";
+            this.DesignerCopilotDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DesignerCopilotDesignerCode_LinkClicked);
             // 
             // ProgrammingLanguageTypeDesignerCode
             // 
@@ -12313,254 +12241,6 @@
             this.ProgrammingLanguageTypeDesignerCode.Size = new System.Drawing.Size(16, 13);
             this.ProgrammingLanguageTypeDesignerCode.TabIndex = 27;
             this.ProgrammingLanguageTypeDesignerCode.Text = "---";
-            // 
-            // ProgrammingLanguageBoxDesignerCode
-            // 
-            this.ProgrammingLanguageBoxDesignerCode.BackColor = System.Drawing.Color.White;
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.windowsformsDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.XMLDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.label178);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.PHPDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.PythonDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JSONDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JavascriptDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JavaDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.HTMLDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.GroovyDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.GoDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CUDACplusplusDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CSSDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CoffeeScriptDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.ClojureDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CPlusPlusDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CSharpDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.BatchDesignerCode);
-            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.HideProgrammingLanguageListDesignerCodeBtn);
-            this.ProgrammingLanguageBoxDesignerCode.Location = new System.Drawing.Point(513, 32);
-            this.ProgrammingLanguageBoxDesignerCode.Name = "ProgrammingLanguageBoxDesignerCode";
-            this.ProgrammingLanguageBoxDesignerCode.Size = new System.Drawing.Size(138, 347);
-            this.ProgrammingLanguageBoxDesignerCode.TabIndex = 26;
-            this.ProgrammingLanguageBoxDesignerCode.TabStop = false;
-            // 
-            // windowsformsDesignerCode
-            // 
-            this.windowsformsDesignerCode.AutoSize = true;
-            this.windowsformsDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windowsformsDesignerCode.Location = new System.Drawing.Point(3, 313);
-            this.windowsformsDesignerCode.Name = "windowsformsDesignerCode";
-            this.windowsformsDesignerCode.Size = new System.Drawing.Size(115, 13);
-            this.windowsformsDesignerCode.TabIndex = 90;
-            this.windowsformsDesignerCode.TabStop = true;
-            this.windowsformsDesignerCode.Text = "C# Windows Forms";
-            this.windowsformsDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.windowsformsDesignerCode_LinkClicked);
-            // 
-            // XMLDesignerCode
-            // 
-            this.XMLDesignerCode.AutoSize = true;
-            this.XMLDesignerCode.Location = new System.Drawing.Point(-2, 290);
-            this.XMLDesignerCode.Name = "XMLDesignerCode";
-            this.XMLDesignerCode.Size = new System.Drawing.Size(29, 13);
-            this.XMLDesignerCode.TabIndex = 89;
-            this.XMLDesignerCode.TabStop = true;
-            this.XMLDesignerCode.Text = "XML";
-            this.XMLDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.XMLDesignerCode_LinkClicked);
-            // 
-            // label178
-            // 
-            this.label178.AutoSize = true;
-            this.label178.Location = new System.Drawing.Point(40, 327);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(64, 13);
-            this.label178.TabIndex = 88;
-            this.label178.Text = "Choose one";
-            // 
-            // PHPDesignerCode
-            // 
-            this.PHPDesignerCode.AutoSize = true;
-            this.PHPDesignerCode.Location = new System.Drawing.Point(-2, 273);
-            this.PHPDesignerCode.Name = "PHPDesignerCode";
-            this.PHPDesignerCode.Size = new System.Drawing.Size(27, 13);
-            this.PHPDesignerCode.TabIndex = 87;
-            this.PHPDesignerCode.TabStop = true;
-            this.PHPDesignerCode.Text = "PhP";
-            this.PHPDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PHPDesignerCode_LinkClicked);
-            // 
-            // PythonDesignerCode
-            // 
-            this.PythonDesignerCode.AutoSize = true;
-            this.PythonDesignerCode.Location = new System.Drawing.Point(-1, 255);
-            this.PythonDesignerCode.Name = "PythonDesignerCode";
-            this.PythonDesignerCode.Size = new System.Drawing.Size(40, 13);
-            this.PythonDesignerCode.TabIndex = 86;
-            this.PythonDesignerCode.TabStop = true;
-            this.PythonDesignerCode.Text = "Python";
-            this.PythonDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PythonDesignerCode_LinkClicked);
-            // 
-            // JSONDesignerCode
-            // 
-            this.JSONDesignerCode.AutoSize = true;
-            this.JSONDesignerCode.Location = new System.Drawing.Point(-1, 237);
-            this.JSONDesignerCode.Name = "JSONDesignerCode";
-            this.JSONDesignerCode.Size = new System.Drawing.Size(35, 13);
-            this.JSONDesignerCode.TabIndex = 85;
-            this.JSONDesignerCode.TabStop = true;
-            this.JSONDesignerCode.Text = "JSON";
-            this.JSONDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JSONDesignerCode_LinkClicked);
-            // 
-            // JavascriptDesignerCode
-            // 
-            this.JavascriptDesignerCode.AutoSize = true;
-            this.JavascriptDesignerCode.Location = new System.Drawing.Point(0, 219);
-            this.JavascriptDesignerCode.Name = "JavascriptDesignerCode";
-            this.JavascriptDesignerCode.Size = new System.Drawing.Size(55, 13);
-            this.JavascriptDesignerCode.TabIndex = 84;
-            this.JavascriptDesignerCode.TabStop = true;
-            this.JavascriptDesignerCode.Text = "Javascript";
-            this.JavascriptDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JavascriptDesignerCode_LinkClicked);
-            // 
-            // JavaDesignerCode
-            // 
-            this.JavaDesignerCode.AutoSize = true;
-            this.JavaDesignerCode.Location = new System.Drawing.Point(-1, 204);
-            this.JavaDesignerCode.Name = "JavaDesignerCode";
-            this.JavaDesignerCode.Size = new System.Drawing.Size(30, 13);
-            this.JavaDesignerCode.TabIndex = 83;
-            this.JavaDesignerCode.TabStop = true;
-            this.JavaDesignerCode.Text = "Java";
-            this.JavaDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JavaDesignerCode_LinkClicked);
-            // 
-            // HTMLDesignerCode
-            // 
-            this.HTMLDesignerCode.AutoSize = true;
-            this.HTMLDesignerCode.Location = new System.Drawing.Point(0, 186);
-            this.HTMLDesignerCode.Name = "HTMLDesignerCode";
-            this.HTMLDesignerCode.Size = new System.Drawing.Size(37, 13);
-            this.HTMLDesignerCode.TabIndex = 82;
-            this.HTMLDesignerCode.TabStop = true;
-            this.HTMLDesignerCode.Text = "HTML";
-            this.HTMLDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.HTMLDesignerCode_LinkClicked);
-            // 
-            // GroovyDesignerCode
-            // 
-            this.GroovyDesignerCode.AutoSize = true;
-            this.GroovyDesignerCode.Location = new System.Drawing.Point(0, 168);
-            this.GroovyDesignerCode.Name = "GroovyDesignerCode";
-            this.GroovyDesignerCode.Size = new System.Drawing.Size(41, 13);
-            this.GroovyDesignerCode.TabIndex = 81;
-            this.GroovyDesignerCode.TabStop = true;
-            this.GroovyDesignerCode.Text = "Groovy";
-            this.GroovyDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GroovyDesignerCode_LinkClicked);
-            // 
-            // GoDesignerCode
-            // 
-            this.GoDesignerCode.AutoSize = true;
-            this.GoDesignerCode.Location = new System.Drawing.Point(1, 150);
-            this.GoDesignerCode.Name = "GoDesignerCode";
-            this.GoDesignerCode.Size = new System.Drawing.Size(21, 13);
-            this.GoDesignerCode.TabIndex = 80;
-            this.GoDesignerCode.TabStop = true;
-            this.GoDesignerCode.Text = "Go";
-            this.GoDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GoDesignerCode_LinkClicked);
-            // 
-            // CUDACplusplusDesignerCode
-            // 
-            this.CUDACplusplusDesignerCode.AutoSize = true;
-            this.CUDACplusplusDesignerCode.Location = new System.Drawing.Point(0, 133);
-            this.CUDACplusplusDesignerCode.Name = "CUDACplusplusDesignerCode";
-            this.CUDACplusplusDesignerCode.Size = new System.Drawing.Size(59, 13);
-            this.CUDACplusplusDesignerCode.TabIndex = 79;
-            this.CUDACplusplusDesignerCode.TabStop = true;
-            this.CUDACplusplusDesignerCode.Text = "CUDA C++";
-            this.CUDACplusplusDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CUDACplusplusDesignerCode_LinkClicked);
-            // 
-            // CSSDesignerCode
-            // 
-            this.CSSDesignerCode.AutoSize = true;
-            this.CSSDesignerCode.Location = new System.Drawing.Point(1, 115);
-            this.CSSDesignerCode.Name = "CSSDesignerCode";
-            this.CSSDesignerCode.Size = new System.Drawing.Size(28, 13);
-            this.CSSDesignerCode.TabIndex = 78;
-            this.CSSDesignerCode.TabStop = true;
-            this.CSSDesignerCode.Text = "CSS";
-            this.CSSDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CSSDesignerCode_LinkClicked);
-            // 
-            // CoffeeScriptDesignerCode
-            // 
-            this.CoffeeScriptDesignerCode.AutoSize = true;
-            this.CoffeeScriptDesignerCode.Location = new System.Drawing.Point(1, 97);
-            this.CoffeeScriptDesignerCode.Name = "CoffeeScriptDesignerCode";
-            this.CoffeeScriptDesignerCode.Size = new System.Drawing.Size(65, 13);
-            this.CoffeeScriptDesignerCode.TabIndex = 77;
-            this.CoffeeScriptDesignerCode.TabStop = true;
-            this.CoffeeScriptDesignerCode.Text = "CoffeeScript";
-            this.CoffeeScriptDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CoffeeScriptDesignerCode_LinkClicked);
-            // 
-            // ClojureDesignerCode
-            // 
-            this.ClojureDesignerCode.AutoSize = true;
-            this.ClojureDesignerCode.Location = new System.Drawing.Point(2, 79);
-            this.ClojureDesignerCode.Name = "ClojureDesignerCode";
-            this.ClojureDesignerCode.Size = new System.Drawing.Size(39, 13);
-            this.ClojureDesignerCode.TabIndex = 76;
-            this.ClojureDesignerCode.TabStop = true;
-            this.ClojureDesignerCode.Text = "Clojure";
-            this.ClojureDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ClojureDesignerCode_LinkClicked);
-            // 
-            // CPlusPlusDesignerCode
-            // 
-            this.CPlusPlusDesignerCode.AutoSize = true;
-            this.CPlusPlusDesignerCode.Location = new System.Drawing.Point(1, 64);
-            this.CPlusPlusDesignerCode.Name = "CPlusPlusDesignerCode";
-            this.CPlusPlusDesignerCode.Size = new System.Drawing.Size(26, 13);
-            this.CPlusPlusDesignerCode.TabIndex = 75;
-            this.CPlusPlusDesignerCode.TabStop = true;
-            this.CPlusPlusDesignerCode.Text = "C++";
-            this.CPlusPlusDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CPlusPlusDesignerCode_LinkClicked);
-            // 
-            // CSharpDesignerCode
-            // 
-            this.CSharpDesignerCode.AutoSize = true;
-            this.CSharpDesignerCode.Location = new System.Drawing.Point(2, 46);
-            this.CSharpDesignerCode.Name = "CSharpDesignerCode";
-            this.CSharpDesignerCode.Size = new System.Drawing.Size(21, 13);
-            this.CSharpDesignerCode.TabIndex = 74;
-            this.CSharpDesignerCode.TabStop = true;
-            this.CSharpDesignerCode.Text = "C#";
-            this.CSharpDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CSharpDesignerCode_LinkClicked);
-            // 
-            // CDesignerCode
-            // 
-            this.CDesignerCode.AutoSize = true;
-            this.CDesignerCode.Location = new System.Drawing.Point(2, 28);
-            this.CDesignerCode.Name = "CDesignerCode";
-            this.CDesignerCode.Size = new System.Drawing.Size(14, 13);
-            this.CDesignerCode.TabIndex = 73;
-            this.CDesignerCode.TabStop = true;
-            this.CDesignerCode.Text = "C";
-            this.CDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CDesignerCode_LinkClicked);
-            // 
-            // BatchDesignerCode
-            // 
-            this.BatchDesignerCode.AutoSize = true;
-            this.BatchDesignerCode.Location = new System.Drawing.Point(3, 10);
-            this.BatchDesignerCode.Name = "BatchDesignerCode";
-            this.BatchDesignerCode.Size = new System.Drawing.Size(35, 13);
-            this.BatchDesignerCode.TabIndex = 72;
-            this.BatchDesignerCode.TabStop = true;
-            this.BatchDesignerCode.Text = "Batch";
-            this.BatchDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BatchDesignerCode_LinkClicked);
-            // 
-            // HideProgrammingLanguageListDesignerCodeBtn
-            // 
-            this.HideProgrammingLanguageListDesignerCodeBtn.BackColor = System.Drawing.Color.Red;
-            this.HideProgrammingLanguageListDesignerCodeBtn.Location = new System.Drawing.Point(3, 331);
-            this.HideProgrammingLanguageListDesignerCodeBtn.Name = "HideProgrammingLanguageListDesignerCodeBtn";
-            this.HideProgrammingLanguageListDesignerCodeBtn.Size = new System.Drawing.Size(32, 12);
-            this.HideProgrammingLanguageListDesignerCodeBtn.TabIndex = 71;
-            this.HideProgrammingLanguageListDesignerCodeBtn.Text = " ";
-            this.HideProgrammingLanguageListDesignerCodeBtn.UseVisualStyleBackColor = false;
-            this.HideProgrammingLanguageListDesignerCodeBtn.Click += new System.EventHandler(this.HideProgrammingLanguageListDesignerCodeBtn_Click);
             // 
             // ProgrammingLanguageDesignerCodeBox
             // 
@@ -12827,6 +12507,413 @@
             this.HideDesignerCode.Text = "X";
             this.HideDesignerCode.UseVisualStyleBackColor = true;
             this.HideDesignerCode.Click += new System.EventHandler(this.HideDesignerCode_Click);
+            // 
+            // ConsoleAndShareBoxDesignerCode
+            // 
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.checkedListBox2);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.ContactsTextDesignerCode);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.LogsListBoxDesignerBox);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.HideConsoleAndShareDesignerCodeBox);
+            this.ConsoleAndShareBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ConsoleAndShareBoxDesignerCode.Location = new System.Drawing.Point(373, 1011);
+            this.ConsoleAndShareBoxDesignerCode.Name = "ConsoleAndShareBoxDesignerCode";
+            this.ConsoleAndShareBoxDesignerCode.Size = new System.Drawing.Size(286, 297);
+            this.ConsoleAndShareBoxDesignerCode.TabIndex = 29;
+            this.ConsoleAndShareBoxDesignerCode.TabStop = false;
+            this.ConsoleAndShareBoxDesignerCode.Text = "UAFD";
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "PostBook / postbook@postbook.net / +1 (800) 400 - 8080"});
+            this.checkedListBox2.Location = new System.Drawing.Point(8, 42);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(269, 244);
+            this.checkedListBox2.TabIndex = 3;
+            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
+            // 
+            // ContactsTextDesignerCode
+            // 
+            this.ContactsTextDesignerCode.AutoSize = true;
+            this.ContactsTextDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactsTextDesignerCode.Location = new System.Drawing.Point(8, 24);
+            this.ContactsTextDesignerCode.Name = "ContactsTextDesignerCode";
+            this.ContactsTextDesignerCode.Size = new System.Drawing.Size(76, 18);
+            this.ContactsTextDesignerCode.TabIndex = 2;
+            this.ContactsTextDesignerCode.Text = "Contacts";
+            // 
+            // LogsListBoxDesignerBox
+            // 
+            this.LogsListBoxDesignerBox.FormattingEnabled = true;
+            this.LogsListBoxDesignerBox.Location = new System.Drawing.Point(4, 28);
+            this.LogsListBoxDesignerBox.Name = "LogsListBoxDesignerBox";
+            this.LogsListBoxDesignerBox.Size = new System.Drawing.Size(278, 264);
+            this.LogsListBoxDesignerBox.TabIndex = 1;
+            // 
+            // HideConsoleAndShareDesignerCodeBox
+            // 
+            this.HideConsoleAndShareDesignerCodeBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideConsoleAndShareDesignerCodeBox.Location = new System.Drawing.Point(252, 5);
+            this.HideConsoleAndShareDesignerCodeBox.Name = "HideConsoleAndShareDesignerCodeBox";
+            this.HideConsoleAndShareDesignerCodeBox.Size = new System.Drawing.Size(34, 23);
+            this.HideConsoleAndShareDesignerCodeBox.TabIndex = 0;
+            this.HideConsoleAndShareDesignerCodeBox.Text = "X";
+            this.HideConsoleAndShareDesignerCodeBox.UseVisualStyleBackColor = true;
+            this.HideConsoleAndShareDesignerCodeBox.Click += new System.EventHandler(this.HideConsoleAndShareDesignerCodeBox_Click);
+            // 
+            // ExtentionBoxDesignerCode
+            // 
+            this.ExtentionBoxDesignerCode.Controls.Add(this.AdditionalExtentionsBoxDesigner);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.SelfInstalledExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.groupBox7);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.label179);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.SearchExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.FindExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.HideExtentionBox);
+            this.ExtentionBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExtentionBoxDesignerCode.Location = new System.Drawing.Point(364, 1031);
+            this.ExtentionBoxDesignerCode.Name = "ExtentionBoxDesignerCode";
+            this.ExtentionBoxDesignerCode.Size = new System.Drawing.Size(285, 307);
+            this.ExtentionBoxDesignerCode.TabIndex = 28;
+            this.ExtentionBoxDesignerCode.TabStop = false;
+            this.ExtentionBoxDesignerCode.Text = "Extentions";
+            // 
+            // AdditionalExtentionsBoxDesigner
+            // 
+            this.AdditionalExtentionsBoxDesigner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AdditionalExtentionsBoxDesigner.ForeColor = System.Drawing.Color.Lime;
+            this.AdditionalExtentionsBoxDesigner.FormattingEnabled = true;
+            this.AdditionalExtentionsBoxDesigner.Items.AddRange(new object[] {
+            "Author: Sarah Lim / Batch Runner / Size: 791KB",
+            "Author: Nils Soderman / Better C++ Syntax / Size: 1.5MB",
+            "Author: Brandon Fowler / exe Runner/ Size: 208KB",
+            "Author: Christoph Schlosser / Jupyter Cell Tags / Size: 997KB",
+            "Author: Xdebug / PHP Debug / Size: 3.07MB",
+            "Author: Eno Yao / Open Browser Preview / Size: 103KB",
+            "Author: twxs / CMake Tools / Size: 1.0MB",
+            "Author: Jeff Hykin / Dev Containers / Size: 2.8MB",
+            "Author: Vadim Chugunov / CodeLLDB / Size: 5.3MB",
+            "Author: DEVSENSE / Composer / Size: 4.0MB",
+            "Author: Jon Joshuana / XML Tools / Size: 1.4MB",
+            "Author: Danjael Matkhovic / Designer Toolbars / Size: 4.7MB",
+            "Author: chjkl / Prettier / Size: 406KB",
+            "Author: Yu Zhang / Java all in one / Size: 2.2MB",
+            "Author: nanlei / All Autocomplete / Size: 738MB",
+            "Author: iOSComp / iOs & Android Editor / Size: 28.6MB",
+            "Author: Benjamin Jain / Vue 3 Support - All in one / Size: 23.1MB"});
+            this.AdditionalExtentionsBoxDesigner.Location = new System.Drawing.Point(3, 98);
+            this.AdditionalExtentionsBoxDesigner.Name = "AdditionalExtentionsBoxDesigner";
+            this.AdditionalExtentionsBoxDesigner.Size = new System.Drawing.Size(282, 199);
+            this.AdditionalExtentionsBoxDesigner.TabIndex = 6;
+            this.AdditionalExtentionsBoxDesigner.SelectedIndexChanged += new System.EventHandler(this.AdditionalExtentionsBoxDesigner_SelectedIndexChanged);
+            // 
+            // SelfInstalledExtentionsDesignerCode
+            // 
+            this.SelfInstalledExtentionsDesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SelfInstalledExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.Window;
+            this.SelfInstalledExtentionsDesignerCode.FormattingEnabled = true;
+            this.SelfInstalledExtentionsDesignerCode.Items.AddRange(new object[] {
+            "Author: NATO / Programming Extentions / Size: 5.24MB",
+            "Author: NATO / Debug Window / Size: 12.7MB"});
+            this.SelfInstalledExtentionsDesignerCode.Location = new System.Drawing.Point(3, 67);
+            this.SelfInstalledExtentionsDesignerCode.Name = "SelfInstalledExtentionsDesignerCode";
+            this.SelfInstalledExtentionsDesignerCode.Size = new System.Drawing.Size(283, 34);
+            this.SelfInstalledExtentionsDesignerCode.TabIndex = 5;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Location = new System.Drawing.Point(2, 54);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(147, 10);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            // 
+            // label179
+            // 
+            this.label179.AutoSize = true;
+            this.label179.Location = new System.Drawing.Point(2, 40);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(76, 13);
+            this.label179.TabIndex = 3;
+            this.label179.Text = "My Extentions:";
+            // 
+            // SearchExtentionsDesignerCode
+            // 
+            this.SearchExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchExtentionsDesignerCode.Location = new System.Drawing.Point(189, 9);
+            this.SearchExtentionsDesignerCode.Name = "SearchExtentionsDesignerCode";
+            this.SearchExtentionsDesignerCode.Size = new System.Drawing.Size(61, 23);
+            this.SearchExtentionsDesignerCode.TabIndex = 2;
+            this.SearchExtentionsDesignerCode.Text = "Search";
+            this.SearchExtentionsDesignerCode.UseVisualStyleBackColor = true;
+            this.SearchExtentionsDesignerCode.Click += new System.EventHandler(this.SearchExtentionsDesignerCode_Click);
+            // 
+            // FindExtentionsDesignerCode
+            // 
+            this.FindExtentionsDesignerCode.Location = new System.Drawing.Point(1, 13);
+            this.FindExtentionsDesignerCode.Name = "FindExtentionsDesignerCode";
+            this.FindExtentionsDesignerCode.Size = new System.Drawing.Size(182, 20);
+            this.FindExtentionsDesignerCode.TabIndex = 1;
+            // 
+            // HideExtentionBox
+            // 
+            this.HideExtentionBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideExtentionBox.Location = new System.Drawing.Point(260, 9);
+            this.HideExtentionBox.Name = "HideExtentionBox";
+            this.HideExtentionBox.Size = new System.Drawing.Size(23, 23);
+            this.HideExtentionBox.TabIndex = 0;
+            this.HideExtentionBox.Text = "X";
+            this.HideExtentionBox.UseVisualStyleBackColor = true;
+            this.HideExtentionBox.Click += new System.EventHandler(this.HideExtentionBox_Click);
+            // 
+            // ProgrammingLanguageBoxDesignerCode
+            // 
+            this.ProgrammingLanguageBoxDesignerCode.BackColor = System.Drawing.Color.White;
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.windowsformsDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.XMLDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.label178);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.PHPDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.PythonDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JSONDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JavascriptDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.JavaDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.HTMLDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.GroovyDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.GoDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CUDACplusplusDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CSSDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CoffeeScriptDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.ClojureDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CPlusPlusDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CSharpDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.BatchDesignerCode);
+            this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.HideProgrammingLanguageListDesignerCodeBtn);
+            this.ProgrammingLanguageBoxDesignerCode.Location = new System.Drawing.Point(663, 1041);
+            this.ProgrammingLanguageBoxDesignerCode.Name = "ProgrammingLanguageBoxDesignerCode";
+            this.ProgrammingLanguageBoxDesignerCode.Size = new System.Drawing.Size(138, 347);
+            this.ProgrammingLanguageBoxDesignerCode.TabIndex = 26;
+            this.ProgrammingLanguageBoxDesignerCode.TabStop = false;
+            // 
+            // windowsformsDesignerCode
+            // 
+            this.windowsformsDesignerCode.AutoSize = true;
+            this.windowsformsDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windowsformsDesignerCode.Location = new System.Drawing.Point(3, 313);
+            this.windowsformsDesignerCode.Name = "windowsformsDesignerCode";
+            this.windowsformsDesignerCode.Size = new System.Drawing.Size(115, 13);
+            this.windowsformsDesignerCode.TabIndex = 90;
+            this.windowsformsDesignerCode.TabStop = true;
+            this.windowsformsDesignerCode.Text = "C# Windows Forms";
+            this.windowsformsDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.windowsformsDesignerCode_LinkClicked);
+            // 
+            // XMLDesignerCode
+            // 
+            this.XMLDesignerCode.AutoSize = true;
+            this.XMLDesignerCode.Location = new System.Drawing.Point(-2, 290);
+            this.XMLDesignerCode.Name = "XMLDesignerCode";
+            this.XMLDesignerCode.Size = new System.Drawing.Size(29, 13);
+            this.XMLDesignerCode.TabIndex = 89;
+            this.XMLDesignerCode.TabStop = true;
+            this.XMLDesignerCode.Text = "XML";
+            this.XMLDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.XMLDesignerCode_LinkClicked);
+            // 
+            // label178
+            // 
+            this.label178.AutoSize = true;
+            this.label178.Location = new System.Drawing.Point(40, 327);
+            this.label178.Name = "label178";
+            this.label178.Size = new System.Drawing.Size(64, 13);
+            this.label178.TabIndex = 88;
+            this.label178.Text = "Choose one";
+            // 
+            // PHPDesignerCode
+            // 
+            this.PHPDesignerCode.AutoSize = true;
+            this.PHPDesignerCode.Location = new System.Drawing.Point(-2, 273);
+            this.PHPDesignerCode.Name = "PHPDesignerCode";
+            this.PHPDesignerCode.Size = new System.Drawing.Size(27, 13);
+            this.PHPDesignerCode.TabIndex = 87;
+            this.PHPDesignerCode.TabStop = true;
+            this.PHPDesignerCode.Text = "PhP";
+            this.PHPDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PHPDesignerCode_LinkClicked);
+            // 
+            // PythonDesignerCode
+            // 
+            this.PythonDesignerCode.AutoSize = true;
+            this.PythonDesignerCode.Location = new System.Drawing.Point(-1, 255);
+            this.PythonDesignerCode.Name = "PythonDesignerCode";
+            this.PythonDesignerCode.Size = new System.Drawing.Size(40, 13);
+            this.PythonDesignerCode.TabIndex = 86;
+            this.PythonDesignerCode.TabStop = true;
+            this.PythonDesignerCode.Text = "Python";
+            this.PythonDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PythonDesignerCode_LinkClicked);
+            // 
+            // JSONDesignerCode
+            // 
+            this.JSONDesignerCode.AutoSize = true;
+            this.JSONDesignerCode.Location = new System.Drawing.Point(-1, 237);
+            this.JSONDesignerCode.Name = "JSONDesignerCode";
+            this.JSONDesignerCode.Size = new System.Drawing.Size(35, 13);
+            this.JSONDesignerCode.TabIndex = 85;
+            this.JSONDesignerCode.TabStop = true;
+            this.JSONDesignerCode.Text = "JSON";
+            this.JSONDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JSONDesignerCode_LinkClicked);
+            // 
+            // JavascriptDesignerCode
+            // 
+            this.JavascriptDesignerCode.AutoSize = true;
+            this.JavascriptDesignerCode.Location = new System.Drawing.Point(0, 219);
+            this.JavascriptDesignerCode.Name = "JavascriptDesignerCode";
+            this.JavascriptDesignerCode.Size = new System.Drawing.Size(55, 13);
+            this.JavascriptDesignerCode.TabIndex = 84;
+            this.JavascriptDesignerCode.TabStop = true;
+            this.JavascriptDesignerCode.Text = "Javascript";
+            this.JavascriptDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JavascriptDesignerCode_LinkClicked);
+            // 
+            // JavaDesignerCode
+            // 
+            this.JavaDesignerCode.AutoSize = true;
+            this.JavaDesignerCode.Location = new System.Drawing.Point(-1, 204);
+            this.JavaDesignerCode.Name = "JavaDesignerCode";
+            this.JavaDesignerCode.Size = new System.Drawing.Size(30, 13);
+            this.JavaDesignerCode.TabIndex = 83;
+            this.JavaDesignerCode.TabStop = true;
+            this.JavaDesignerCode.Text = "Java";
+            this.JavaDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.JavaDesignerCode_LinkClicked);
+            // 
+            // HTMLDesignerCode
+            // 
+            this.HTMLDesignerCode.AutoSize = true;
+            this.HTMLDesignerCode.Location = new System.Drawing.Point(0, 186);
+            this.HTMLDesignerCode.Name = "HTMLDesignerCode";
+            this.HTMLDesignerCode.Size = new System.Drawing.Size(37, 13);
+            this.HTMLDesignerCode.TabIndex = 82;
+            this.HTMLDesignerCode.TabStop = true;
+            this.HTMLDesignerCode.Text = "HTML";
+            this.HTMLDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.HTMLDesignerCode_LinkClicked);
+            // 
+            // GroovyDesignerCode
+            // 
+            this.GroovyDesignerCode.AutoSize = true;
+            this.GroovyDesignerCode.Location = new System.Drawing.Point(0, 168);
+            this.GroovyDesignerCode.Name = "GroovyDesignerCode";
+            this.GroovyDesignerCode.Size = new System.Drawing.Size(41, 13);
+            this.GroovyDesignerCode.TabIndex = 81;
+            this.GroovyDesignerCode.TabStop = true;
+            this.GroovyDesignerCode.Text = "Groovy";
+            this.GroovyDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GroovyDesignerCode_LinkClicked);
+            // 
+            // GoDesignerCode
+            // 
+            this.GoDesignerCode.AutoSize = true;
+            this.GoDesignerCode.Location = new System.Drawing.Point(1, 150);
+            this.GoDesignerCode.Name = "GoDesignerCode";
+            this.GoDesignerCode.Size = new System.Drawing.Size(21, 13);
+            this.GoDesignerCode.TabIndex = 80;
+            this.GoDesignerCode.TabStop = true;
+            this.GoDesignerCode.Text = "Go";
+            this.GoDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GoDesignerCode_LinkClicked);
+            // 
+            // CUDACplusplusDesignerCode
+            // 
+            this.CUDACplusplusDesignerCode.AutoSize = true;
+            this.CUDACplusplusDesignerCode.Location = new System.Drawing.Point(0, 133);
+            this.CUDACplusplusDesignerCode.Name = "CUDACplusplusDesignerCode";
+            this.CUDACplusplusDesignerCode.Size = new System.Drawing.Size(59, 13);
+            this.CUDACplusplusDesignerCode.TabIndex = 79;
+            this.CUDACplusplusDesignerCode.TabStop = true;
+            this.CUDACplusplusDesignerCode.Text = "CUDA C++";
+            this.CUDACplusplusDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CUDACplusplusDesignerCode_LinkClicked);
+            // 
+            // CSSDesignerCode
+            // 
+            this.CSSDesignerCode.AutoSize = true;
+            this.CSSDesignerCode.Location = new System.Drawing.Point(1, 115);
+            this.CSSDesignerCode.Name = "CSSDesignerCode";
+            this.CSSDesignerCode.Size = new System.Drawing.Size(28, 13);
+            this.CSSDesignerCode.TabIndex = 78;
+            this.CSSDesignerCode.TabStop = true;
+            this.CSSDesignerCode.Text = "CSS";
+            this.CSSDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CSSDesignerCode_LinkClicked);
+            // 
+            // CoffeeScriptDesignerCode
+            // 
+            this.CoffeeScriptDesignerCode.AutoSize = true;
+            this.CoffeeScriptDesignerCode.Location = new System.Drawing.Point(1, 97);
+            this.CoffeeScriptDesignerCode.Name = "CoffeeScriptDesignerCode";
+            this.CoffeeScriptDesignerCode.Size = new System.Drawing.Size(65, 13);
+            this.CoffeeScriptDesignerCode.TabIndex = 77;
+            this.CoffeeScriptDesignerCode.TabStop = true;
+            this.CoffeeScriptDesignerCode.Text = "CoffeeScript";
+            this.CoffeeScriptDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CoffeeScriptDesignerCode_LinkClicked);
+            // 
+            // ClojureDesignerCode
+            // 
+            this.ClojureDesignerCode.AutoSize = true;
+            this.ClojureDesignerCode.Location = new System.Drawing.Point(2, 79);
+            this.ClojureDesignerCode.Name = "ClojureDesignerCode";
+            this.ClojureDesignerCode.Size = new System.Drawing.Size(39, 13);
+            this.ClojureDesignerCode.TabIndex = 76;
+            this.ClojureDesignerCode.TabStop = true;
+            this.ClojureDesignerCode.Text = "Clojure";
+            this.ClojureDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ClojureDesignerCode_LinkClicked);
+            // 
+            // CPlusPlusDesignerCode
+            // 
+            this.CPlusPlusDesignerCode.AutoSize = true;
+            this.CPlusPlusDesignerCode.Location = new System.Drawing.Point(1, 64);
+            this.CPlusPlusDesignerCode.Name = "CPlusPlusDesignerCode";
+            this.CPlusPlusDesignerCode.Size = new System.Drawing.Size(26, 13);
+            this.CPlusPlusDesignerCode.TabIndex = 75;
+            this.CPlusPlusDesignerCode.TabStop = true;
+            this.CPlusPlusDesignerCode.Text = "C++";
+            this.CPlusPlusDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CPlusPlusDesignerCode_LinkClicked);
+            // 
+            // CSharpDesignerCode
+            // 
+            this.CSharpDesignerCode.AutoSize = true;
+            this.CSharpDesignerCode.Location = new System.Drawing.Point(2, 46);
+            this.CSharpDesignerCode.Name = "CSharpDesignerCode";
+            this.CSharpDesignerCode.Size = new System.Drawing.Size(21, 13);
+            this.CSharpDesignerCode.TabIndex = 74;
+            this.CSharpDesignerCode.TabStop = true;
+            this.CSharpDesignerCode.Text = "C#";
+            this.CSharpDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CSharpDesignerCode_LinkClicked);
+            // 
+            // CDesignerCode
+            // 
+            this.CDesignerCode.AutoSize = true;
+            this.CDesignerCode.Location = new System.Drawing.Point(2, 28);
+            this.CDesignerCode.Name = "CDesignerCode";
+            this.CDesignerCode.Size = new System.Drawing.Size(14, 13);
+            this.CDesignerCode.TabIndex = 73;
+            this.CDesignerCode.TabStop = true;
+            this.CDesignerCode.Text = "C";
+            this.CDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CDesignerCode_LinkClicked);
+            // 
+            // BatchDesignerCode
+            // 
+            this.BatchDesignerCode.AutoSize = true;
+            this.BatchDesignerCode.Location = new System.Drawing.Point(3, 10);
+            this.BatchDesignerCode.Name = "BatchDesignerCode";
+            this.BatchDesignerCode.Size = new System.Drawing.Size(35, 13);
+            this.BatchDesignerCode.TabIndex = 72;
+            this.BatchDesignerCode.TabStop = true;
+            this.BatchDesignerCode.Text = "Batch";
+            this.BatchDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BatchDesignerCode_LinkClicked);
+            // 
+            // HideProgrammingLanguageListDesignerCodeBtn
+            // 
+            this.HideProgrammingLanguageListDesignerCodeBtn.BackColor = System.Drawing.Color.Red;
+            this.HideProgrammingLanguageListDesignerCodeBtn.Location = new System.Drawing.Point(3, 331);
+            this.HideProgrammingLanguageListDesignerCodeBtn.Name = "HideProgrammingLanguageListDesignerCodeBtn";
+            this.HideProgrammingLanguageListDesignerCodeBtn.Size = new System.Drawing.Size(32, 12);
+            this.HideProgrammingLanguageListDesignerCodeBtn.TabIndex = 71;
+            this.HideProgrammingLanguageListDesignerCodeBtn.Text = " ";
+            this.HideProgrammingLanguageListDesignerCodeBtn.UseVisualStyleBackColor = false;
+            this.HideProgrammingLanguageListDesignerCodeBtn.Click += new System.EventHandler(this.HideProgrammingLanguageListDesignerCodeBtn_Click);
             // 
             // DebugWindowDesignerCode
             // 
@@ -22430,7 +22517,7 @@
             this.sneakydeakyfeaturesselectionbox.Controls.Add(this.scriptedSandboxBtn);
             this.sneakydeakyfeaturesselectionbox.Controls.Add(this.aboutsneakydeakyfeatures);
             this.sneakydeakyfeaturesselectionbox.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.sneakydeakyfeaturesselectionbox.Location = new System.Drawing.Point(1146, 713);
+            this.sneakydeakyfeaturesselectionbox.Location = new System.Drawing.Point(830, 949);
             this.sneakydeakyfeaturesselectionbox.Name = "sneakydeakyfeaturesselectionbox";
             this.sneakydeakyfeaturesselectionbox.Size = new System.Drawing.Size(430, 102);
             this.sneakydeakyfeaturesselectionbox.TabIndex = 151;
@@ -23057,7 +23144,7 @@
             this.postbookonemediabox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.postbookonemediabox.Controls.Add(this.postbookonemediasigninbox);
             this.postbookonemediabox.Controls.Add(this.hidepostbookonemediabox);
-            this.postbookonemediabox.Location = new System.Drawing.Point(345, 530);
+            this.postbookonemediabox.Location = new System.Drawing.Point(22, 516);
             this.postbookonemediabox.Name = "postbookonemediabox";
             this.postbookonemediabox.Size = new System.Drawing.Size(740, 489);
             this.postbookonemediabox.TabIndex = 155;
@@ -23258,19 +23345,6 @@
             this.hidepostbookonemediabox.UseVisualStyleBackColor = true;
             this.hidepostbookonemediabox.Click += new System.EventHandler(this.hidepostbookonemediabox_Click);
             // 
-            // natotutoriallink
-            // 
-            this.natotutoriallink.AutoSize = true;
-            this.natotutoriallink.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.natotutoriallink.LinkColor = System.Drawing.Color.Red;
-            this.natotutoriallink.Location = new System.Drawing.Point(59, 162);
-            this.natotutoriallink.Name = "natotutoriallink";
-            this.natotutoriallink.Size = new System.Drawing.Size(79, 13);
-            this.natotutoriallink.TabIndex = 26;
-            this.natotutoriallink.TabStop = true;
-            this.natotutoriallink.Text = "System Tutorial";
-            this.toolTip1.SetToolTip(this.natotutoriallink, "Provides a system tutorial for your NATO-OS 7");
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -23278,6 +23352,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.ContextMenuStrip = this.RightClickMenuNATO;
+            this.Controls.Add(this.ConsoleAndShareBoxDesignerCode);
+            this.Controls.Add(this.ExtentionBoxDesignerCode);
+            this.Controls.Add(this.ProgrammingLanguageBoxDesignerCode);
             this.Controls.Add(this.postbookonemediabox);
             this.Controls.Add(this.BeatLabBox);
             this.Controls.Add(this.natospeechrecogbox);
@@ -23617,13 +23694,16 @@
             this.DesignerCode.ResumeLayout(false);
             this.DesignerCode.PerformLayout();
             this.DesignerCodeMenuStrip.ResumeLayout(false);
+            this.designercopilotboxdesignercode.ResumeLayout(false);
+            this.designercopilotboxdesignercode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sendpromptdesignercopilot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             this.ConsoleAndShareBoxDesignerCode.ResumeLayout(false);
             this.ConsoleAndShareBoxDesignerCode.PerformLayout();
             this.ExtentionBoxDesignerCode.ResumeLayout(false);
             this.ExtentionBoxDesignerCode.PerformLayout();
             this.ProgrammingLanguageBoxDesignerCode.ResumeLayout(false);
             this.ProgrammingLanguageBoxDesignerCode.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             this.DebugWindowDesignerCode.ResumeLayout(false);
             this.RightClickMenuNATO.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.natotutorialsplayer)).EndInit();
@@ -25819,5 +25899,11 @@
         private System.Windows.Forms.PictureBox postbookdevonemedialogo;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.LinkLabel natotutoriallink;
+        private System.Windows.Forms.LinkLabel DesignerCopilotDesignerCode;
+        private System.Windows.Forms.GroupBox designercopilotboxdesignercode;
+        private System.Windows.Forms.Label responcetextdesignercopilot;
+        private System.Windows.Forms.PictureBox sendpromptdesignercopilot;
+        private System.Windows.Forms.TextBox prompdesignercopilot;
+        private System.Windows.Forms.Button hidedesignercopilot;
     }
 }

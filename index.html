@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NATO-OS 7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      background: #2a2a2a;
+      padding: 12px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    nav button {
+      background: #444;
+      color: #eee;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+    nav button:hover {
+      background: #666;
+      transform: translateY(-2px);
+    }
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+    .caption {
+      text-align: center;
+      font-style: italic;
+      color: #aaa;
+      margin-top: 8px;
+    }
+    pre {
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: #0f0;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1f1f1f;
+      color: #777;
+      margin-top: 70px;
+    }
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+  <script>
+    function navigate(sectionId) {
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>NATO-OS 7 🚀</h1>
+    <p>The OS you didn’t know you needed. Built for devs, by devs.</p>
+  </header>
+
+  <nav>
+    <button onclick="navigate('#features')"><i class="fas fa-cogs"></i> Features</button>
+    <button onclick="navigate('#screenshots')"><i class="fas fa-image"></i> Screenshots</button>
+    <button onclick="navigate('#setup')"><i class="fas fa-tools"></i> Setup</button>
+    <button onclick="navigate('#roadmap')"><i class="fas fa-road"></i> Roadmap</button>
+    <button onclick="navigate('#developer')"><i class="fas fa-code"></i> Developer Items</button>
+  </nav>
+
+  <section id="features">
+    <h2>📦 Features</h2>
+    <ul>
+      <li>Custom desktop UI with icons, windows, and taskbar</li>
+      <li>60+ built-in apps including media players, text editor, paint app, chat app, and games</li>
+      <li>3D Desktop Environment toggle</li>
+      <li>Soundtrack & system sounds</li>
+      <li>App installer & file manager</li>
+      <li>SQL Server support for chat, file sharing, and database apps</li>
+    </ul>
+  </section>
+
+  <section id="screenshots">
+    <h2>📸 Screenshots</h2>
+    <div align="center">
+      <img src="github/desktop.png" alt="NATO-OS 7 Desktop Screenshot">
+      <p class="caption">Figure 1: The NATO-OS 7 desktop environment with apps running.</p>
+    </div>
+  </section>
+
+  <section id="setup">
+    <h2>⚙️ Getting Started</h2>
+    <p><strong>Requirements:</strong></p>
+    <ul>
+      <li>Windows 10/11</li>
+      <li>.NET Framework 4.8+</li>
+      <li>SQL Server</li>
+      <li>Visual Studio</li>
+    </ul>
+    <p><strong>Run the OS:</strong></p>
+    <pre>
+git clone https://github.com/yourusername/NATO-OS-7.git
+Open NATO-OS.sln in Visual Studio
+Build the solution
+Run NATOOS.exe
+    </pre>
+  </section>
+
+  <section id="roadmap">
+    <h2>🎮 Roadmap</h2>
+    <ul>
+      <li>✅ 3D Desktop Environment toggle</li>
+      <li>✅ File sharing in chat app</li>
+      <li>✅ Soundtrack & system sounds</li>
+      <li>📝 NATO-Beat (Music DAW)</li>
+      <li>📝 Online multiplayer game integration</li>
+      <li>📝 App Store system for new apps</li>
+      <li>📝 Customizable wallpapers and themes</li>
+    </ul>
+  </section>
+
+  <section id="developer">
+    <h2>👨‍💻 Developer Items</h2>
+    <ul>
+      <li><strong>App SDK:</strong> Build native NATO-OS 7 apps with our C# API templates</li>
+      <li><strong>NATO-API:</strong> Internal API layer for file system, window management, and audio control</li>
+      <li><strong>SQL Chat Backend:</strong> Full TCP/IP based messaging system with database hooks</li>
+      <li><strong>NATO-BuildTool:</strong> Command-line builder for packaging apps for the OS</li>
+      <li><strong>Plugin System:</strong> Drop-in DLL support for extending system functionalities</li>
+      <li><strong>3D Environment Framework:</strong> Toggle 3D windowed desktops via OpenTK</li>
+      <li>Full project source on <a href="https://github.com/yourusername/NATO-OS-7">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Built by <strong>Alex</strong> | <a href="https://github.com/yourusername/NATO-OS-7">GitHub Repo</a></p>
+  </footer>
+
+</body>
+</html>

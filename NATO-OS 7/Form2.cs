@@ -62,6 +62,9 @@ using Blender.Audio;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 using PostBookOneMedia.AuthLoginForm.Scope.FormTemplate.three;
+using PostBookOneMedia.Servers.NATO.Build.DesignerCode.DesignerCodeUIAgent;
+using PostBookOneMedia.Servers.NATO.Build.DesignerCode.GeminiAgentResponce;
+using Markdig;
 
 namespace NATO_OS_7
 {
@@ -69,7 +72,6 @@ namespace NATO_OS_7
 
     {
         //System Desktop Icons
-        private Panel DesktopPanel;
 
         //BangLab
 
@@ -266,32 +268,40 @@ namespace NATO_OS_7
         private bool redrawBackground = false;
         private Bitmap backgroundBitmap; // To store the generated background
         private System.Timers.Timer TickbeepTimer;
-
+        
         public Form2()
         {
 
             InitializeComponent();
+            //designer copilot
+            designercopilotboxdesignercode.Hide();
+
+            /*
+            if (this.DebugWindowBrowserDesignerCode != null)
+            {
+                this.DebugWindowBrowserDesignerCode.Dock = System.Windows.Forms.DockStyle.Fill; // Fills the available space
+                this.DebugWindowBrowserDesignerCode.ScriptErrorsSuppressed = true; // Suppress JavaScript errors
+            }
+
+            // Configure the TextBox for Send Message (CodeAreaDesignerCode)
+            // Assuming CodeAreaDesignerCode is already defined in InitializeComponent().
+            if (this.CodeAreaDesignerCode != null)
+            {
+                this.CodeAreaDesignerCode.Dock = System.Windows.Forms.DockStyle.Bottom; // Docks to the bottom
+                this.CodeAreaDesignerCode.Multiline = true; // Allow multi-line input
+                this.CodeAreaDesignerCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical; // Add vertical scrollbar if text exceeds height
+                this.CodeAreaDesignerCode.Height = 100; // Set a fixed height for the input box (adjust as needed)
+            }
+            string htmlContent = Markdig.Markdown.ToHtml(copilotMarkdownAnswer);
+
+            // Display the HTML in the WebBrowser control
+            if (this.DebugWindowBrowserDesignerCode != null)
+            {
+                this.DebugWindowBrowserDesignerCode.DocumentText = htmlContent;
+            }
+            */
             //System Desktop Icons
-            DesktopPanel = new Panel()
-            {
-                Dock = DockStyle.Fill,
-                BackColor = Color.Transparent,
-                AllowDrop = true
-            };
-            this.Controls.Add(DesktopPanel);
 
-            DesktopPanel.BringToFront();
-            DesktopPanel.DragEnter += (s, e) =>
-            {
-                if (e.Data.GetDataPresent(DataFormats.StringFormat))
-                    e.Effect = DragDropEffects.Copy;
-            };
-
-            DesktopPanel.DragDrop += (s, e) =>
-            {
-                string appName = e.Data.GetData(DataFormats.StringFormat).ToString();
-                AddDesktopIcon(appName, e.X, e.Y);
-            };
             //System Desktop Icons
             // Initialize UI Components
             BeatLabtoolStrip = new ToolStrip();
@@ -1042,94 +1052,10 @@ namespace NATO_OS_7
             };
 
 
-            //System Desktop Icons
-
+            //System Desktop Icons 
+            
         }
         //System Desktop Icons
-        private Bitmap CaptureControlImage(Control ctrl)
-        {
-            Bitmap bmp = new Bitmap(ctrl.Width, ctrl.Height);
-            ctrl.DrawToBitmap(bmp, new Rectangle(0, 0, ctrl.Width, ctrl.Height));
-            return bmp;
-        }
-
-        private Bitmap ResizeImage(Bitmap source, int width, int height)
-        {
-            Bitmap resized = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(resized))
-            {
-                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                g.DrawImage(source, 0, 0, width, height);
-            }
-            return resized;
-        }
-        private void AddDesktopIcon(string appName, int x, int y)
-        {
-            GroupBox appGroupBox = GetAppByName(appName);
-            if (appGroupBox == null)
-            {
-                MessageBox.Show($"App '{appName}' not found.");
-                return;
-            }
-
-            bool wasVisible = appGroupBox.Visible;
-            appGroupBox.Location = new Point(-2000, -2000);
-            appGroupBox.Show();
-            appGroupBox.BringToFront();
-
-            Bitmap snapshot = CaptureControlImage(appGroupBox);
-            Bitmap iconImage = ResizeImage(snapshot, 50, 50);
-
-            if (!wasVisible)
-                appGroupBox.Hide();
-
-            PictureBox icon = new PictureBox
-            {
-                Image = iconImage,
-                SizeMode = PictureBoxSizeMode.StretchImage,
-                Size = new Size(50, 50),
-                Location = DesktopPanel.PointToClient(new Point(x, y)),
-                Tag = appName,
-                Cursor = Cursors.Hand
-            };
-
-            ContextMenuStrip menu = new ContextMenuStrip();
-            menu.Items.Add("Copy as Shortcut", null, (s, e) => AddDesktopIcon(appName, icon.Left + 20, icon.Top + 20));
-            menu.Items.Add("Delete", null, (s, e) => DesktopPanel.Controls.Remove(icon));
-            icon.ContextMenuStrip = menu;
-
-            icon.DoubleClick += (s, e) => LaunchApp(appName);
-
-            DesktopPanel.Controls.Add(icon);
-        }
-
-        private GroupBox GetAppByName(string appName)
-        {
-            switch (appName)
-            {
-                case "NATOPaint": return NATOPAINTBOX;
-                case "Tetris": return TetrisGameBox;
-                // Add more cases here
-                default: return null;
-            }
-        }
-        private void LaunchApp(string appName)
-        {
-            GroupBox appGroupBox = GetAppByName(appName);
-            if (appGroupBox != null)
-            {
-                appGroupBox.Show();
-                appGroupBox.BringToFront();
-            }
-        }
-        private void AppIconMouseDownEvents(Control controlIcon, string appName)
-        {
-            controlIcon.MouseDown += (s, e) =>
-            {
-                if (e.Button == MouseButtons.Left)
-                    DoDragDrop(appName, DragDropEffects.Copy);
-            };
-        }
 
         //System Desktop Icons
         //BeatLab
@@ -18463,6 +18389,36 @@ namespace MyWindowsCode
         {
             BeatLabwmp.URL = "C:\\Users\\Alex\\source\\repos\\NATO-OS 7\\NATO-OS 7\\OS\\SYSTEM FILES\\BangLab\\assets\\TOM.mp3";
             BeatLabwmp.controls.play();
+        }
+
+        private void DesignerCopilotDesignerCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            designercopilotboxdesignercode.Show();
+        }
+
+        private async void sendpromptdesignercopilot_Click(object sender, EventArgs e)
+        {
+            // Clear previous output and show a loading message
+            responcetextdesignercopilot.Text = "Generating/Modifying code, please wait...";
+            responcetextdesignercopilot.Text = ""; // Clear non-code output
+            sendpromptdesignercopilot.Enabled = false; // Disable button during generation
+
+            string userPrompt = prompdesignercopilot.Text;
+            string existingCode = CodeAreaDesignerCode.Text;
+
+            // Call the updated API client method
+            GeminiResponse apiResponse = await GeminiApiClient.GenerateCodeFromPrompt(userPrompt, existingCode);
+
+            // Display the generated code and non-code text in separate textboxes
+            CodeAreaDesignerCode.Text = apiResponse.Code;
+            responcetextdesignercopilot.Text = apiResponse.NonCodeText;
+
+            sendpromptdesignercopilot.Enabled = true; // Re-enable button
+        }
+
+        private void hidedesignercopilot_Click(object sender, EventArgs e)
+        {
+            designercopilotboxdesignercode.Hide();
         }
 
         private void kickdrumbeatlab_Click(object sender, EventArgs e)
