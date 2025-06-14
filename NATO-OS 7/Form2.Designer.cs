@@ -400,7 +400,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.syslabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.natotutoriallink = new System.Windows.Forms.LinkLabel();
+            this.sysappdownloaderpkglink = new System.Windows.Forms.LinkLabel();
             this.allappslink = new System.Windows.Forms.LinkLabel();
             this.welcomemsglink = new System.Windows.Forms.LinkLabel();
             this.NATODesigner = new System.Windows.Forms.LinkLabel();
@@ -1275,12 +1275,26 @@
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.defualtGreyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsoleAndShareBoxDesignerCode = new System.Windows.Forms.GroupBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.ContactsTextDesignerCode = new System.Windows.Forms.Label();
+            this.LogsListBoxDesignerBox = new System.Windows.Forms.ListBox();
+            this.HideConsoleAndShareDesignerCodeBox = new System.Windows.Forms.Button();
+            this.signinwithgithubdesignercode = new System.Windows.Forms.PictureBox();
             this.designercopilotboxdesignercode = new System.Windows.Forms.GroupBox();
+            this.responcetextdesignercopilot = new System.Windows.Forms.TextBox();
             this.hidedesignercopilot = new System.Windows.Forms.Button();
-            this.responcetextdesignercopilot = new System.Windows.Forms.Label();
             this.sendpromptdesignercopilot = new System.Windows.Forms.PictureBox();
             this.prompdesignercopilot = new System.Windows.Forms.TextBox();
             this.DesignerCopilotDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.ExtentionBoxDesignerCode = new System.Windows.Forms.GroupBox();
+            this.AdditionalExtentionsBoxDesigner = new System.Windows.Forms.CheckedListBox();
+            this.SelfInstalledExtentionsDesignerCode = new System.Windows.Forms.CheckedListBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label179 = new System.Windows.Forms.Label();
+            this.SearchExtentionsDesignerCode = new System.Windows.Forms.Button();
+            this.FindExtentionsDesignerCode = new System.Windows.Forms.TextBox();
+            this.HideExtentionBox = new System.Windows.Forms.Button();
             this.ProgrammingLanguageTypeDesignerCode = new System.Windows.Forms.Label();
             this.ProgrammingLanguageDesignerCodeBox = new System.Windows.Forms.Button();
             this.SaveDesignerCode = new System.Windows.Forms.Button();
@@ -1295,31 +1309,6 @@
             this.BuildYourFirstAppInFiveMinutesButtonNATODesignerCodeButton = new System.Windows.Forms.Button();
             this.FancyDivider8 = new System.Windows.Forms.GroupBox();
             this.label176 = new System.Windows.Forms.Label();
-            this.FileNameDesignerCode = new System.Windows.Forms.TextBox();
-            this.ExtentionsLinkDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.label175 = new System.Windows.Forms.Label();
-            this.FancyDivider7 = new System.Windows.Forms.GroupBox();
-            this.label174 = new System.Windows.Forms.Label();
-            this.SharedFilesDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.UploadFolderDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.UploadFileDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.NewBlankFileDesignerCode = new System.Windows.Forms.LinkLabel();
-            this.label173 = new System.Windows.Forms.Label();
-            this.pictureBox49 = new System.Windows.Forms.PictureBox();
-            this.HideDesignerCode = new System.Windows.Forms.Button();
-            this.ConsoleAndShareBoxDesignerCode = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.ContactsTextDesignerCode = new System.Windows.Forms.Label();
-            this.LogsListBoxDesignerBox = new System.Windows.Forms.ListBox();
-            this.HideConsoleAndShareDesignerCodeBox = new System.Windows.Forms.Button();
-            this.ExtentionBoxDesignerCode = new System.Windows.Forms.GroupBox();
-            this.AdditionalExtentionsBoxDesigner = new System.Windows.Forms.CheckedListBox();
-            this.SelfInstalledExtentionsDesignerCode = new System.Windows.Forms.CheckedListBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label179 = new System.Windows.Forms.Label();
-            this.SearchExtentionsDesignerCode = new System.Windows.Forms.Button();
-            this.FindExtentionsDesignerCode = new System.Windows.Forms.TextBox();
-            this.HideExtentionBox = new System.Windows.Forms.Button();
             this.ProgrammingLanguageBoxDesignerCode = new System.Windows.Forms.GroupBox();
             this.windowsformsDesignerCode = new System.Windows.Forms.LinkLabel();
             this.XMLDesignerCode = new System.Windows.Forms.LinkLabel();
@@ -1341,6 +1330,18 @@
             this.CDesignerCode = new System.Windows.Forms.LinkLabel();
             this.BatchDesignerCode = new System.Windows.Forms.LinkLabel();
             this.HideProgrammingLanguageListDesignerCodeBtn = new System.Windows.Forms.Button();
+            this.FileNameDesignerCode = new System.Windows.Forms.TextBox();
+            this.ExtentionsLinkDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.label175 = new System.Windows.Forms.Label();
+            this.FancyDivider7 = new System.Windows.Forms.GroupBox();
+            this.label174 = new System.Windows.Forms.Label();
+            this.SharedFilesDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.UploadFolderDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.UploadFileDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.NewBlankFileDesignerCode = new System.Windows.Forms.LinkLabel();
+            this.label173 = new System.Windows.Forms.Label();
+            this.pictureBox49 = new System.Windows.Forms.PictureBox();
+            this.HideDesignerCode = new System.Windows.Forms.Button();
             this.DebugWindowDesignerCode = new System.Windows.Forms.GroupBox();
             this.RefreshDebugWindowDesigner = new System.Windows.Forms.Button();
             this.FowardDebugWindowDesignerCode = new System.Windows.Forms.Button();
@@ -2036,6 +2037,34 @@
             this.UploadMediaWidget = new System.Windows.Forms.Button();
             this.UploadMediaWidgetBtn = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
+            this.pointerToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.linklabelToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.buttonToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.groupBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.webBrowserToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.textBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
+            this.uploadgameblenderplayer = new System.Windows.Forms.Button();
+            this.refreshblendernews = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.blenderconnecttomodem = new System.Windows.Forms.Button();
+            this.debugmodenato = new System.Windows.Forms.Button();
+            this.makeyourownsonginfiveminutesbeatlablink = new System.Windows.Forms.LinkLabel();
+            this.beatlabtutorialbeatlab = new System.Windows.Forms.LinkLabel();
+            this.samplebeatbtnbeatlab = new System.Windows.Forms.Button();
+            this.NewBeatLabProject = new System.Windows.Forms.Button();
+            this.explainsthepurposeofkbddrumslinklabelbeatlab = new System.Windows.Forms.LinkLabel();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.postbookdevonemedialogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox59 = new System.Windows.Forms.PictureBox();
+            this.EnableSpeechBtn = new System.Windows.Forms.PictureBox();
+            this.HideSpeechRecogBox = new System.Windows.Forms.Button();
+            this.hidesneakydeakyfeaturesbox = new System.Windows.Forms.Button();
+            this.aboutsneakydeakyfeatures = new System.Windows.Forms.Button();
+            this.backgroundtaskpanel = new System.Windows.Forms.Panel();
+            this.blenderimagegenerate = new System.Windows.Forms.PictureBox();
+            this.radiowidgetbtn = new System.Windows.Forms.PictureBox();
             this.fishgamebtn = new System.Windows.Forms.PictureBox();
             this.pictureBox56 = new System.Windows.Forms.PictureBox();
             this.pictureBox70 = new System.Windows.Forms.PictureBox();
@@ -2045,34 +2074,6 @@
             this.ClockWidgetBtn = new System.Windows.Forms.PictureBox();
             this.RSSFeedWidgetBtn = new System.Windows.Forms.PictureBox();
             this.MediaPlayerWidgetBtn = new System.Windows.Forms.PictureBox();
-            this.pointerToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.linklabelToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.buttonToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.groupBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.webBrowserToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.textBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.pictureBoxToolboxWindowsFormsPlayer = new System.Windows.Forms.LinkLabel();
-            this.radiowidgetbtn = new System.Windows.Forms.PictureBox();
-            this.uploadgameblenderplayer = new System.Windows.Forms.Button();
-            this.blenderimagegenerate = new System.Windows.Forms.PictureBox();
-            this.refreshblendernews = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.blenderconnecttomodem = new System.Windows.Forms.Button();
-            this.backgroundtaskpanel = new System.Windows.Forms.Panel();
-            this.debugmodenato = new System.Windows.Forms.Button();
-            this.aboutsneakydeakyfeatures = new System.Windows.Forms.Button();
-            this.hidesneakydeakyfeaturesbox = new System.Windows.Forms.Button();
-            this.HideSpeechRecogBox = new System.Windows.Forms.Button();
-            this.EnableSpeechBtn = new System.Windows.Forms.PictureBox();
-            this.makeyourownsonginfiveminutesbeatlablink = new System.Windows.Forms.LinkLabel();
-            this.beatlabtutorialbeatlab = new System.Windows.Forms.LinkLabel();
-            this.samplebeatbtnbeatlab = new System.Windows.Forms.Button();
-            this.NewBeatLabProject = new System.Windows.Forms.Button();
-            this.pictureBox59 = new System.Windows.Forms.PictureBox();
-            this.explainsthepurposeofkbddrumslinklabelbeatlab = new System.Windows.Forms.LinkLabel();
-            this.postbookdevonemedialogo = new System.Windows.Forms.PictureBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.weatherBox = new System.Windows.Forms.GroupBox();
             this.hideWeather = new System.Windows.Forms.Button();
             this.weatherLabel = new System.Windows.Forms.Label();
@@ -2189,12 +2190,6 @@
             this.hideWidgetToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameBoardPlayAGame = new System.Windows.Forms.GroupBox();
             this.HideGameMail = new System.Windows.Forms.Button();
-            this.blender3dgameplayerloadingassetsbox = new System.Windows.Forms.GroupBox();
-            this.label263 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.blender3dgameplayerloadingassetsdialog = new System.Windows.Forms.Label();
-            this.label265 = new System.Windows.Forms.Label();
-            this.label266 = new System.Windows.Forms.Label();
             this.blender3dgamebox = new System.Windows.Forms.GroupBox();
             this.Blender3DPlayerExecute = new System.Windows.Forms.GroupBox();
             this.blendergamenews = new System.Windows.Forms.ListBox();
@@ -2232,9 +2227,6 @@
             this.appstatisticsgroup = new System.Windows.Forms.ListBox();
             this.hideappstatisticsbox = new System.Windows.Forms.Button();
             this.fpsTimer = new System.Windows.Forms.Timer(this.components);
-            this.sneakydeakyfeaturesselectionbox = new System.Windows.Forms.GroupBox();
-            this.phoneDialerBtn = new System.Windows.Forms.Button();
-            this.scriptedSandboxBtn = new System.Windows.Forms.Button();
             this.phoneDialerBox = new System.Windows.Forms.GroupBox();
             this.phonedialerbtnHASH = new System.Windows.Forms.Button();
             this.phonedialerbtn0 = new System.Windows.Forms.Button();
@@ -2262,8 +2254,6 @@
             this.label272 = new System.Windows.Forms.Label();
             this.phoneDialerDialBox = new System.Windows.Forms.ComboBox();
             this.label271 = new System.Windows.Forms.Label();
-            this.natospeechrecogbox = new System.Windows.Forms.GroupBox();
-            this.defaultNATOSpeechTXT = new System.Windows.Forms.Label();
             this.BeatLabBox = new System.Windows.Forms.GroupBox();
             this.BeatLabPianoBox = new System.Windows.Forms.GroupBox();
             this.HidePianoBoxBeatLab = new System.Windows.Forms.Button();
@@ -2308,6 +2298,17 @@
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.hidepostbookonemediabox = new System.Windows.Forms.Button();
+            this.natospeechrecogbox = new System.Windows.Forms.GroupBox();
+            this.defaultNATOSpeechTXT = new System.Windows.Forms.Label();
+            this.sneakydeakyfeaturesselectionbox = new System.Windows.Forms.GroupBox();
+            this.phoneDialerBtn = new System.Windows.Forms.Button();
+            this.scriptedSandboxBtn = new System.Windows.Forms.Button();
+            this.blender3dgameplayerloadingassetsbox = new System.Windows.Forms.GroupBox();
+            this.label263 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.blender3dgameplayerloadingassetsdialog = new System.Windows.Forms.Label();
+            this.label265 = new System.Windows.Forms.Label();
+            this.label266 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuimg)).BeginInit();
             this.systeminfobox.SuspendLayout();
@@ -2488,12 +2489,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             this.DesignerCode.SuspendLayout();
             this.DesignerCodeMenuStrip.SuspendLayout();
+            this.ConsoleAndShareBoxDesignerCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.signinwithgithubdesignercode)).BeginInit();
             this.designercopilotboxdesignercode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendpromptdesignercopilot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
-            this.ConsoleAndShareBoxDesignerCode.SuspendLayout();
             this.ExtentionBoxDesignerCode.SuspendLayout();
             this.ProgrammingLanguageBoxDesignerCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             this.DebugWindowDesignerCode.SuspendLayout();
             this.RightClickMenuNATO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.natotutorialsplayer)).BeginInit();
@@ -2621,6 +2623,11 @@
             this.vmwarebox.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.toolStrip8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postbookdevonemedialogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EnableSpeechBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blenderimagegenerate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiowidgetbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fishgamebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
@@ -2630,11 +2637,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ClockWidgetBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RSSFeedWidgetBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayerWidgetBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radiowidgetbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blenderimagegenerate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EnableSpeechBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postbookdevonemedialogo)).BeginInit();
             this.weatherBox.SuspendLayout();
             this.passwordmanagerbox.SuspendLayout();
             this.changepasswordboxpasswordmanager.SuspendLayout();
@@ -2661,7 +2663,6 @@
             this.DesignerCodeWindowsFormsPlayerToolStrip.SuspendLayout();
             this.HIDEUNITCONVERTERWIDGET.SuspendLayout();
             this.gameBoardPlayAGame.SuspendLayout();
-            this.blender3dgameplayerloadingassetsbox.SuspendLayout();
             this.blender3dgamebox.SuspendLayout();
             this.panel7.SuspendLayout();
             this.blenderchoicegame.SuspendLayout();
@@ -2670,10 +2671,8 @@
             this.NATOPAINTBOX.SuspendLayout();
             this.tutorialsbox.SuspendLayout();
             this.appstatisticsbox.SuspendLayout();
-            this.sneakydeakyfeaturesselectionbox.SuspendLayout();
             this.phoneDialerBox.SuspendLayout();
             this.phoneDialerSpeedDialBox.SuspendLayout();
-            this.natospeechrecogbox.SuspendLayout();
             this.BeatLabBox.SuspendLayout();
             this.BeatLabPianoBox.SuspendLayout();
             this.BeatLabProjectBox.SuspendLayout();
@@ -2690,6 +2689,9 @@
             this.postbookonemediabox.SuspendLayout();
             this.postbookonemediasigninbox.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.natospeechrecogbox.SuspendLayout();
+            this.sneakydeakyfeaturesselectionbox.SuspendLayout();
+            this.blender3dgameplayerloadingassetsbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -2748,7 +2750,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Controls.Add(this.natotutoriallink);
+            this.groupBox1.Controls.Add(this.sysappdownloaderpkglink);
             this.groupBox1.Controls.Add(this.allappslink);
             this.groupBox1.Controls.Add(this.welcomemsglink);
             this.groupBox1.Controls.Add(this.NATODesigner);
@@ -2777,18 +2779,20 @@
             this.groupBox1.Text = "Menu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // natotutoriallink
+            // sysappdownloaderpkglink
             // 
-            this.natotutoriallink.AutoSize = true;
-            this.natotutoriallink.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.natotutoriallink.LinkColor = System.Drawing.Color.Red;
-            this.natotutoriallink.Location = new System.Drawing.Point(59, 162);
-            this.natotutoriallink.Name = "natotutoriallink";
-            this.natotutoriallink.Size = new System.Drawing.Size(79, 13);
-            this.natotutoriallink.TabIndex = 26;
-            this.natotutoriallink.TabStop = true;
-            this.natotutoriallink.Text = "System Tutorial";
-            this.toolTip1.SetToolTip(this.natotutoriallink, "Provides a system tutorial for your NATO-OS 7");
+            this.sysappdownloaderpkglink.ActiveLinkColor = System.Drawing.Color.Red;
+            this.sysappdownloaderpkglink.AutoSize = true;
+            this.sysappdownloaderpkglink.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sysappdownloaderpkglink.LinkColor = System.Drawing.Color.Blue;
+            this.sysappdownloaderpkglink.Location = new System.Drawing.Point(59, 162);
+            this.sysappdownloaderpkglink.Name = "sysappdownloaderpkglink";
+            this.sysappdownloaderpkglink.Size = new System.Drawing.Size(86, 13);
+            this.sysappdownloaderpkglink.TabIndex = 26;
+            this.sysappdownloaderpkglink.TabStop = true;
+            this.sysappdownloaderpkglink.Text = "App Downloader";
+            this.toolTip1.SetToolTip(this.sysappdownloaderpkglink, "Provides a system tutorial for your NATO-OS 7");
+            this.sysappdownloaderpkglink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sysappdownloaderpkglink_LinkClicked);
             // 
             // allappslink
             // 
@@ -12075,8 +12079,11 @@
             // 
             this.DesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.DesignerCode.ContextMenuStrip = this.DesignerCodeMenuStrip;
+            this.DesignerCode.Controls.Add(this.ConsoleAndShareBoxDesignerCode);
+            this.DesignerCode.Controls.Add(this.signinwithgithubdesignercode);
             this.DesignerCode.Controls.Add(this.designercopilotboxdesignercode);
             this.DesignerCode.Controls.Add(this.DesignerCopilotDesignerCode);
+            this.DesignerCode.Controls.Add(this.ExtentionBoxDesignerCode);
             this.DesignerCode.Controls.Add(this.ProgrammingLanguageTypeDesignerCode);
             this.DesignerCode.Controls.Add(this.ProgrammingLanguageDesignerCodeBox);
             this.DesignerCode.Controls.Add(this.SaveDesignerCode);
@@ -12091,6 +12098,7 @@
             this.DesignerCode.Controls.Add(this.BuildYourFirstAppInFiveMinutesButtonNATODesignerCodeButton);
             this.DesignerCode.Controls.Add(this.FancyDivider8);
             this.DesignerCode.Controls.Add(this.label176);
+            this.DesignerCode.Controls.Add(this.ProgrammingLanguageBoxDesignerCode);
             this.DesignerCode.Controls.Add(this.FileNameDesignerCode);
             this.DesignerCode.Controls.Add(this.ExtentionsLinkDesignerCode);
             this.DesignerCode.Controls.Add(this.label175);
@@ -12104,7 +12112,7 @@
             this.DesignerCode.Controls.Add(this.pictureBox49);
             this.DesignerCode.Controls.Add(this.HideDesignerCode);
             this.DesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DesignerCode.Location = new System.Drawing.Point(778, 516);
+            this.DesignerCode.Location = new System.Drawing.Point(247, 1);
             this.DesignerCode.Name = "DesignerCode";
             this.DesignerCode.Size = new System.Drawing.Size(687, 404);
             this.DesignerCode.TabIndex = 96;
@@ -12165,11 +12173,77 @@
             this.defualtGreyToolStripMenuItem.Text = "Defualt (Grey)";
             this.defualtGreyToolStripMenuItem.Click += new System.EventHandler(this.defualtGreyToolStripMenuItem_Click);
             // 
+            // ConsoleAndShareBoxDesignerCode
+            // 
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.checkedListBox2);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.ContactsTextDesignerCode);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.LogsListBoxDesignerBox);
+            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.HideConsoleAndShareDesignerCodeBox);
+            this.ConsoleAndShareBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ConsoleAndShareBoxDesignerCode.Location = new System.Drawing.Point(112, 0);
+            this.ConsoleAndShareBoxDesignerCode.Name = "ConsoleAndShareBoxDesignerCode";
+            this.ConsoleAndShareBoxDesignerCode.Size = new System.Drawing.Size(286, 297);
+            this.ConsoleAndShareBoxDesignerCode.TabIndex = 29;
+            this.ConsoleAndShareBoxDesignerCode.TabStop = false;
+            this.ConsoleAndShareBoxDesignerCode.Text = "UAFD";
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "PostBook / postbook@postbook.net / +1 (800) 400 - 8080"});
+            this.checkedListBox2.Location = new System.Drawing.Point(8, 42);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(269, 244);
+            this.checkedListBox2.TabIndex = 3;
+            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
+            // 
+            // ContactsTextDesignerCode
+            // 
+            this.ContactsTextDesignerCode.AutoSize = true;
+            this.ContactsTextDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactsTextDesignerCode.Location = new System.Drawing.Point(8, 24);
+            this.ContactsTextDesignerCode.Name = "ContactsTextDesignerCode";
+            this.ContactsTextDesignerCode.Size = new System.Drawing.Size(76, 18);
+            this.ContactsTextDesignerCode.TabIndex = 2;
+            this.ContactsTextDesignerCode.Text = "Contacts";
+            // 
+            // LogsListBoxDesignerBox
+            // 
+            this.LogsListBoxDesignerBox.FormattingEnabled = true;
+            this.LogsListBoxDesignerBox.Location = new System.Drawing.Point(4, 28);
+            this.LogsListBoxDesignerBox.Name = "LogsListBoxDesignerBox";
+            this.LogsListBoxDesignerBox.Size = new System.Drawing.Size(278, 264);
+            this.LogsListBoxDesignerBox.TabIndex = 1;
+            // 
+            // HideConsoleAndShareDesignerCodeBox
+            // 
+            this.HideConsoleAndShareDesignerCodeBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideConsoleAndShareDesignerCodeBox.Location = new System.Drawing.Point(252, 5);
+            this.HideConsoleAndShareDesignerCodeBox.Name = "HideConsoleAndShareDesignerCodeBox";
+            this.HideConsoleAndShareDesignerCodeBox.Size = new System.Drawing.Size(34, 23);
+            this.HideConsoleAndShareDesignerCodeBox.TabIndex = 0;
+            this.HideConsoleAndShareDesignerCodeBox.Text = "X";
+            this.HideConsoleAndShareDesignerCodeBox.UseVisualStyleBackColor = true;
+            this.HideConsoleAndShareDesignerCodeBox.Click += new System.EventHandler(this.HideConsoleAndShareDesignerCodeBox_Click);
+            // 
+            // signinwithgithubdesignercode
+            // 
+            this.signinwithgithubdesignercode.Image = global::NATO_OS_7.Properties.Resources.octocat;
+            this.signinwithgithubdesignercode.Location = new System.Drawing.Point(5, 379);
+            this.signinwithgithubdesignercode.Name = "signinwithgithubdesignercode";
+            this.signinwithgithubdesignercode.Size = new System.Drawing.Size(23, 21);
+            this.signinwithgithubdesignercode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.signinwithgithubdesignercode.TabIndex = 30;
+            this.signinwithgithubdesignercode.TabStop = false;
+            this.toolTip1.SetToolTip(this.signinwithgithubdesignercode, "Sign In with GitHub");
+            this.signinwithgithubdesignercode.Click += new System.EventHandler(this.signinwithgithubdesignercode_Click);
+            // 
             // designercopilotboxdesignercode
             // 
             this.designercopilotboxdesignercode.BackColor = System.Drawing.Color.Gray;
-            this.designercopilotboxdesignercode.Controls.Add(this.hidedesignercopilot);
             this.designercopilotboxdesignercode.Controls.Add(this.responcetextdesignercopilot);
+            this.designercopilotboxdesignercode.Controls.Add(this.hidedesignercopilot);
             this.designercopilotboxdesignercode.Controls.Add(this.sendpromptdesignercopilot);
             this.designercopilotboxdesignercode.Controls.Add(this.prompdesignercopilot);
             this.designercopilotboxdesignercode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -12179,6 +12253,17 @@
             this.designercopilotboxdesignercode.TabIndex = 29;
             this.designercopilotboxdesignercode.TabStop = false;
             this.designercopilotboxdesignercode.Text = "Designer Copilot";
+            // 
+            // responcetextdesignercopilot
+            // 
+            this.responcetextdesignercopilot.Location = new System.Drawing.Point(5, 29);
+            this.responcetextdesignercopilot.Multiline = true;
+            this.responcetextdesignercopilot.Name = "responcetextdesignercopilot";
+            this.responcetextdesignercopilot.ReadOnly = true;
+            this.responcetextdesignercopilot.Size = new System.Drawing.Size(192, 247);
+            this.responcetextdesignercopilot.TabIndex = 4;
+            this.responcetextdesignercopilot.Text = "Welcome to Designer Copilot!\r\nAsk anything...\r\n";
+            this.toolTip1.SetToolTip(this.responcetextdesignercopilot, "Responce Box");
             // 
             // hidedesignercopilot
             // 
@@ -12190,15 +12275,6 @@
             this.hidedesignercopilot.Text = "X";
             this.hidedesignercopilot.UseVisualStyleBackColor = true;
             this.hidedesignercopilot.Click += new System.EventHandler(this.hidedesignercopilot_Click);
-            // 
-            // responcetextdesignercopilot
-            // 
-            this.responcetextdesignercopilot.AutoSize = true;
-            this.responcetextdesignercopilot.Location = new System.Drawing.Point(2, 39);
-            this.responcetextdesignercopilot.Name = "responcetextdesignercopilot";
-            this.responcetextdesignercopilot.Size = new System.Drawing.Size(147, 26);
-            this.responcetextdesignercopilot.TabIndex = 2;
-            this.responcetextdesignercopilot.Text = "Welcome to Designer Copilot!\r\nAsk anything...";
             // 
             // sendpromptdesignercopilot
             // 
@@ -12231,6 +12307,111 @@
             this.DesignerCopilotDesignerCode.TabStop = true;
             this.DesignerCopilotDesignerCode.Text = "Designer Copilot";
             this.DesignerCopilotDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DesignerCopilotDesignerCode_LinkClicked);
+            // 
+            // ExtentionBoxDesignerCode
+            // 
+            this.ExtentionBoxDesignerCode.Controls.Add(this.AdditionalExtentionsBoxDesigner);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.SelfInstalledExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.groupBox7);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.label179);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.SearchExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.FindExtentionsDesignerCode);
+            this.ExtentionBoxDesignerCode.Controls.Add(this.HideExtentionBox);
+            this.ExtentionBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExtentionBoxDesignerCode.Location = new System.Drawing.Point(34, 0);
+            this.ExtentionBoxDesignerCode.Name = "ExtentionBoxDesignerCode";
+            this.ExtentionBoxDesignerCode.Size = new System.Drawing.Size(285, 307);
+            this.ExtentionBoxDesignerCode.TabIndex = 28;
+            this.ExtentionBoxDesignerCode.TabStop = false;
+            this.ExtentionBoxDesignerCode.Text = "Extentions";
+            // 
+            // AdditionalExtentionsBoxDesigner
+            // 
+            this.AdditionalExtentionsBoxDesigner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AdditionalExtentionsBoxDesigner.ForeColor = System.Drawing.Color.Lime;
+            this.AdditionalExtentionsBoxDesigner.FormattingEnabled = true;
+            this.AdditionalExtentionsBoxDesigner.Items.AddRange(new object[] {
+            "Author: Sarah Lim / Batch Runner / Size: 791KB",
+            "Author: Nils Soderman / Better C++ Syntax / Size: 1.5MB",
+            "Author: Brandon Fowler / exe Runner/ Size: 208KB",
+            "Author: Christoph Schlosser / Jupyter Cell Tags / Size: 997KB",
+            "Author: Xdebug / PHP Debug / Size: 3.07MB",
+            "Author: Eno Yao / Open Browser Preview / Size: 103KB",
+            "Author: twxs / CMake Tools / Size: 1.0MB",
+            "Author: Jeff Hykin / Dev Containers / Size: 2.8MB",
+            "Author: Vadim Chugunov / CodeLLDB / Size: 5.3MB",
+            "Author: DEVSENSE / Composer / Size: 4.0MB",
+            "Author: Jon Joshuana / XML Tools / Size: 1.4MB",
+            "Author: Danjael Matkhovic / Designer Toolbars / Size: 4.7MB",
+            "Author: chjkl / Prettier / Size: 406KB",
+            "Author: Yu Zhang / Java all in one / Size: 2.2MB",
+            "Author: nanlei / All Autocomplete / Size: 738MB",
+            "Author: iOSComp / iOs & Android Editor / Size: 28.6MB",
+            "Author: Benjamin Jain / Vue 3 Support - All in one / Size: 23.1MB"});
+            this.AdditionalExtentionsBoxDesigner.Location = new System.Drawing.Point(3, 98);
+            this.AdditionalExtentionsBoxDesigner.Name = "AdditionalExtentionsBoxDesigner";
+            this.AdditionalExtentionsBoxDesigner.Size = new System.Drawing.Size(282, 199);
+            this.AdditionalExtentionsBoxDesigner.TabIndex = 6;
+            this.AdditionalExtentionsBoxDesigner.SelectedIndexChanged += new System.EventHandler(this.AdditionalExtentionsBoxDesigner_SelectedIndexChanged);
+            // 
+            // SelfInstalledExtentionsDesignerCode
+            // 
+            this.SelfInstalledExtentionsDesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SelfInstalledExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.Window;
+            this.SelfInstalledExtentionsDesignerCode.FormattingEnabled = true;
+            this.SelfInstalledExtentionsDesignerCode.Items.AddRange(new object[] {
+            "Author: NATO / Programming Extentions / Size: 5.24MB",
+            "Author: NATO / Debug Window / Size: 12.7MB"});
+            this.SelfInstalledExtentionsDesignerCode.Location = new System.Drawing.Point(3, 67);
+            this.SelfInstalledExtentionsDesignerCode.Name = "SelfInstalledExtentionsDesignerCode";
+            this.SelfInstalledExtentionsDesignerCode.Size = new System.Drawing.Size(283, 34);
+            this.SelfInstalledExtentionsDesignerCode.TabIndex = 5;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Location = new System.Drawing.Point(2, 54);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(147, 10);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            // 
+            // label179
+            // 
+            this.label179.AutoSize = true;
+            this.label179.Location = new System.Drawing.Point(2, 40);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(76, 13);
+            this.label179.TabIndex = 3;
+            this.label179.Text = "My Extentions:";
+            // 
+            // SearchExtentionsDesignerCode
+            // 
+            this.SearchExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchExtentionsDesignerCode.Location = new System.Drawing.Point(189, 9);
+            this.SearchExtentionsDesignerCode.Name = "SearchExtentionsDesignerCode";
+            this.SearchExtentionsDesignerCode.Size = new System.Drawing.Size(61, 23);
+            this.SearchExtentionsDesignerCode.TabIndex = 2;
+            this.SearchExtentionsDesignerCode.Text = "Search";
+            this.SearchExtentionsDesignerCode.UseVisualStyleBackColor = true;
+            this.SearchExtentionsDesignerCode.Click += new System.EventHandler(this.SearchExtentionsDesignerCode_Click);
+            // 
+            // FindExtentionsDesignerCode
+            // 
+            this.FindExtentionsDesignerCode.Location = new System.Drawing.Point(1, 13);
+            this.FindExtentionsDesignerCode.Name = "FindExtentionsDesignerCode";
+            this.FindExtentionsDesignerCode.Size = new System.Drawing.Size(182, 20);
+            this.FindExtentionsDesignerCode.TabIndex = 1;
+            // 
+            // HideExtentionBox
+            // 
+            this.HideExtentionBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideExtentionBox.Location = new System.Drawing.Point(260, 9);
+            this.HideExtentionBox.Name = "HideExtentionBox";
+            this.HideExtentionBox.Size = new System.Drawing.Size(23, 23);
+            this.HideExtentionBox.TabIndex = 0;
+            this.HideExtentionBox.Text = "X";
+            this.HideExtentionBox.UseVisualStyleBackColor = true;
+            this.HideExtentionBox.Click += new System.EventHandler(this.HideExtentionBox_Click);
             // 
             // ProgrammingLanguageTypeDesignerCode
             // 
@@ -12376,297 +12557,6 @@
             this.label176.TabIndex = 13;
             this.label176.Text = "Get Started";
             // 
-            // FileNameDesignerCode
-            // 
-            this.FileNameDesignerCode.Location = new System.Drawing.Point(237, 374);
-            this.FileNameDesignerCode.Name = "FileNameDesignerCode";
-            this.FileNameDesignerCode.Size = new System.Drawing.Size(91, 20);
-            this.FileNameDesignerCode.TabIndex = 12;
-            // 
-            // ExtentionsLinkDesignerCode
-            // 
-            this.ExtentionsLinkDesignerCode.AutoSize = true;
-            this.ExtentionsLinkDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtentionsLinkDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.ExtentionsLinkDesignerCode.Location = new System.Drawing.Point(4, 276);
-            this.ExtentionsLinkDesignerCode.Name = "ExtentionsLinkDesignerCode";
-            this.ExtentionsLinkDesignerCode.Size = new System.Drawing.Size(78, 16);
-            this.ExtentionsLinkDesignerCode.TabIndex = 11;
-            this.ExtentionsLinkDesignerCode.TabStop = true;
-            this.ExtentionsLinkDesignerCode.Text = "Extentions";
-            this.ExtentionsLinkDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ExtentionsLinkDesignerCode_LinkClicked);
-            // 
-            // label175
-            // 
-            this.label175.AutoSize = true;
-            this.label175.Location = new System.Drawing.Point(4, 258);
-            this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(33, 13);
-            this.label175.TabIndex = 10;
-            this.label175.Text = "Other";
-            // 
-            // FancyDivider7
-            // 
-            this.FancyDivider7.Location = new System.Drawing.Point(3, 248);
-            this.FancyDivider7.Name = "FancyDivider7";
-            this.FancyDivider7.Size = new System.Drawing.Size(126, 10);
-            this.FancyDivider7.TabIndex = 9;
-            this.FancyDivider7.TabStop = false;
-            // 
-            // label174
-            // 
-            this.label174.AutoSize = true;
-            this.label174.Font = new System.Drawing.Font("MS PGothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label174.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label174.Location = new System.Drawing.Point(179, 96);
-            this.label174.Name = "label174";
-            this.label174.Size = new System.Drawing.Size(237, 19);
-            this.label174.TabIndex = 8;
-            this.label174.Text = "A Nato Authentic® brand";
-            // 
-            // SharedFilesDesignerCode
-            // 
-            this.SharedFilesDesignerCode.AutoSize = true;
-            this.SharedFilesDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SharedFilesDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.SharedFilesDesignerCode.Location = new System.Drawing.Point(6, 198);
-            this.SharedFilesDesignerCode.Name = "SharedFilesDesignerCode";
-            this.SharedFilesDesignerCode.Size = new System.Drawing.Size(114, 16);
-            this.SharedFilesDesignerCode.TabIndex = 7;
-            this.SharedFilesDesignerCode.TabStop = true;
-            this.SharedFilesDesignerCode.Text = "Shared Files (0)";
-            this.SharedFilesDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SharedFilesDesignerCode_LinkClicked);
-            // 
-            // UploadFolderDesignerCode
-            // 
-            this.UploadFolderDesignerCode.AutoSize = true;
-            this.UploadFolderDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadFolderDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.UploadFolderDesignerCode.Location = new System.Drawing.Point(6, 176);
-            this.UploadFolderDesignerCode.Name = "UploadFolderDesignerCode";
-            this.UploadFolderDesignerCode.Size = new System.Drawing.Size(100, 16);
-            this.UploadFolderDesignerCode.TabIndex = 6;
-            this.UploadFolderDesignerCode.TabStop = true;
-            this.UploadFolderDesignerCode.Text = "Upload Folder";
-            this.UploadFolderDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UploadFolderDesignerCode_LinkClicked);
-            // 
-            // UploadFileDesignerCode
-            // 
-            this.UploadFileDesignerCode.AutoSize = true;
-            this.UploadFileDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadFileDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.UploadFileDesignerCode.Location = new System.Drawing.Point(5, 155);
-            this.UploadFileDesignerCode.Name = "UploadFileDesignerCode";
-            this.UploadFileDesignerCode.Size = new System.Drawing.Size(81, 16);
-            this.UploadFileDesignerCode.TabIndex = 5;
-            this.UploadFileDesignerCode.TabStop = true;
-            this.UploadFileDesignerCode.Text = "Upload File";
-            this.UploadFileDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UploadFileDesignerCode_LinkClicked);
-            // 
-            // NewBlankFileDesignerCode
-            // 
-            this.NewBlankFileDesignerCode.AutoSize = true;
-            this.NewBlankFileDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewBlankFileDesignerCode.LinkColor = System.Drawing.Color.Gold;
-            this.NewBlankFileDesignerCode.Location = new System.Drawing.Point(5, 133);
-            this.NewBlankFileDesignerCode.Name = "NewBlankFileDesignerCode";
-            this.NewBlankFileDesignerCode.Size = new System.Drawing.Size(105, 16);
-            this.NewBlankFileDesignerCode.TabIndex = 4;
-            this.NewBlankFileDesignerCode.TabStop = true;
-            this.NewBlankFileDesignerCode.Text = "New Blank File";
-            this.NewBlankFileDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewBlankFileDesignerCode_LinkClicked);
-            // 
-            // label173
-            // 
-            this.label173.AutoSize = true;
-            this.label173.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label173.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label173.Location = new System.Drawing.Point(164, 20);
-            this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(473, 73);
-            this.label173.TabIndex = 3;
-            this.label173.Text = "Designer Code";
-            // 
-            // pictureBox49
-            // 
-            this.pictureBox49.Image = global::NATO_OS_7.Properties.Resources.Ico_HTML2;
-            this.pictureBox49.Location = new System.Drawing.Point(8, 11);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(144, 118);
-            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox49.TabIndex = 2;
-            this.pictureBox49.TabStop = false;
-            // 
-            // HideDesignerCode
-            // 
-            this.HideDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideDesignerCode.Location = new System.Drawing.Point(652, 7);
-            this.HideDesignerCode.Name = "HideDesignerCode";
-            this.HideDesignerCode.Size = new System.Drawing.Size(34, 23);
-            this.HideDesignerCode.TabIndex = 1;
-            this.HideDesignerCode.Text = "X";
-            this.HideDesignerCode.UseVisualStyleBackColor = true;
-            this.HideDesignerCode.Click += new System.EventHandler(this.HideDesignerCode_Click);
-            // 
-            // ConsoleAndShareBoxDesignerCode
-            // 
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.checkedListBox2);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.ContactsTextDesignerCode);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.LogsListBoxDesignerBox);
-            this.ConsoleAndShareBoxDesignerCode.Controls.Add(this.HideConsoleAndShareDesignerCodeBox);
-            this.ConsoleAndShareBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ConsoleAndShareBoxDesignerCode.Location = new System.Drawing.Point(373, 1011);
-            this.ConsoleAndShareBoxDesignerCode.Name = "ConsoleAndShareBoxDesignerCode";
-            this.ConsoleAndShareBoxDesignerCode.Size = new System.Drawing.Size(286, 297);
-            this.ConsoleAndShareBoxDesignerCode.TabIndex = 29;
-            this.ConsoleAndShareBoxDesignerCode.TabStop = false;
-            this.ConsoleAndShareBoxDesignerCode.Text = "UAFD";
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "PostBook / postbook@postbook.net / +1 (800) 400 - 8080"});
-            this.checkedListBox2.Location = new System.Drawing.Point(8, 42);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(269, 244);
-            this.checkedListBox2.TabIndex = 3;
-            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
-            // 
-            // ContactsTextDesignerCode
-            // 
-            this.ContactsTextDesignerCode.AutoSize = true;
-            this.ContactsTextDesignerCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactsTextDesignerCode.Location = new System.Drawing.Point(8, 24);
-            this.ContactsTextDesignerCode.Name = "ContactsTextDesignerCode";
-            this.ContactsTextDesignerCode.Size = new System.Drawing.Size(76, 18);
-            this.ContactsTextDesignerCode.TabIndex = 2;
-            this.ContactsTextDesignerCode.Text = "Contacts";
-            // 
-            // LogsListBoxDesignerBox
-            // 
-            this.LogsListBoxDesignerBox.FormattingEnabled = true;
-            this.LogsListBoxDesignerBox.Location = new System.Drawing.Point(4, 28);
-            this.LogsListBoxDesignerBox.Name = "LogsListBoxDesignerBox";
-            this.LogsListBoxDesignerBox.Size = new System.Drawing.Size(278, 264);
-            this.LogsListBoxDesignerBox.TabIndex = 1;
-            // 
-            // HideConsoleAndShareDesignerCodeBox
-            // 
-            this.HideConsoleAndShareDesignerCodeBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideConsoleAndShareDesignerCodeBox.Location = new System.Drawing.Point(252, 5);
-            this.HideConsoleAndShareDesignerCodeBox.Name = "HideConsoleAndShareDesignerCodeBox";
-            this.HideConsoleAndShareDesignerCodeBox.Size = new System.Drawing.Size(34, 23);
-            this.HideConsoleAndShareDesignerCodeBox.TabIndex = 0;
-            this.HideConsoleAndShareDesignerCodeBox.Text = "X";
-            this.HideConsoleAndShareDesignerCodeBox.UseVisualStyleBackColor = true;
-            this.HideConsoleAndShareDesignerCodeBox.Click += new System.EventHandler(this.HideConsoleAndShareDesignerCodeBox_Click);
-            // 
-            // ExtentionBoxDesignerCode
-            // 
-            this.ExtentionBoxDesignerCode.Controls.Add(this.AdditionalExtentionsBoxDesigner);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.SelfInstalledExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.groupBox7);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.label179);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.SearchExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.FindExtentionsDesignerCode);
-            this.ExtentionBoxDesignerCode.Controls.Add(this.HideExtentionBox);
-            this.ExtentionBoxDesignerCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExtentionBoxDesignerCode.Location = new System.Drawing.Point(364, 1031);
-            this.ExtentionBoxDesignerCode.Name = "ExtentionBoxDesignerCode";
-            this.ExtentionBoxDesignerCode.Size = new System.Drawing.Size(285, 307);
-            this.ExtentionBoxDesignerCode.TabIndex = 28;
-            this.ExtentionBoxDesignerCode.TabStop = false;
-            this.ExtentionBoxDesignerCode.Text = "Extentions";
-            // 
-            // AdditionalExtentionsBoxDesigner
-            // 
-            this.AdditionalExtentionsBoxDesigner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AdditionalExtentionsBoxDesigner.ForeColor = System.Drawing.Color.Lime;
-            this.AdditionalExtentionsBoxDesigner.FormattingEnabled = true;
-            this.AdditionalExtentionsBoxDesigner.Items.AddRange(new object[] {
-            "Author: Sarah Lim / Batch Runner / Size: 791KB",
-            "Author: Nils Soderman / Better C++ Syntax / Size: 1.5MB",
-            "Author: Brandon Fowler / exe Runner/ Size: 208KB",
-            "Author: Christoph Schlosser / Jupyter Cell Tags / Size: 997KB",
-            "Author: Xdebug / PHP Debug / Size: 3.07MB",
-            "Author: Eno Yao / Open Browser Preview / Size: 103KB",
-            "Author: twxs / CMake Tools / Size: 1.0MB",
-            "Author: Jeff Hykin / Dev Containers / Size: 2.8MB",
-            "Author: Vadim Chugunov / CodeLLDB / Size: 5.3MB",
-            "Author: DEVSENSE / Composer / Size: 4.0MB",
-            "Author: Jon Joshuana / XML Tools / Size: 1.4MB",
-            "Author: Danjael Matkhovic / Designer Toolbars / Size: 4.7MB",
-            "Author: chjkl / Prettier / Size: 406KB",
-            "Author: Yu Zhang / Java all in one / Size: 2.2MB",
-            "Author: nanlei / All Autocomplete / Size: 738MB",
-            "Author: iOSComp / iOs & Android Editor / Size: 28.6MB",
-            "Author: Benjamin Jain / Vue 3 Support - All in one / Size: 23.1MB"});
-            this.AdditionalExtentionsBoxDesigner.Location = new System.Drawing.Point(3, 98);
-            this.AdditionalExtentionsBoxDesigner.Name = "AdditionalExtentionsBoxDesigner";
-            this.AdditionalExtentionsBoxDesigner.Size = new System.Drawing.Size(282, 199);
-            this.AdditionalExtentionsBoxDesigner.TabIndex = 6;
-            this.AdditionalExtentionsBoxDesigner.SelectedIndexChanged += new System.EventHandler(this.AdditionalExtentionsBoxDesigner_SelectedIndexChanged);
-            // 
-            // SelfInstalledExtentionsDesignerCode
-            // 
-            this.SelfInstalledExtentionsDesignerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SelfInstalledExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.Window;
-            this.SelfInstalledExtentionsDesignerCode.FormattingEnabled = true;
-            this.SelfInstalledExtentionsDesignerCode.Items.AddRange(new object[] {
-            "Author: NATO / Programming Extentions / Size: 5.24MB",
-            "Author: NATO / Debug Window / Size: 12.7MB"});
-            this.SelfInstalledExtentionsDesignerCode.Location = new System.Drawing.Point(3, 67);
-            this.SelfInstalledExtentionsDesignerCode.Name = "SelfInstalledExtentionsDesignerCode";
-            this.SelfInstalledExtentionsDesignerCode.Size = new System.Drawing.Size(283, 34);
-            this.SelfInstalledExtentionsDesignerCode.TabIndex = 5;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Location = new System.Drawing.Point(2, 54);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(147, 10);
-            this.groupBox7.TabIndex = 4;
-            this.groupBox7.TabStop = false;
-            // 
-            // label179
-            // 
-            this.label179.AutoSize = true;
-            this.label179.Location = new System.Drawing.Point(2, 40);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(76, 13);
-            this.label179.TabIndex = 3;
-            this.label179.Text = "My Extentions:";
-            // 
-            // SearchExtentionsDesignerCode
-            // 
-            this.SearchExtentionsDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchExtentionsDesignerCode.Location = new System.Drawing.Point(189, 9);
-            this.SearchExtentionsDesignerCode.Name = "SearchExtentionsDesignerCode";
-            this.SearchExtentionsDesignerCode.Size = new System.Drawing.Size(61, 23);
-            this.SearchExtentionsDesignerCode.TabIndex = 2;
-            this.SearchExtentionsDesignerCode.Text = "Search";
-            this.SearchExtentionsDesignerCode.UseVisualStyleBackColor = true;
-            this.SearchExtentionsDesignerCode.Click += new System.EventHandler(this.SearchExtentionsDesignerCode_Click);
-            // 
-            // FindExtentionsDesignerCode
-            // 
-            this.FindExtentionsDesignerCode.Location = new System.Drawing.Point(1, 13);
-            this.FindExtentionsDesignerCode.Name = "FindExtentionsDesignerCode";
-            this.FindExtentionsDesignerCode.Size = new System.Drawing.Size(182, 20);
-            this.FindExtentionsDesignerCode.TabIndex = 1;
-            // 
-            // HideExtentionBox
-            // 
-            this.HideExtentionBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideExtentionBox.Location = new System.Drawing.Point(260, 9);
-            this.HideExtentionBox.Name = "HideExtentionBox";
-            this.HideExtentionBox.Size = new System.Drawing.Size(23, 23);
-            this.HideExtentionBox.TabIndex = 0;
-            this.HideExtentionBox.Text = "X";
-            this.HideExtentionBox.UseVisualStyleBackColor = true;
-            this.HideExtentionBox.Click += new System.EventHandler(this.HideExtentionBox_Click);
-            // 
             // ProgrammingLanguageBoxDesignerCode
             // 
             this.ProgrammingLanguageBoxDesignerCode.BackColor = System.Drawing.Color.White;
@@ -12690,7 +12580,7 @@
             this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.CDesignerCode);
             this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.BatchDesignerCode);
             this.ProgrammingLanguageBoxDesignerCode.Controls.Add(this.HideProgrammingLanguageListDesignerCodeBtn);
-            this.ProgrammingLanguageBoxDesignerCode.Location = new System.Drawing.Point(663, 1041);
+            this.ProgrammingLanguageBoxDesignerCode.Location = new System.Drawing.Point(511, 18);
             this.ProgrammingLanguageBoxDesignerCode.Name = "ProgrammingLanguageBoxDesignerCode";
             this.ProgrammingLanguageBoxDesignerCode.Size = new System.Drawing.Size(138, 347);
             this.ProgrammingLanguageBoxDesignerCode.TabIndex = 26;
@@ -12914,6 +12804,138 @@
             this.HideProgrammingLanguageListDesignerCodeBtn.Text = " ";
             this.HideProgrammingLanguageListDesignerCodeBtn.UseVisualStyleBackColor = false;
             this.HideProgrammingLanguageListDesignerCodeBtn.Click += new System.EventHandler(this.HideProgrammingLanguageListDesignerCodeBtn_Click);
+            // 
+            // FileNameDesignerCode
+            // 
+            this.FileNameDesignerCode.Location = new System.Drawing.Point(237, 374);
+            this.FileNameDesignerCode.Name = "FileNameDesignerCode";
+            this.FileNameDesignerCode.Size = new System.Drawing.Size(91, 20);
+            this.FileNameDesignerCode.TabIndex = 12;
+            // 
+            // ExtentionsLinkDesignerCode
+            // 
+            this.ExtentionsLinkDesignerCode.AutoSize = true;
+            this.ExtentionsLinkDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtentionsLinkDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.ExtentionsLinkDesignerCode.Location = new System.Drawing.Point(4, 276);
+            this.ExtentionsLinkDesignerCode.Name = "ExtentionsLinkDesignerCode";
+            this.ExtentionsLinkDesignerCode.Size = new System.Drawing.Size(78, 16);
+            this.ExtentionsLinkDesignerCode.TabIndex = 11;
+            this.ExtentionsLinkDesignerCode.TabStop = true;
+            this.ExtentionsLinkDesignerCode.Text = "Extentions";
+            this.ExtentionsLinkDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ExtentionsLinkDesignerCode_LinkClicked);
+            // 
+            // label175
+            // 
+            this.label175.AutoSize = true;
+            this.label175.Location = new System.Drawing.Point(4, 258);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(33, 13);
+            this.label175.TabIndex = 10;
+            this.label175.Text = "Other";
+            // 
+            // FancyDivider7
+            // 
+            this.FancyDivider7.Location = new System.Drawing.Point(3, 248);
+            this.FancyDivider7.Name = "FancyDivider7";
+            this.FancyDivider7.Size = new System.Drawing.Size(126, 10);
+            this.FancyDivider7.TabIndex = 9;
+            this.FancyDivider7.TabStop = false;
+            // 
+            // label174
+            // 
+            this.label174.AutoSize = true;
+            this.label174.Font = new System.Drawing.Font("MS PGothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label174.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label174.Location = new System.Drawing.Point(179, 96);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(237, 19);
+            this.label174.TabIndex = 8;
+            this.label174.Text = "A Nato Authentic® brand";
+            // 
+            // SharedFilesDesignerCode
+            // 
+            this.SharedFilesDesignerCode.AutoSize = true;
+            this.SharedFilesDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SharedFilesDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.SharedFilesDesignerCode.Location = new System.Drawing.Point(6, 198);
+            this.SharedFilesDesignerCode.Name = "SharedFilesDesignerCode";
+            this.SharedFilesDesignerCode.Size = new System.Drawing.Size(114, 16);
+            this.SharedFilesDesignerCode.TabIndex = 7;
+            this.SharedFilesDesignerCode.TabStop = true;
+            this.SharedFilesDesignerCode.Text = "Shared Files (0)";
+            this.SharedFilesDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SharedFilesDesignerCode_LinkClicked);
+            // 
+            // UploadFolderDesignerCode
+            // 
+            this.UploadFolderDesignerCode.AutoSize = true;
+            this.UploadFolderDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadFolderDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.UploadFolderDesignerCode.Location = new System.Drawing.Point(6, 176);
+            this.UploadFolderDesignerCode.Name = "UploadFolderDesignerCode";
+            this.UploadFolderDesignerCode.Size = new System.Drawing.Size(100, 16);
+            this.UploadFolderDesignerCode.TabIndex = 6;
+            this.UploadFolderDesignerCode.TabStop = true;
+            this.UploadFolderDesignerCode.Text = "Upload Folder";
+            this.UploadFolderDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UploadFolderDesignerCode_LinkClicked);
+            // 
+            // UploadFileDesignerCode
+            // 
+            this.UploadFileDesignerCode.AutoSize = true;
+            this.UploadFileDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadFileDesignerCode.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.UploadFileDesignerCode.Location = new System.Drawing.Point(5, 155);
+            this.UploadFileDesignerCode.Name = "UploadFileDesignerCode";
+            this.UploadFileDesignerCode.Size = new System.Drawing.Size(81, 16);
+            this.UploadFileDesignerCode.TabIndex = 5;
+            this.UploadFileDesignerCode.TabStop = true;
+            this.UploadFileDesignerCode.Text = "Upload File";
+            this.UploadFileDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UploadFileDesignerCode_LinkClicked);
+            // 
+            // NewBlankFileDesignerCode
+            // 
+            this.NewBlankFileDesignerCode.AutoSize = true;
+            this.NewBlankFileDesignerCode.Font = new System.Drawing.Font("MS PGothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewBlankFileDesignerCode.LinkColor = System.Drawing.Color.Gold;
+            this.NewBlankFileDesignerCode.Location = new System.Drawing.Point(5, 133);
+            this.NewBlankFileDesignerCode.Name = "NewBlankFileDesignerCode";
+            this.NewBlankFileDesignerCode.Size = new System.Drawing.Size(105, 16);
+            this.NewBlankFileDesignerCode.TabIndex = 4;
+            this.NewBlankFileDesignerCode.TabStop = true;
+            this.NewBlankFileDesignerCode.Text = "New Blank File";
+            this.NewBlankFileDesignerCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewBlankFileDesignerCode_LinkClicked);
+            // 
+            // label173
+            // 
+            this.label173.AutoSize = true;
+            this.label173.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label173.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label173.Location = new System.Drawing.Point(164, 20);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(473, 73);
+            this.label173.TabIndex = 3;
+            this.label173.Text = "Designer Code";
+            // 
+            // pictureBox49
+            // 
+            this.pictureBox49.Image = global::NATO_OS_7.Properties.Resources.Ico_HTML2;
+            this.pictureBox49.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox49.Name = "pictureBox49";
+            this.pictureBox49.Size = new System.Drawing.Size(144, 118);
+            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox49.TabIndex = 2;
+            this.pictureBox49.TabStop = false;
+            // 
+            // HideDesignerCode
+            // 
+            this.HideDesignerCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideDesignerCode.Location = new System.Drawing.Point(652, 7);
+            this.HideDesignerCode.Name = "HideDesignerCode";
+            this.HideDesignerCode.Size = new System.Drawing.Size(34, 23);
+            this.HideDesignerCode.TabIndex = 1;
+            this.HideDesignerCode.Text = "X";
+            this.HideDesignerCode.UseVisualStyleBackColor = true;
+            this.HideDesignerCode.Click += new System.EventHandler(this.HideDesignerCode_Click);
             // 
             // DebugWindowDesignerCode
             // 
@@ -20126,6 +20148,331 @@
             this.textBox33.Text = "Sticky Note";
             this.toolTip1.SetToolTip(this.textBox33, "Click to type...");
             // 
+            // pointerToolboxWindowsFormsPlayer
+            // 
+            this.pointerToolboxWindowsFormsPlayer.AutoSize = true;
+            this.pointerToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pointerToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 74);
+            this.pointerToolboxWindowsFormsPlayer.Name = "pointerToolboxWindowsFormsPlayer";
+            this.pointerToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(40, 13);
+            this.pointerToolboxWindowsFormsPlayer.TabIndex = 4;
+            this.pointerToolboxWindowsFormsPlayer.TabStop = true;
+            this.pointerToolboxWindowsFormsPlayer.Text = "Pointer";
+            this.toolTip1.SetToolTip(this.pointerToolboxWindowsFormsPlayer, "Pointer");
+            this.pointerToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.pointerToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // linklabelToolboxWindowsFormsPlayer
+            // 
+            this.linklabelToolboxWindowsFormsPlayer.AutoSize = true;
+            this.linklabelToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.linklabelToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 91);
+            this.linklabelToolboxWindowsFormsPlayer.Name = "linklabelToolboxWindowsFormsPlayer";
+            this.linklabelToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(53, 13);
+            this.linklabelToolboxWindowsFormsPlayer.TabIndex = 5;
+            this.linklabelToolboxWindowsFormsPlayer.TabStop = true;
+            this.linklabelToolboxWindowsFormsPlayer.Text = "LinkLabel";
+            this.toolTip1.SetToolTip(this.linklabelToolboxWindowsFormsPlayer, "Displays a link that is mainly used for Hyperlink functionalities.");
+            this.linklabelToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabelToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // buttonToolboxWindowsFormsPlayer
+            // 
+            this.buttonToolboxWindowsFormsPlayer.AutoSize = true;
+            this.buttonToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 125);
+            this.buttonToolboxWindowsFormsPlayer.Name = "buttonToolboxWindowsFormsPlayer";
+            this.buttonToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(38, 13);
+            this.buttonToolboxWindowsFormsPlayer.TabIndex = 7;
+            this.buttonToolboxWindowsFormsPlayer.TabStop = true;
+            this.buttonToolboxWindowsFormsPlayer.Text = "Button";
+            this.toolTip1.SetToolTip(this.buttonToolboxWindowsFormsPlayer, "Raises an event when the user clicks it.");
+            this.buttonToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.buttonToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // groupBoxToolboxWindowsFormsPlayer
+            // 
+            this.groupBoxToolboxWindowsFormsPlayer.AutoSize = true;
+            this.groupBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 108);
+            this.groupBoxToolboxWindowsFormsPlayer.Name = "groupBoxToolboxWindowsFormsPlayer";
+            this.groupBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(54, 13);
+            this.groupBoxToolboxWindowsFormsPlayer.TabIndex = 6;
+            this.groupBoxToolboxWindowsFormsPlayer.TabStop = true;
+            this.groupBoxToolboxWindowsFormsPlayer.Text = "GroupBox";
+            this.toolTip1.SetToolTip(this.groupBoxToolboxWindowsFormsPlayer, "Displays a frame around a group of options");
+            this.groupBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.groupBoxToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // webBrowserToolboxWindowsFormsPlayer
+            // 
+            this.webBrowserToolboxWindowsFormsPlayer.AutoSize = true;
+            this.webBrowserToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.webBrowserToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 195);
+            this.webBrowserToolboxWindowsFormsPlayer.Name = "webBrowserToolboxWindowsFormsPlayer";
+            this.webBrowserToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(68, 13);
+            this.webBrowserToolboxWindowsFormsPlayer.TabIndex = 11;
+            this.webBrowserToolboxWindowsFormsPlayer.TabStop = true;
+            this.webBrowserToolboxWindowsFormsPlayer.Text = "WebBrowser";
+            this.toolTip1.SetToolTip(this.webBrowserToolboxWindowsFormsPlayer, "Enables the user to access web pages in a form");
+            this.webBrowserToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.webBrowserToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // textBoxToolboxWindowsFormsPlayer
+            // 
+            this.textBoxToolboxWindowsFormsPlayer.AutoSize = true;
+            this.textBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 178);
+            this.textBoxToolboxWindowsFormsPlayer.Name = "textBoxToolboxWindowsFormsPlayer";
+            this.textBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(46, 13);
+            this.textBoxToolboxWindowsFormsPlayer.TabIndex = 10;
+            this.textBoxToolboxWindowsFormsPlayer.TabStop = true;
+            this.textBoxToolboxWindowsFormsPlayer.Text = "TextBox";
+            this.toolTip1.SetToolTip(this.textBoxToolboxWindowsFormsPlayer, "Enables the user to display text");
+            this.textBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.textBoxToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // windowsMediaPlayerToolboxWindowsFormsPlayer
+            // 
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.AutoSize = true;
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 161);
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Name = "windowsMediaPlayerToolboxWindowsFormsPlayer";
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(109, 13);
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.TabIndex = 9;
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.TabStop = true;
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Text = "WindowsMediaPlayer";
+            this.toolTip1.SetToolTip(this.windowsMediaPlayerToolboxWindowsFormsPlayer, "Windows Media Player");
+            this.windowsMediaPlayerToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.windowsMediaPlayerToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // pictureBoxToolboxWindowsFormsPlayer
+            // 
+            this.pictureBoxToolboxWindowsFormsPlayer.AutoSize = true;
+            this.pictureBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 144);
+            this.pictureBoxToolboxWindowsFormsPlayer.Name = "pictureBoxToolboxWindowsFormsPlayer";
+            this.pictureBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(58, 13);
+            this.pictureBoxToolboxWindowsFormsPlayer.TabIndex = 8;
+            this.pictureBoxToolboxWindowsFormsPlayer.TabStop = true;
+            this.pictureBoxToolboxWindowsFormsPlayer.Text = "PictureBox";
+            this.toolTip1.SetToolTip(this.pictureBoxToolboxWindowsFormsPlayer, "Displays an image.");
+            this.pictureBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.pictureBoxToolboxWindowsFormsPlayer_LinkClicked);
+            // 
+            // uploadgameblenderplayer
+            // 
+            this.uploadgameblenderplayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadgameblenderplayer.Location = new System.Drawing.Point(9, 30);
+            this.uploadgameblenderplayer.Name = "uploadgameblenderplayer";
+            this.uploadgameblenderplayer.Size = new System.Drawing.Size(148, 23);
+            this.uploadgameblenderplayer.TabIndex = 1;
+            this.uploadgameblenderplayer.Text = "Upload game...";
+            this.toolTip1.SetToolTip(this.uploadgameblenderplayer, "Play game in Blender");
+            this.uploadgameblenderplayer.UseVisualStyleBackColor = true;
+            this.uploadgameblenderplayer.Click += new System.EventHandler(this.uploadgameblenderplayer_Click);
+            // 
+            // refreshblendernews
+            // 
+            this.refreshblendernews.Location = new System.Drawing.Point(107, 180);
+            this.refreshblendernews.Name = "refreshblendernews";
+            this.refreshblendernews.Size = new System.Drawing.Size(75, 23);
+            this.refreshblendernews.TabIndex = 7;
+            this.refreshblendernews.Text = "Refresh";
+            this.toolTip1.SetToolTip(this.refreshblendernews, "Refresh News");
+            this.refreshblendernews.UseVisualStyleBackColor = true;
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(9, 125);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(75, 23);
+            this.button31.TabIndex = 5;
+            this.button31.Text = "Start";
+            this.toolTip1.SetToolTip(this.button31, "Connect to game server");
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // blenderconnecttomodem
+            // 
+            this.blenderconnecttomodem.Location = new System.Drawing.Point(85, 125);
+            this.blenderconnecttomodem.Name = "blenderconnecttomodem";
+            this.blenderconnecttomodem.Size = new System.Drawing.Size(75, 23);
+            this.blenderconnecttomodem.TabIndex = 6;
+            this.blenderconnecttomodem.Text = "Connect";
+            this.toolTip1.SetToolTip(this.blenderconnecttomodem, "Connect to modem");
+            this.blenderconnecttomodem.UseVisualStyleBackColor = true;
+            this.blenderconnecttomodem.Click += new System.EventHandler(this.blenderconnecttomodem_Click);
+            // 
+            // debugmodenato
+            // 
+            this.debugmodenato.Location = new System.Drawing.Point(8, 424);
+            this.debugmodenato.Name = "debugmodenato";
+            this.debugmodenato.Size = new System.Drawing.Size(82, 23);
+            this.debugmodenato.TabIndex = 4;
+            this.debugmodenato.Text = "Debug Mode";
+            this.toolTip1.SetToolTip(this.debugmodenato, "Sets the system in debug mode");
+            this.debugmodenato.UseVisualStyleBackColor = true;
+            this.debugmodenato.Click += new System.EventHandler(this.debugmodenato_Click);
+            // 
+            // makeyourownsonginfiveminutesbeatlablink
+            // 
+            this.makeyourownsonginfiveminutesbeatlablink.AutoSize = true;
+            this.makeyourownsonginfiveminutesbeatlablink.Location = new System.Drawing.Point(134, 111);
+            this.makeyourownsonginfiveminutesbeatlablink.Name = "makeyourownsonginfiveminutesbeatlablink";
+            this.makeyourownsonginfiveminutesbeatlablink.Size = new System.Drawing.Size(168, 13);
+            this.makeyourownsonginfiveminutesbeatlablink.TabIndex = 5;
+            this.makeyourownsonginfiveminutesbeatlablink.TabStop = true;
+            this.makeyourownsonginfiveminutesbeatlablink.Text = "Make your own song in 5 minutes!";
+            this.toolTip1.SetToolTip(this.makeyourownsonginfiveminutesbeatlablink, "BeatLab Tutorial");
+            this.makeyourownsonginfiveminutesbeatlablink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeyourownsonginfiveminutesbeatlablink_LinkClicked);
+            // 
+            // beatlabtutorialbeatlab
+            // 
+            this.beatlabtutorialbeatlab.AutoSize = true;
+            this.beatlabtutorialbeatlab.Location = new System.Drawing.Point(134, 124);
+            this.beatlabtutorialbeatlab.Name = "beatlabtutorialbeatlab";
+            this.beatlabtutorialbeatlab.Size = new System.Drawing.Size(85, 13);
+            this.beatlabtutorialbeatlab.TabIndex = 7;
+            this.beatlabtutorialbeatlab.TabStop = true;
+            this.beatlabtutorialbeatlab.Text = "BeatLab Tutorial";
+            this.toolTip1.SetToolTip(this.beatlabtutorialbeatlab, "BeatLab Tutorial");
+            this.beatlabtutorialbeatlab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.beatlabtutorialbeatlab_LinkClicked);
+            // 
+            // samplebeatbtnbeatlab
+            // 
+            this.samplebeatbtnbeatlab.Location = new System.Drawing.Point(557, 111);
+            this.samplebeatbtnbeatlab.Name = "samplebeatbtnbeatlab";
+            this.samplebeatbtnbeatlab.Size = new System.Drawing.Size(75, 23);
+            this.samplebeatbtnbeatlab.TabIndex = 9;
+            this.samplebeatbtnbeatlab.Text = "Sample Beat";
+            this.toolTip1.SetToolTip(this.samplebeatbtnbeatlab, "Plays a sample beat");
+            this.samplebeatbtnbeatlab.UseVisualStyleBackColor = true;
+            this.samplebeatbtnbeatlab.Click += new System.EventHandler(this.samplebeatbtnbeatlab_Click);
+            // 
+            // NewBeatLabProject
+            // 
+            this.NewBeatLabProject.Location = new System.Drawing.Point(21, 23);
+            this.NewBeatLabProject.Name = "NewBeatLabProject";
+            this.NewBeatLabProject.Size = new System.Drawing.Size(75, 23);
+            this.NewBeatLabProject.TabIndex = 0;
+            this.NewBeatLabProject.Text = "New";
+            this.toolTip1.SetToolTip(this.NewBeatLabProject, "Opens a new BeatLab Project");
+            this.NewBeatLabProject.UseVisualStyleBackColor = true;
+            this.NewBeatLabProject.Click += new System.EventHandler(this.NewBeatLabProject_Click);
+            // 
+            // explainsthepurposeofkbddrumslinklabelbeatlab
+            // 
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.AutoSize = true;
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.Location = new System.Drawing.Point(550, 345);
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.Name = "explainsthepurposeofkbddrumslinklabelbeatlab";
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.Size = new System.Drawing.Size(65, 13);
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.TabIndex = 77;
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.TabStop = true;
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.Text = "What\'s this?";
+            this.toolTip1.SetToolTip(this.explainsthepurposeofkbddrumslinklabelbeatlab, "Explains the purpose of keyboard drums");
+            this.explainsthepurposeofkbddrumslinklabelbeatlab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.explainsthepurposeofkbddrumslinklabelbeatlab_LinkClicked);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Location = new System.Drawing.Point(0, 0);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(730, 431);
+            this.groupBox14.TabIndex = 2;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Dashboard";
+            this.toolTip1.SetToolTip(this.groupBox14, "1");
+            // 
+            // postbookdevonemedialogo
+            // 
+            this.postbookdevonemedialogo.Image = ((System.Drawing.Image)(resources.GetObject("postbookdevonemedialogo.Image")));
+            this.postbookdevonemedialogo.Location = new System.Drawing.Point(81, 71);
+            this.postbookdevonemedialogo.Name = "postbookdevonemedialogo";
+            this.postbookdevonemedialogo.Size = new System.Drawing.Size(511, 85);
+            this.postbookdevonemedialogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.postbookdevonemedialogo.TabIndex = 7;
+            this.postbookdevonemedialogo.TabStop = false;
+            this.toolTip1.SetToolTip(this.postbookdevonemedialogo, "Click to view credits");
+            this.postbookdevonemedialogo.Click += new System.EventHandler(this.postbookdevonemedialogo_Click);
+            // 
+            // pictureBox59
+            // 
+            this.pictureBox59.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox59.Image")));
+            this.pictureBox59.Location = new System.Drawing.Point(8, 18);
+            this.pictureBox59.Name = "pictureBox59";
+            this.pictureBox59.Size = new System.Drawing.Size(403, 347);
+            this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox59.TabIndex = 58;
+            this.pictureBox59.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox59, "Drum Interactive");
+            // 
+            // EnableSpeechBtn
+            // 
+            this.EnableSpeechBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EnableSpeechBtn.BackgroundImage")));
+            this.EnableSpeechBtn.Location = new System.Drawing.Point(4, 10);
+            this.EnableSpeechBtn.Name = "EnableSpeechBtn";
+            this.EnableSpeechBtn.Size = new System.Drawing.Size(55, 55);
+            this.EnableSpeechBtn.TabIndex = 2;
+            this.EnableSpeechBtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.EnableSpeechBtn, "Click to start speech");
+            this.EnableSpeechBtn.Click += new System.EventHandler(this.EnableSpeechBtn_Click);
+            // 
+            // HideSpeechRecogBox
+            // 
+            this.HideSpeechRecogBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HideSpeechRecogBox.Location = new System.Drawing.Point(283, 10);
+            this.HideSpeechRecogBox.Name = "HideSpeechRecogBox";
+            this.HideSpeechRecogBox.Size = new System.Drawing.Size(29, 55);
+            this.HideSpeechRecogBox.TabIndex = 1;
+            this.HideSpeechRecogBox.Text = "X";
+            this.toolTip1.SetToolTip(this.HideSpeechRecogBox, "Hide Speech Box");
+            this.HideSpeechRecogBox.UseVisualStyleBackColor = true;
+            this.HideSpeechRecogBox.Click += new System.EventHandler(this.HideSpeechRecogBox_Click);
+            // 
+            // hidesneakydeakyfeaturesbox
+            // 
+            this.hidesneakydeakyfeaturesbox.Location = new System.Drawing.Point(395, 0);
+            this.hidesneakydeakyfeaturesbox.Name = "hidesneakydeakyfeaturesbox";
+            this.hidesneakydeakyfeaturesbox.Size = new System.Drawing.Size(35, 23);
+            this.hidesneakydeakyfeaturesbox.TabIndex = 2;
+            this.hidesneakydeakyfeaturesbox.Text = "X";
+            this.toolTip1.SetToolTip(this.hidesneakydeakyfeaturesbox, "About Sneaky Deaky Features");
+            this.hidesneakydeakyfeaturesbox.UseVisualStyleBackColor = true;
+            this.hidesneakydeakyfeaturesbox.Click += new System.EventHandler(this.hidesneakydeakyfeaturesbox_Click);
+            // 
+            // aboutsneakydeakyfeatures
+            // 
+            this.aboutsneakydeakyfeatures.Location = new System.Drawing.Point(350, 73);
+            this.aboutsneakydeakyfeatures.Name = "aboutsneakydeakyfeatures";
+            this.aboutsneakydeakyfeatures.Size = new System.Drawing.Size(75, 23);
+            this.aboutsneakydeakyfeatures.TabIndex = 0;
+            this.aboutsneakydeakyfeatures.Text = "About";
+            this.toolTip1.SetToolTip(this.aboutsneakydeakyfeatures, "About Sneaky Deaky Features");
+            this.aboutsneakydeakyfeatures.UseVisualStyleBackColor = true;
+            this.aboutsneakydeakyfeatures.Click += new System.EventHandler(this.aboutsneakydeakyfeatures_Click);
+            // 
+            // backgroundtaskpanel
+            // 
+            this.backgroundtaskpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backgroundtaskpanel.BackgroundImage")));
+            this.backgroundtaskpanel.Location = new System.Drawing.Point(0, 1);
+            this.backgroundtaskpanel.Name = "backgroundtaskpanel";
+            this.backgroundtaskpanel.Size = new System.Drawing.Size(26, 29);
+            this.backgroundtaskpanel.TabIndex = 71;
+            this.toolTip1.SetToolTip(this.backgroundtaskpanel, "No background tasks running.");
+            // 
+            // blenderimagegenerate
+            // 
+            this.blenderimagegenerate.Location = new System.Drawing.Point(207, 27);
+            this.blenderimagegenerate.Name = "blenderimagegenerate";
+            this.blenderimagegenerate.Size = new System.Drawing.Size(100, 100);
+            this.blenderimagegenerate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blenderimagegenerate.TabIndex = 4;
+            this.blenderimagegenerate.TabStop = false;
+            this.toolTip1.SetToolTip(this.blenderimagegenerate, "Preview of the Blender 3D version");
+            // 
+            // radiowidgetbtn
+            // 
+            this.radiowidgetbtn.Image = ((System.Drawing.Image)(resources.GetObject("radiowidgetbtn.Image")));
+            this.radiowidgetbtn.Location = new System.Drawing.Point(587, 194);
+            this.radiowidgetbtn.Name = "radiowidgetbtn";
+            this.radiowidgetbtn.Size = new System.Drawing.Size(142, 138);
+            this.radiowidgetbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radiowidgetbtn.TabIndex = 23;
+            this.radiowidgetbtn.TabStop = false;
+            this.toolTip1.SetToolTip(this.radiowidgetbtn, "Launches the Unit Converter Widget");
+            this.radiowidgetbtn.Click += new System.EventHandler(this.radiowidgetbtn_Click);
+            // 
             // fishgamebtn
             // 
             this.fishgamebtn.Image = global::NATO_OS_7.Properties.Resources.WidgetImage;
@@ -20233,331 +20580,6 @@
             this.MediaPlayerWidgetBtn.TabStop = false;
             this.toolTip1.SetToolTip(this.MediaPlayerWidgetBtn, "Launches the Media Widget");
             this.MediaPlayerWidgetBtn.Click += new System.EventHandler(this.MediaPlayerWidgetBtn_Click);
-            // 
-            // pointerToolboxWindowsFormsPlayer
-            // 
-            this.pointerToolboxWindowsFormsPlayer.AutoSize = true;
-            this.pointerToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pointerToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 74);
-            this.pointerToolboxWindowsFormsPlayer.Name = "pointerToolboxWindowsFormsPlayer";
-            this.pointerToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(40, 13);
-            this.pointerToolboxWindowsFormsPlayer.TabIndex = 4;
-            this.pointerToolboxWindowsFormsPlayer.TabStop = true;
-            this.pointerToolboxWindowsFormsPlayer.Text = "Pointer";
-            this.toolTip1.SetToolTip(this.pointerToolboxWindowsFormsPlayer, "Pointer");
-            this.pointerToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.pointerToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // linklabelToolboxWindowsFormsPlayer
-            // 
-            this.linklabelToolboxWindowsFormsPlayer.AutoSize = true;
-            this.linklabelToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linklabelToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 91);
-            this.linklabelToolboxWindowsFormsPlayer.Name = "linklabelToolboxWindowsFormsPlayer";
-            this.linklabelToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(53, 13);
-            this.linklabelToolboxWindowsFormsPlayer.TabIndex = 5;
-            this.linklabelToolboxWindowsFormsPlayer.TabStop = true;
-            this.linklabelToolboxWindowsFormsPlayer.Text = "LinkLabel";
-            this.toolTip1.SetToolTip(this.linklabelToolboxWindowsFormsPlayer, "Displays a link that is mainly used for Hyperlink functionalities.");
-            this.linklabelToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabelToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // buttonToolboxWindowsFormsPlayer
-            // 
-            this.buttonToolboxWindowsFormsPlayer.AutoSize = true;
-            this.buttonToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 125);
-            this.buttonToolboxWindowsFormsPlayer.Name = "buttonToolboxWindowsFormsPlayer";
-            this.buttonToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(38, 13);
-            this.buttonToolboxWindowsFormsPlayer.TabIndex = 7;
-            this.buttonToolboxWindowsFormsPlayer.TabStop = true;
-            this.buttonToolboxWindowsFormsPlayer.Text = "Button";
-            this.toolTip1.SetToolTip(this.buttonToolboxWindowsFormsPlayer, "Raises an event when the user clicks it.");
-            this.buttonToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.buttonToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // groupBoxToolboxWindowsFormsPlayer
-            // 
-            this.groupBoxToolboxWindowsFormsPlayer.AutoSize = true;
-            this.groupBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 108);
-            this.groupBoxToolboxWindowsFormsPlayer.Name = "groupBoxToolboxWindowsFormsPlayer";
-            this.groupBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(54, 13);
-            this.groupBoxToolboxWindowsFormsPlayer.TabIndex = 6;
-            this.groupBoxToolboxWindowsFormsPlayer.TabStop = true;
-            this.groupBoxToolboxWindowsFormsPlayer.Text = "GroupBox";
-            this.toolTip1.SetToolTip(this.groupBoxToolboxWindowsFormsPlayer, "Displays a frame around a group of options");
-            this.groupBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.groupBoxToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // webBrowserToolboxWindowsFormsPlayer
-            // 
-            this.webBrowserToolboxWindowsFormsPlayer.AutoSize = true;
-            this.webBrowserToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.webBrowserToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 195);
-            this.webBrowserToolboxWindowsFormsPlayer.Name = "webBrowserToolboxWindowsFormsPlayer";
-            this.webBrowserToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(68, 13);
-            this.webBrowserToolboxWindowsFormsPlayer.TabIndex = 11;
-            this.webBrowserToolboxWindowsFormsPlayer.TabStop = true;
-            this.webBrowserToolboxWindowsFormsPlayer.Text = "WebBrowser";
-            this.toolTip1.SetToolTip(this.webBrowserToolboxWindowsFormsPlayer, "Enables the user to access web pages in a form");
-            this.webBrowserToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.webBrowserToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // textBoxToolboxWindowsFormsPlayer
-            // 
-            this.textBoxToolboxWindowsFormsPlayer.AutoSize = true;
-            this.textBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 178);
-            this.textBoxToolboxWindowsFormsPlayer.Name = "textBoxToolboxWindowsFormsPlayer";
-            this.textBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(46, 13);
-            this.textBoxToolboxWindowsFormsPlayer.TabIndex = 10;
-            this.textBoxToolboxWindowsFormsPlayer.TabStop = true;
-            this.textBoxToolboxWindowsFormsPlayer.Text = "TextBox";
-            this.toolTip1.SetToolTip(this.textBoxToolboxWindowsFormsPlayer, "Enables the user to display text");
-            this.textBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.textBoxToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // windowsMediaPlayerToolboxWindowsFormsPlayer
-            // 
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.AutoSize = true;
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 161);
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Name = "windowsMediaPlayerToolboxWindowsFormsPlayer";
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(109, 13);
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.TabIndex = 9;
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.TabStop = true;
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.Text = "WindowsMediaPlayer";
-            this.toolTip1.SetToolTip(this.windowsMediaPlayerToolboxWindowsFormsPlayer, "Windows Media Player");
-            this.windowsMediaPlayerToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.windowsMediaPlayerToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // pictureBoxToolboxWindowsFormsPlayer
-            // 
-            this.pictureBoxToolboxWindowsFormsPlayer.AutoSize = true;
-            this.pictureBoxToolboxWindowsFormsPlayer.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBoxToolboxWindowsFormsPlayer.Location = new System.Drawing.Point(460, 144);
-            this.pictureBoxToolboxWindowsFormsPlayer.Name = "pictureBoxToolboxWindowsFormsPlayer";
-            this.pictureBoxToolboxWindowsFormsPlayer.Size = new System.Drawing.Size(58, 13);
-            this.pictureBoxToolboxWindowsFormsPlayer.TabIndex = 8;
-            this.pictureBoxToolboxWindowsFormsPlayer.TabStop = true;
-            this.pictureBoxToolboxWindowsFormsPlayer.Text = "PictureBox";
-            this.toolTip1.SetToolTip(this.pictureBoxToolboxWindowsFormsPlayer, "Displays an image.");
-            this.pictureBoxToolboxWindowsFormsPlayer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.pictureBoxToolboxWindowsFormsPlayer_LinkClicked);
-            // 
-            // radiowidgetbtn
-            // 
-            this.radiowidgetbtn.Image = ((System.Drawing.Image)(resources.GetObject("radiowidgetbtn.Image")));
-            this.radiowidgetbtn.Location = new System.Drawing.Point(587, 194);
-            this.radiowidgetbtn.Name = "radiowidgetbtn";
-            this.radiowidgetbtn.Size = new System.Drawing.Size(142, 138);
-            this.radiowidgetbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.radiowidgetbtn.TabIndex = 23;
-            this.radiowidgetbtn.TabStop = false;
-            this.toolTip1.SetToolTip(this.radiowidgetbtn, "Launches the Unit Converter Widget");
-            this.radiowidgetbtn.Click += new System.EventHandler(this.radiowidgetbtn_Click);
-            // 
-            // uploadgameblenderplayer
-            // 
-            this.uploadgameblenderplayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadgameblenderplayer.Location = new System.Drawing.Point(9, 30);
-            this.uploadgameblenderplayer.Name = "uploadgameblenderplayer";
-            this.uploadgameblenderplayer.Size = new System.Drawing.Size(148, 23);
-            this.uploadgameblenderplayer.TabIndex = 1;
-            this.uploadgameblenderplayer.Text = "Upload game...";
-            this.toolTip1.SetToolTip(this.uploadgameblenderplayer, "Play game in Blender");
-            this.uploadgameblenderplayer.UseVisualStyleBackColor = true;
-            this.uploadgameblenderplayer.Click += new System.EventHandler(this.uploadgameblenderplayer_Click);
-            // 
-            // blenderimagegenerate
-            // 
-            this.blenderimagegenerate.Location = new System.Drawing.Point(207, 27);
-            this.blenderimagegenerate.Name = "blenderimagegenerate";
-            this.blenderimagegenerate.Size = new System.Drawing.Size(100, 100);
-            this.blenderimagegenerate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blenderimagegenerate.TabIndex = 4;
-            this.blenderimagegenerate.TabStop = false;
-            this.toolTip1.SetToolTip(this.blenderimagegenerate, "Preview of the Blender 3D version");
-            // 
-            // refreshblendernews
-            // 
-            this.refreshblendernews.Location = new System.Drawing.Point(107, 180);
-            this.refreshblendernews.Name = "refreshblendernews";
-            this.refreshblendernews.Size = new System.Drawing.Size(75, 23);
-            this.refreshblendernews.TabIndex = 7;
-            this.refreshblendernews.Text = "Refresh";
-            this.toolTip1.SetToolTip(this.refreshblendernews, "Refresh News");
-            this.refreshblendernews.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(9, 125);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 23);
-            this.button31.TabIndex = 5;
-            this.button31.Text = "Start";
-            this.toolTip1.SetToolTip(this.button31, "Connect to game server");
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // blenderconnecttomodem
-            // 
-            this.blenderconnecttomodem.Location = new System.Drawing.Point(85, 125);
-            this.blenderconnecttomodem.Name = "blenderconnecttomodem";
-            this.blenderconnecttomodem.Size = new System.Drawing.Size(75, 23);
-            this.blenderconnecttomodem.TabIndex = 6;
-            this.blenderconnecttomodem.Text = "Connect";
-            this.toolTip1.SetToolTip(this.blenderconnecttomodem, "Connect to modem");
-            this.blenderconnecttomodem.UseVisualStyleBackColor = true;
-            this.blenderconnecttomodem.Click += new System.EventHandler(this.blenderconnecttomodem_Click);
-            // 
-            // backgroundtaskpanel
-            // 
-            this.backgroundtaskpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backgroundtaskpanel.BackgroundImage")));
-            this.backgroundtaskpanel.Location = new System.Drawing.Point(0, 1);
-            this.backgroundtaskpanel.Name = "backgroundtaskpanel";
-            this.backgroundtaskpanel.Size = new System.Drawing.Size(26, 29);
-            this.backgroundtaskpanel.TabIndex = 71;
-            this.toolTip1.SetToolTip(this.backgroundtaskpanel, "No background tasks running.");
-            // 
-            // debugmodenato
-            // 
-            this.debugmodenato.Location = new System.Drawing.Point(8, 424);
-            this.debugmodenato.Name = "debugmodenato";
-            this.debugmodenato.Size = new System.Drawing.Size(82, 23);
-            this.debugmodenato.TabIndex = 4;
-            this.debugmodenato.Text = "Debug Mode";
-            this.toolTip1.SetToolTip(this.debugmodenato, "Sets the system in debug mode");
-            this.debugmodenato.UseVisualStyleBackColor = true;
-            this.debugmodenato.Click += new System.EventHandler(this.debugmodenato_Click);
-            // 
-            // aboutsneakydeakyfeatures
-            // 
-            this.aboutsneakydeakyfeatures.Location = new System.Drawing.Point(350, 73);
-            this.aboutsneakydeakyfeatures.Name = "aboutsneakydeakyfeatures";
-            this.aboutsneakydeakyfeatures.Size = new System.Drawing.Size(75, 23);
-            this.aboutsneakydeakyfeatures.TabIndex = 0;
-            this.aboutsneakydeakyfeatures.Text = "About";
-            this.toolTip1.SetToolTip(this.aboutsneakydeakyfeatures, "About Sneaky Deaky Features");
-            this.aboutsneakydeakyfeatures.UseVisualStyleBackColor = true;
-            this.aboutsneakydeakyfeatures.Click += new System.EventHandler(this.aboutsneakydeakyfeatures_Click);
-            // 
-            // hidesneakydeakyfeaturesbox
-            // 
-            this.hidesneakydeakyfeaturesbox.Location = new System.Drawing.Point(395, 0);
-            this.hidesneakydeakyfeaturesbox.Name = "hidesneakydeakyfeaturesbox";
-            this.hidesneakydeakyfeaturesbox.Size = new System.Drawing.Size(35, 23);
-            this.hidesneakydeakyfeaturesbox.TabIndex = 2;
-            this.hidesneakydeakyfeaturesbox.Text = "X";
-            this.toolTip1.SetToolTip(this.hidesneakydeakyfeaturesbox, "About Sneaky Deaky Features");
-            this.hidesneakydeakyfeaturesbox.UseVisualStyleBackColor = true;
-            this.hidesneakydeakyfeaturesbox.Click += new System.EventHandler(this.hidesneakydeakyfeaturesbox_Click);
-            // 
-            // HideSpeechRecogBox
-            // 
-            this.HideSpeechRecogBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HideSpeechRecogBox.Location = new System.Drawing.Point(283, 10);
-            this.HideSpeechRecogBox.Name = "HideSpeechRecogBox";
-            this.HideSpeechRecogBox.Size = new System.Drawing.Size(29, 55);
-            this.HideSpeechRecogBox.TabIndex = 1;
-            this.HideSpeechRecogBox.Text = "X";
-            this.toolTip1.SetToolTip(this.HideSpeechRecogBox, "Hide Speech Box");
-            this.HideSpeechRecogBox.UseVisualStyleBackColor = true;
-            this.HideSpeechRecogBox.Click += new System.EventHandler(this.HideSpeechRecogBox_Click);
-            // 
-            // EnableSpeechBtn
-            // 
-            this.EnableSpeechBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EnableSpeechBtn.BackgroundImage")));
-            this.EnableSpeechBtn.Location = new System.Drawing.Point(4, 10);
-            this.EnableSpeechBtn.Name = "EnableSpeechBtn";
-            this.EnableSpeechBtn.Size = new System.Drawing.Size(55, 55);
-            this.EnableSpeechBtn.TabIndex = 2;
-            this.EnableSpeechBtn.TabStop = false;
-            this.toolTip1.SetToolTip(this.EnableSpeechBtn, "Click to start speech");
-            this.EnableSpeechBtn.Click += new System.EventHandler(this.EnableSpeechBtn_Click);
-            // 
-            // makeyourownsonginfiveminutesbeatlablink
-            // 
-            this.makeyourownsonginfiveminutesbeatlablink.AutoSize = true;
-            this.makeyourownsonginfiveminutesbeatlablink.Location = new System.Drawing.Point(134, 111);
-            this.makeyourownsonginfiveminutesbeatlablink.Name = "makeyourownsonginfiveminutesbeatlablink";
-            this.makeyourownsonginfiveminutesbeatlablink.Size = new System.Drawing.Size(168, 13);
-            this.makeyourownsonginfiveminutesbeatlablink.TabIndex = 5;
-            this.makeyourownsonginfiveminutesbeatlablink.TabStop = true;
-            this.makeyourownsonginfiveminutesbeatlablink.Text = "Make your own song in 5 minutes!";
-            this.toolTip1.SetToolTip(this.makeyourownsonginfiveminutesbeatlablink, "BeatLab Tutorial");
-            this.makeyourownsonginfiveminutesbeatlablink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.makeyourownsonginfiveminutesbeatlablink_LinkClicked);
-            // 
-            // beatlabtutorialbeatlab
-            // 
-            this.beatlabtutorialbeatlab.AutoSize = true;
-            this.beatlabtutorialbeatlab.Location = new System.Drawing.Point(134, 124);
-            this.beatlabtutorialbeatlab.Name = "beatlabtutorialbeatlab";
-            this.beatlabtutorialbeatlab.Size = new System.Drawing.Size(85, 13);
-            this.beatlabtutorialbeatlab.TabIndex = 7;
-            this.beatlabtutorialbeatlab.TabStop = true;
-            this.beatlabtutorialbeatlab.Text = "BeatLab Tutorial";
-            this.toolTip1.SetToolTip(this.beatlabtutorialbeatlab, "BeatLab Tutorial");
-            this.beatlabtutorialbeatlab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.beatlabtutorialbeatlab_LinkClicked);
-            // 
-            // samplebeatbtnbeatlab
-            // 
-            this.samplebeatbtnbeatlab.Location = new System.Drawing.Point(557, 111);
-            this.samplebeatbtnbeatlab.Name = "samplebeatbtnbeatlab";
-            this.samplebeatbtnbeatlab.Size = new System.Drawing.Size(75, 23);
-            this.samplebeatbtnbeatlab.TabIndex = 9;
-            this.samplebeatbtnbeatlab.Text = "Sample Beat";
-            this.toolTip1.SetToolTip(this.samplebeatbtnbeatlab, "Plays a sample beat");
-            this.samplebeatbtnbeatlab.UseVisualStyleBackColor = true;
-            this.samplebeatbtnbeatlab.Click += new System.EventHandler(this.samplebeatbtnbeatlab_Click);
-            // 
-            // NewBeatLabProject
-            // 
-            this.NewBeatLabProject.Location = new System.Drawing.Point(21, 23);
-            this.NewBeatLabProject.Name = "NewBeatLabProject";
-            this.NewBeatLabProject.Size = new System.Drawing.Size(75, 23);
-            this.NewBeatLabProject.TabIndex = 0;
-            this.NewBeatLabProject.Text = "New";
-            this.toolTip1.SetToolTip(this.NewBeatLabProject, "Opens a new BeatLab Project");
-            this.NewBeatLabProject.UseVisualStyleBackColor = true;
-            this.NewBeatLabProject.Click += new System.EventHandler(this.NewBeatLabProject_Click);
-            // 
-            // pictureBox59
-            // 
-            this.pictureBox59.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox59.Image")));
-            this.pictureBox59.Location = new System.Drawing.Point(8, 18);
-            this.pictureBox59.Name = "pictureBox59";
-            this.pictureBox59.Size = new System.Drawing.Size(403, 347);
-            this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox59.TabIndex = 58;
-            this.pictureBox59.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox59, "Drum Interactive");
-            // 
-            // explainsthepurposeofkbddrumslinklabelbeatlab
-            // 
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.AutoSize = true;
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.Location = new System.Drawing.Point(550, 345);
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.Name = "explainsthepurposeofkbddrumslinklabelbeatlab";
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.Size = new System.Drawing.Size(65, 13);
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.TabIndex = 77;
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.TabStop = true;
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.Text = "What\'s this?";
-            this.toolTip1.SetToolTip(this.explainsthepurposeofkbddrumslinklabelbeatlab, "Explains the purpose of keyboard drums");
-            this.explainsthepurposeofkbddrumslinklabelbeatlab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.explainsthepurposeofkbddrumslinklabelbeatlab_LinkClicked);
-            // 
-            // postbookdevonemedialogo
-            // 
-            this.postbookdevonemedialogo.Image = ((System.Drawing.Image)(resources.GetObject("postbookdevonemedialogo.Image")));
-            this.postbookdevonemedialogo.Location = new System.Drawing.Point(81, 71);
-            this.postbookdevonemedialogo.Name = "postbookdevonemedialogo";
-            this.postbookdevonemedialogo.Size = new System.Drawing.Size(511, 85);
-            this.postbookdevonemedialogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.postbookdevonemedialogo.TabIndex = 7;
-            this.postbookdevonemedialogo.TabStop = false;
-            this.toolTip1.SetToolTip(this.postbookdevonemedialogo, "Click to view credits");
-            this.postbookdevonemedialogo.Click += new System.EventHandler(this.postbookdevonemedialogo_Click);
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Location = new System.Drawing.Point(0, 0);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(730, 431);
-            this.groupBox14.TabIndex = 2;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Dashboard";
-            this.toolTip1.SetToolTip(this.groupBox14, "1");
             // 
             // weatherBox
             // 
@@ -22053,71 +22075,6 @@
             this.HideGameMail.UseVisualStyleBackColor = false;
             this.HideGameMail.Click += new System.EventHandler(this.HideGameMail_Click);
             // 
-            // blender3dgameplayerloadingassetsbox
-            // 
-            this.blender3dgameplayerloadingassetsbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blender3dgameplayerloadingassetsbox.BackgroundImage")));
-            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label263);
-            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.progressBar2);
-            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.blender3dgameplayerloadingassetsdialog);
-            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label265);
-            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label266);
-            this.blender3dgameplayerloadingassetsbox.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.blender3dgameplayerloadingassetsbox.ForeColor = System.Drawing.Color.White;
-            this.blender3dgameplayerloadingassetsbox.Location = new System.Drawing.Point(180, 176);
-            this.blender3dgameplayerloadingassetsbox.Name = "blender3dgameplayerloadingassetsbox";
-            this.blender3dgameplayerloadingassetsbox.Size = new System.Drawing.Size(396, 178);
-            this.blender3dgameplayerloadingassetsbox.TabIndex = 145;
-            this.blender3dgameplayerloadingassetsbox.TabStop = false;
-            // 
-            // label263
-            // 
-            this.label263.AutoSize = true;
-            this.label263.BackColor = System.Drawing.Color.Transparent;
-            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label263.Location = new System.Drawing.Point(108, 63);
-            this.label263.Name = "label263";
-            this.label263.Size = new System.Drawing.Size(164, 15);
-            this.label263.TabIndex = 5;
-            this.label263.Text = "3D Game Player | Ver. 16.8.2";
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(67, 144);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(252, 23);
-            this.progressBar2.TabIndex = 4;
-            // 
-            // blender3dgameplayerloadingassetsdialog
-            // 
-            this.blender3dgameplayerloadingassetsdialog.AutoSize = true;
-            this.blender3dgameplayerloadingassetsdialog.BackColor = System.Drawing.Color.Transparent;
-            this.blender3dgameplayerloadingassetsdialog.Location = new System.Drawing.Point(200, 84);
-            this.blender3dgameplayerloadingassetsdialog.Name = "blender3dgameplayerloadingassetsdialog";
-            this.blender3dgameplayerloadingassetsdialog.Size = new System.Drawing.Size(70, 13);
-            this.blender3dgameplayerloadingassetsdialog.TabIndex = 3;
-            this.blender3dgameplayerloadingassetsdialog.Text = "none avalible";
-            // 
-            // label265
-            // 
-            this.label265.AutoSize = true;
-            this.label265.BackColor = System.Drawing.Color.Transparent;
-            this.label265.Location = new System.Drawing.Point(108, 84);
-            this.label265.Name = "label265";
-            this.label265.Size = new System.Drawing.Size(91, 13);
-            this.label265.TabIndex = 2;
-            this.label265.Text = "Extracting Assets:";
-            // 
-            // label266
-            // 
-            this.label266.AutoSize = true;
-            this.label266.BackColor = System.Drawing.Color.Transparent;
-            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label266.Location = new System.Drawing.Point(113, 21);
-            this.label266.Name = "label266";
-            this.label266.Size = new System.Drawing.Size(147, 42);
-            this.label266.TabIndex = 0;
-            this.label266.Text = "Blender";
-            // 
             // blender3dgamebox
             // 
             this.blender3dgamebox.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -22507,43 +22464,6 @@
             this.hideappstatisticsbox.UseVisualStyleBackColor = true;
             this.hideappstatisticsbox.Click += new System.EventHandler(this.hideappstatisticsbox_Click);
             // 
-            // sneakydeakyfeaturesselectionbox
-            // 
-            this.sneakydeakyfeaturesselectionbox.BackColor = System.Drawing.Color.White;
-            this.sneakydeakyfeaturesselectionbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sneakydeakyfeaturesselectionbox.BackgroundImage")));
-            this.sneakydeakyfeaturesselectionbox.ContextMenuStrip = this.HIDEUNITCONVERTERWIDGET;
-            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.phoneDialerBtn);
-            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.hidesneakydeakyfeaturesbox);
-            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.scriptedSandboxBtn);
-            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.aboutsneakydeakyfeatures);
-            this.sneakydeakyfeaturesselectionbox.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.sneakydeakyfeaturesselectionbox.Location = new System.Drawing.Point(830, 949);
-            this.sneakydeakyfeaturesselectionbox.Name = "sneakydeakyfeaturesselectionbox";
-            this.sneakydeakyfeaturesselectionbox.Size = new System.Drawing.Size(430, 102);
-            this.sneakydeakyfeaturesselectionbox.TabIndex = 151;
-            this.sneakydeakyfeaturesselectionbox.TabStop = false;
-            this.sneakydeakyfeaturesselectionbox.Text = "Sneaky Deaky Features";
-            // 
-            // phoneDialerBtn
-            // 
-            this.phoneDialerBtn.Location = new System.Drawing.Point(128, 19);
-            this.phoneDialerBtn.Name = "phoneDialerBtn";
-            this.phoneDialerBtn.Size = new System.Drawing.Size(119, 23);
-            this.phoneDialerBtn.TabIndex = 3;
-            this.phoneDialerBtn.Text = "Phone Dialer";
-            this.phoneDialerBtn.UseVisualStyleBackColor = true;
-            this.phoneDialerBtn.Click += new System.EventHandler(this.phoneDialerBtn_Click);
-            // 
-            // scriptedSandboxBtn
-            // 
-            this.scriptedSandboxBtn.Location = new System.Drawing.Point(5, 19);
-            this.scriptedSandboxBtn.Name = "scriptedSandboxBtn";
-            this.scriptedSandboxBtn.Size = new System.Drawing.Size(119, 23);
-            this.scriptedSandboxBtn.TabIndex = 1;
-            this.scriptedSandboxBtn.Text = "Scripted Sandbox";
-            this.scriptedSandboxBtn.UseVisualStyleBackColor = true;
-            this.scriptedSandboxBtn.Click += new System.EventHandler(this.scriptedSandboxBtn_Click);
-            // 
             // phoneDialerBox
             // 
             this.phoneDialerBox.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -22837,30 +22757,6 @@
             this.label271.TabIndex = 0;
             this.label271.Text = "Number to dial:";
             // 
-            // natospeechrecogbox
-            // 
-            this.natospeechrecogbox.BackColor = System.Drawing.Color.Transparent;
-            this.natospeechrecogbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("natospeechrecogbox.BackgroundImage")));
-            this.natospeechrecogbox.Controls.Add(this.defaultNATOSpeechTXT);
-            this.natospeechrecogbox.Controls.Add(this.EnableSpeechBtn);
-            this.natospeechrecogbox.Controls.Add(this.HideSpeechRecogBox);
-            this.natospeechrecogbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.natospeechrecogbox.Location = new System.Drawing.Point(185, 42);
-            this.natospeechrecogbox.Name = "natospeechrecogbox";
-            this.natospeechrecogbox.Size = new System.Drawing.Size(315, 71);
-            this.natospeechrecogbox.TabIndex = 153;
-            this.natospeechrecogbox.TabStop = false;
-            // 
-            // defaultNATOSpeechTXT
-            // 
-            this.defaultNATOSpeechTXT.AutoSize = true;
-            this.defaultNATOSpeechTXT.Font = new System.Drawing.Font("Segoe MDL2 Assets", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.defaultNATOSpeechTXT.Location = new System.Drawing.Point(83, 29);
-            this.defaultNATOSpeechTXT.Name = "defaultNATOSpeechTXT";
-            this.defaultNATOSpeechTXT.Size = new System.Drawing.Size(77, 15);
-            this.defaultNATOSpeechTXT.TabIndex = 3;
-            this.defaultNATOSpeechTXT.Text = "Say something";
-            // 
             // BeatLabBox
             // 
             this.BeatLabBox.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -23144,7 +23040,7 @@
             this.postbookonemediabox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.postbookonemediabox.Controls.Add(this.postbookonemediasigninbox);
             this.postbookonemediabox.Controls.Add(this.hidepostbookonemediabox);
-            this.postbookonemediabox.Location = new System.Drawing.Point(22, 516);
+            this.postbookonemediabox.Location = new System.Drawing.Point(189, 16);
             this.postbookonemediabox.Name = "postbookonemediabox";
             this.postbookonemediabox.Size = new System.Drawing.Size(740, 489);
             this.postbookonemediabox.TabIndex = 155;
@@ -23345,6 +23241,132 @@
             this.hidepostbookonemediabox.UseVisualStyleBackColor = true;
             this.hidepostbookonemediabox.Click += new System.EventHandler(this.hidepostbookonemediabox_Click);
             // 
+            // natospeechrecogbox
+            // 
+            this.natospeechrecogbox.BackColor = System.Drawing.Color.Transparent;
+            this.natospeechrecogbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("natospeechrecogbox.BackgroundImage")));
+            this.natospeechrecogbox.Controls.Add(this.defaultNATOSpeechTXT);
+            this.natospeechrecogbox.Controls.Add(this.EnableSpeechBtn);
+            this.natospeechrecogbox.Controls.Add(this.HideSpeechRecogBox);
+            this.natospeechrecogbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.natospeechrecogbox.Location = new System.Drawing.Point(185, 42);
+            this.natospeechrecogbox.Name = "natospeechrecogbox";
+            this.natospeechrecogbox.Size = new System.Drawing.Size(315, 71);
+            this.natospeechrecogbox.TabIndex = 153;
+            this.natospeechrecogbox.TabStop = false;
+            // 
+            // defaultNATOSpeechTXT
+            // 
+            this.defaultNATOSpeechTXT.AutoSize = true;
+            this.defaultNATOSpeechTXT.Font = new System.Drawing.Font("Segoe MDL2 Assets", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defaultNATOSpeechTXT.Location = new System.Drawing.Point(83, 29);
+            this.defaultNATOSpeechTXT.Name = "defaultNATOSpeechTXT";
+            this.defaultNATOSpeechTXT.Size = new System.Drawing.Size(77, 15);
+            this.defaultNATOSpeechTXT.TabIndex = 3;
+            this.defaultNATOSpeechTXT.Text = "Say something";
+            // 
+            // sneakydeakyfeaturesselectionbox
+            // 
+            this.sneakydeakyfeaturesselectionbox.BackColor = System.Drawing.Color.White;
+            this.sneakydeakyfeaturesselectionbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sneakydeakyfeaturesselectionbox.BackgroundImage")));
+            this.sneakydeakyfeaturesselectionbox.ContextMenuStrip = this.HIDEUNITCONVERTERWIDGET;
+            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.phoneDialerBtn);
+            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.hidesneakydeakyfeaturesbox);
+            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.scriptedSandboxBtn);
+            this.sneakydeakyfeaturesselectionbox.Controls.Add(this.aboutsneakydeakyfeatures);
+            this.sneakydeakyfeaturesselectionbox.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.sneakydeakyfeaturesselectionbox.Location = new System.Drawing.Point(830, 949);
+            this.sneakydeakyfeaturesselectionbox.Name = "sneakydeakyfeaturesselectionbox";
+            this.sneakydeakyfeaturesselectionbox.Size = new System.Drawing.Size(430, 102);
+            this.sneakydeakyfeaturesselectionbox.TabIndex = 151;
+            this.sneakydeakyfeaturesselectionbox.TabStop = false;
+            this.sneakydeakyfeaturesselectionbox.Text = "Sneaky Deaky Features";
+            // 
+            // phoneDialerBtn
+            // 
+            this.phoneDialerBtn.Location = new System.Drawing.Point(128, 19);
+            this.phoneDialerBtn.Name = "phoneDialerBtn";
+            this.phoneDialerBtn.Size = new System.Drawing.Size(119, 23);
+            this.phoneDialerBtn.TabIndex = 3;
+            this.phoneDialerBtn.Text = "Phone Dialer";
+            this.phoneDialerBtn.UseVisualStyleBackColor = true;
+            this.phoneDialerBtn.Click += new System.EventHandler(this.phoneDialerBtn_Click);
+            // 
+            // scriptedSandboxBtn
+            // 
+            this.scriptedSandboxBtn.Location = new System.Drawing.Point(5, 19);
+            this.scriptedSandboxBtn.Name = "scriptedSandboxBtn";
+            this.scriptedSandboxBtn.Size = new System.Drawing.Size(119, 23);
+            this.scriptedSandboxBtn.TabIndex = 1;
+            this.scriptedSandboxBtn.Text = "Scripted Sandbox";
+            this.scriptedSandboxBtn.UseVisualStyleBackColor = true;
+            this.scriptedSandboxBtn.Click += new System.EventHandler(this.scriptedSandboxBtn_Click);
+            // 
+            // blender3dgameplayerloadingassetsbox
+            // 
+            this.blender3dgameplayerloadingassetsbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blender3dgameplayerloadingassetsbox.BackgroundImage")));
+            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label263);
+            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.progressBar2);
+            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.blender3dgameplayerloadingassetsdialog);
+            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label265);
+            this.blender3dgameplayerloadingassetsbox.Controls.Add(this.label266);
+            this.blender3dgameplayerloadingassetsbox.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.blender3dgameplayerloadingassetsbox.ForeColor = System.Drawing.Color.White;
+            this.blender3dgameplayerloadingassetsbox.Location = new System.Drawing.Point(180, 176);
+            this.blender3dgameplayerloadingassetsbox.Name = "blender3dgameplayerloadingassetsbox";
+            this.blender3dgameplayerloadingassetsbox.Size = new System.Drawing.Size(396, 178);
+            this.blender3dgameplayerloadingassetsbox.TabIndex = 145;
+            this.blender3dgameplayerloadingassetsbox.TabStop = false;
+            // 
+            // label263
+            // 
+            this.label263.AutoSize = true;
+            this.label263.BackColor = System.Drawing.Color.Transparent;
+            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label263.Location = new System.Drawing.Point(108, 63);
+            this.label263.Name = "label263";
+            this.label263.Size = new System.Drawing.Size(164, 15);
+            this.label263.TabIndex = 5;
+            this.label263.Text = "3D Game Player | Ver. 16.8.2";
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(67, 144);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(252, 23);
+            this.progressBar2.TabIndex = 4;
+            // 
+            // blender3dgameplayerloadingassetsdialog
+            // 
+            this.blender3dgameplayerloadingassetsdialog.AutoSize = true;
+            this.blender3dgameplayerloadingassetsdialog.BackColor = System.Drawing.Color.Transparent;
+            this.blender3dgameplayerloadingassetsdialog.Location = new System.Drawing.Point(200, 84);
+            this.blender3dgameplayerloadingassetsdialog.Name = "blender3dgameplayerloadingassetsdialog";
+            this.blender3dgameplayerloadingassetsdialog.Size = new System.Drawing.Size(70, 13);
+            this.blender3dgameplayerloadingassetsdialog.TabIndex = 3;
+            this.blender3dgameplayerloadingassetsdialog.Text = "none avalible";
+            // 
+            // label265
+            // 
+            this.label265.AutoSize = true;
+            this.label265.BackColor = System.Drawing.Color.Transparent;
+            this.label265.Location = new System.Drawing.Point(108, 84);
+            this.label265.Name = "label265";
+            this.label265.Size = new System.Drawing.Size(91, 13);
+            this.label265.TabIndex = 2;
+            this.label265.Text = "Extracting Assets:";
+            // 
+            // label266
+            // 
+            this.label266.AutoSize = true;
+            this.label266.BackColor = System.Drawing.Color.Transparent;
+            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label266.Location = new System.Drawing.Point(113, 21);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(147, 42);
+            this.label266.TabIndex = 0;
+            this.label266.Text = "Blender";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -23352,9 +23374,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.ContextMenuStrip = this.RightClickMenuNATO;
-            this.Controls.Add(this.ConsoleAndShareBoxDesignerCode);
-            this.Controls.Add(this.ExtentionBoxDesignerCode);
-            this.Controls.Add(this.ProgrammingLanguageBoxDesignerCode);
             this.Controls.Add(this.postbookonemediabox);
             this.Controls.Add(this.BeatLabBox);
             this.Controls.Add(this.natospeechrecogbox);
@@ -23694,16 +23713,17 @@
             this.DesignerCode.ResumeLayout(false);
             this.DesignerCode.PerformLayout();
             this.DesignerCodeMenuStrip.ResumeLayout(false);
+            this.ConsoleAndShareBoxDesignerCode.ResumeLayout(false);
+            this.ConsoleAndShareBoxDesignerCode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.signinwithgithubdesignercode)).EndInit();
             this.designercopilotboxdesignercode.ResumeLayout(false);
             this.designercopilotboxdesignercode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendpromptdesignercopilot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
-            this.ConsoleAndShareBoxDesignerCode.ResumeLayout(false);
-            this.ConsoleAndShareBoxDesignerCode.PerformLayout();
             this.ExtentionBoxDesignerCode.ResumeLayout(false);
             this.ExtentionBoxDesignerCode.PerformLayout();
             this.ProgrammingLanguageBoxDesignerCode.ResumeLayout(false);
             this.ProgrammingLanguageBoxDesignerCode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             this.DebugWindowDesignerCode.ResumeLayout(false);
             this.RightClickMenuNATO.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.natotutorialsplayer)).EndInit();
@@ -23892,6 +23912,11 @@
             this.groupBox11.PerformLayout();
             this.toolStrip8.ResumeLayout(false);
             this.toolStrip8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postbookdevonemedialogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EnableSpeechBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blenderimagegenerate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiowidgetbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fishgamebtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
@@ -23901,11 +23926,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ClockWidgetBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RSSFeedWidgetBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayerWidgetBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radiowidgetbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blenderimagegenerate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EnableSpeechBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postbookdevonemedialogo)).EndInit();
             this.weatherBox.ResumeLayout(false);
             this.weatherBox.PerformLayout();
             this.passwordmanagerbox.ResumeLayout(false);
@@ -23941,8 +23961,6 @@
             this.DesignerCodeWindowsFormsPlayerToolStrip.PerformLayout();
             this.HIDEUNITCONVERTERWIDGET.ResumeLayout(false);
             this.gameBoardPlayAGame.ResumeLayout(false);
-            this.blender3dgameplayerloadingassetsbox.ResumeLayout(false);
-            this.blender3dgameplayerloadingassetsbox.PerformLayout();
             this.blender3dgamebox.ResumeLayout(false);
             this.blender3dgamebox.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -23957,13 +23975,10 @@
             this.tutorialsbox.PerformLayout();
             this.appstatisticsbox.ResumeLayout(false);
             this.appstatisticsbox.PerformLayout();
-            this.sneakydeakyfeaturesselectionbox.ResumeLayout(false);
             this.phoneDialerBox.ResumeLayout(false);
             this.phoneDialerBox.PerformLayout();
             this.phoneDialerSpeedDialBox.ResumeLayout(false);
             this.phoneDialerSpeedDialBox.PerformLayout();
-            this.natospeechrecogbox.ResumeLayout(false);
-            this.natospeechrecogbox.PerformLayout();
             this.BeatLabBox.ResumeLayout(false);
             this.BeatLabBox.PerformLayout();
             this.BeatLabPianoBox.ResumeLayout(false);
@@ -23984,6 +23999,11 @@
             this.postbookonemediasigninbox.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.natospeechrecogbox.ResumeLayout(false);
+            this.natospeechrecogbox.PerformLayout();
+            this.sneakydeakyfeaturesselectionbox.ResumeLayout(false);
+            this.blender3dgameplayerloadingassetsbox.ResumeLayout(false);
+            this.blender3dgameplayerloadingassetsbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -25898,12 +25918,13 @@
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.PictureBox postbookdevonemedialogo;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.LinkLabel natotutoriallink;
+        private System.Windows.Forms.LinkLabel sysappdownloaderpkglink;
         private System.Windows.Forms.LinkLabel DesignerCopilotDesignerCode;
         private System.Windows.Forms.GroupBox designercopilotboxdesignercode;
-        private System.Windows.Forms.Label responcetextdesignercopilot;
         private System.Windows.Forms.PictureBox sendpromptdesignercopilot;
         private System.Windows.Forms.TextBox prompdesignercopilot;
         private System.Windows.Forms.Button hidedesignercopilot;
+        private System.Windows.Forms.PictureBox signinwithgithubdesignercode;
+        private System.Windows.Forms.TextBox responcetextdesignercopilot;
     }
 }
