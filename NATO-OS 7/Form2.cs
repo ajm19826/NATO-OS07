@@ -67,6 +67,8 @@ using PostBookOneMedia.Servers.NATO.Build.DesignerCode.GeminiAgentResponce;
 using NATO_OS_App_Installer; // Ensure this matches your project's root namespace if different
 using System.Text.Json;
 using Newtonsoft.Json;
+using Formatting = Newtonsoft.Json.Formatting;
+using System.Runtime.Loader; // For AssemblyLoadContext
 
 
 //using PostBookOneMedia.Servers.NATO.Host.AppPkgr;
@@ -75,6 +77,14 @@ namespace NATO_OS_7
     public partial class Form2 : Form
 
     {
+        private Assembly _loadedAppAssembly;
+        private object _loadedAppInstance;
+        private GroupBox _currentLoadedAppGroupBox; // Reference to the currently loaded app's GroupBox
+
+        // New: Panel to host pinned app icons
+        private FlowLayoutPanel pnlPinnedApps;
+
+
         //App Retrieve
         private GroupBox appInstallerGroupBox;
         private TextBox txtAppUrl;
@@ -284,7 +294,27 @@ namespace NATO_OS_7
         {
 
             InitializeComponent();
-            InitializeAppInstallerUI(); // Call the new method to set up the App Installer GroupBox
+            InitDesktopIcons();
+            //InitializeAppInstallerUI(); // Call the new method to set up the App Installer GroupBox
+            this.KeyPreview = true;
+            this.KeyDown += Form2_KeyDownForPackageSave;
+
+            // Initialize the panel for pinned apps
+            // You might want to add this to your Form2.Designer.cs for better visual design
+            // For now, adding it programmatically here.
+            pnlPinnedApps = new FlowLayoutPanel
+            {
+                Name = "pnlPinnedApps",
+                Location = new Point(10, 10), // Adjust this location to where you want the icons to appear
+                Size = new Size(this.ClientSize.Width - 20, 100), // Example size, adjust as needed
+                BorderStyle = BorderStyle.FixedSingle,
+                AutoScroll = true,
+                FlowDirection = FlowDirection.LeftToRight,
+                WrapContents = true // Allow icons to wrap to the next row
+            };
+            this.Controls.Add(pnlPinnedApps);
+            pnlPinnedApps.BringToFront(); // Ensure it's on top of other controls, but behind loaded apps
+
 
             //designer copilot
             designercopilotboxdesignercode.Hide();
@@ -1066,471 +1096,994 @@ namespace NATO_OS_7
             };
 
 
-            //System Desktop Icons 
-            
 
+
+
+        }            //System Desktop Icons
+        /*private void CopyDesktopShortcut(PictureBox originalIcon)
+        {
+            PictureBox newIcon = new PictureBox
+            {
+                Size = new Size(64, 64),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Image = originalIcon.Image,
+                ContextMenuStrip = desktopIconMenu,
+                Cursor = Cursors.Hand
+            };
+
+            // Copy the click event handler from dictionary
+            if (desktopIconHandlers.TryGetValue(originalIcon, out EventHandler handler))
+            {
+                newIcon.Click += handler;
+                desktopIconHandlers[newIcon] = handler;
+            }
+
+            newIcon.Location = new Point(originalIcon.Location.X + 20, originalIcon.Location.Y + 20);
+            this.Controls.Add(newIcon);
+            newIcon.BringToFront();
         }
+
+
+        private void DeleteDesktopIcon(PictureBox icon)
+        {
+            this.Controls.Remove(icon);
+            desktopIconHandlers.Remove(icon);
+            icon.Dispose();
+        }
+
+        */
+        private void AddDesktopIcon(GroupBox appGroupBox)
+        {
+            // Move the app offscreen temporarily
+            appGroupBox.Location = new Point(-5000, -5000);
+            appGroupBox.Show();
+            appGroupBox.Refresh();
+            Application.DoEvents();
+            Thread.Sleep(100); // Wait a bit for it to render properly
+
+            // Screenshot the GroupBox UI
+            Bitmap appScreenshot = new Bitmap(appGroupBox.Width, appGroupBox.Height);
+            appGroupBox.DrawToBitmap(appScreenshot, new Rectangle(0, 0, appGroupBox.Width, appGroupBox.Height));
+
+            // Resize the screenshot to 64x64 for desktop icon
+            Bitmap iconBitmap = new Bitmap(64, 64);
+            using (Graphics g = Graphics.FromImage(iconBitmap))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.Clear(Color.Transparent);
+                g.DrawImage(appScreenshot, 0, 0, 64, 64);
+            }
+
+            // Hide the app window now that the capture's done
+            appGroupBox.Hide();
+
+            // Create a new PictureBox icon on the desktop
+            PictureBox icon = new PictureBox
+            {
+                Size = new Size(64, 64),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Image = iconBitmap,
+                //ContextMenuStrip = desktopIconMenu, // your existing context menu
+                Cursor = Cursors.Hand
+            };
+
+            // Single-click the icon to open the app window
+            icon.Click += (s, e) => appGroupBox.Show();
+
+            // Random desktop position for now
+            icon.Location = new Point(random.Next(50, 800), random.Next(50, 600));
+
+            // Add the icon to the desktop
+            this.Controls.Add(icon);
+            icon.BringToFront();
+
+            // Optional: Add a text label below the icon
+            Label titleLabel = new Label
+            {
+                Text = appGroupBox.Text,
+                AutoSize = true,
+                ForeColor = Color.White,
+                BackColor = Color.Transparent,
+                Location = new Point(icon.Left, icon.Bottom)
+            };
+            this.Controls.Add(titleLabel);
+            titleLabel.BringToFront();
+        }
+
+        //System Desktop Icons
+
         //App Retriever
-        private void InitializeAppInstallerUI()
+        // Add this method to Form2 to handle loading an app package
+        public GroupBox LoadAppFromPackage(AppPackage appPackage)
         {
-            appInstallerGroupBox = new GroupBox();
-            appInstallerGroupBox.Text = "App Installer";
-            appInstallerGroupBox.Size = new Size(650, 600);
-            appInstallerGroupBox.Location = new Point(this.ClientSize.Width / 2 - appInstallerGroupBox.Width / 2, this.ClientSize.Height / 2 - appInstallerGroupBox.Height / 2);
-            appInstallerGroupBox.Anchor = AnchorStyles.None;
-            appInstallerGroupBox.BackColor = System.Drawing.Color.White;
-            appInstallerGroupBox.Hide();
+            // IMPORTANT SECURITY WARNING:
+            // Executing arbitrary code loaded from external sources (like .npkg files)
+            // is a significant security risk. This implementation does NOT include robust sandboxing
+            // and the loaded code will have full access to your system's resources
+            // and the NATO OS 7 application.
+            // For true security, consider running untrusted apps in isolated processes
+            // or virtualized environments.
 
-            Label lblHowItWorks = new Label();
-            lblHowItWorks.Text = "This installer allows you to load application packages from a URL or upload a local .npkg file. Click on an app groupbox, then press Ctrl+Shift+Alt+P to save its data to a new .npkg file.";
-            lblHowItWorks.AutoSize = true;
-            lblHowItWorks.Location = new Point(20, 30);
-            lblHowItWorks.MaximumSize = new Size(appInstallerGroupBox.Width - 40, 0);
-            lblHowItWorks.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, ((byte)(0)));
-            appInstallerGroupBox.Controls.Add(lblHowItWorks);
-
-            Label lblAppUrl = new Label();
-            lblAppUrl.Text = "Enter App URL:";
-            lblAppUrl.AutoSize = true;
-            lblAppUrl.Location = new Point(20, lblHowItWorks.Bottom + 20);
-            appInstallerGroupBox.Controls.Add(lblAppUrl);
-
-            txtAppUrl = new TextBox();
-            txtAppUrl.Name = "txtAppUrl";
-            txtAppUrl.Size = new Size(400, 25);
-            txtAppUrl.Location = new Point(20, lblAppUrl.Bottom + 5);
-            appInstallerGroupBox.Controls.Add(txtAppUrl);
-
-            Button btnLoadUrl = new Button();
-            btnLoadUrl.Text = "Load from URL";
-            btnLoadUrl.Size = new Size(150, 30);
-            btnLoadUrl.Location = new Point(txtAppUrl.Right + 10, txtAppUrl.Top);
-            btnLoadUrl.Click += BtnLoadUrl_Click;
-            appInstallerGroupBox.Controls.Add(btnLoadUrl);
-
-            Button btnUploadPackage = new Button();
-            btnUploadPackage.Text = "Upload Package";
-            btnUploadPackage.Size = new Size(150, 30);
-            btnUploadPackage.Location = new Point(btnLoadUrl.Left, btnLoadUrl.Bottom + 10);
-            btnUploadPackage.Click += BtnUploadPackage_Click;
-            appInstallerGroupBox.Controls.Add(btnUploadPackage);
-
-            // NEW: Preview App Button
-            Button btnPreviewApp = new Button();
-            btnPreviewApp.Text = "Preview First App";
-            btnPreviewApp.Size = new Size(150, 30);
-            btnPreviewApp.Location = new Point(btnUploadPackage.Left, btnUploadPackage.Bottom + 10);
-            btnPreviewApp.Click += BtnPreviewApp_Click;
-            appInstallerGroupBox.Controls.Add(btnPreviewApp);
-
-
-            flowLayoutPanelApps = new FlowLayoutPanel();
-            flowLayoutPanelApps.Name = "flowLayoutPanelApps";
-            flowLayoutPanelApps.FlowDirection = FlowDirection.LeftToRight;
-            flowLayoutPanelApps.AutoScroll = true;
-            flowLayoutPanelApps.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanelApps.BackColor = Color.LightGray;
-            flowLayoutPanelApps.Location = new Point(20, btnPreviewApp.Bottom + 20);
-            flowLayoutPanelApps.Size = new Size(appInstallerGroupBox.Width - 40, appInstallerGroupBox.Height - btnPreviewApp.Bottom - 40);
-            appInstallerGroupBox.Controls.Add(flowLayoutPanelApps);
-
-            Button btnCloseInstaller = new Button();
-            btnCloseInstaller.Text = "X";
-            btnCloseInstaller.Size = new Size(25, 25);
-            btnCloseInstaller.Location = new Point(appInstallerGroupBox.Width - btnCloseInstaller.Width - 5, 5);
-            btnCloseInstaller.FlatStyle = FlatStyle.Flat;
-            btnCloseInstaller.BackColor = Color.Red;
-            btnCloseInstaller.ForeColor = Color.White;
-            btnCloseInstaller.Click += (s, e) => appInstallerGroupBox.Hide();
-            appInstallerGroupBox.Controls.Add(btnCloseInstaller);
-
-            this.Controls.Add(appInstallerGroupBox);
-            appInstallerGroupBox.BringToFront();
-        }
-
-        private void OpenAppInstallerGroupBox(object sender, EventArgs e)
-        {
-            appInstallerGroupBox.Show();
-        }
-
-        private async void BtnLoadUrl_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtAppUrl.Text))
+            // Clear existing dynamically added app group boxes if any
+            Panel dynamicAppsPanel = this.Controls.OfType<Panel>().FirstOrDefault(p => p.Name == "dynamicAppsHostPanel");
+            if (dynamicAppsPanel == null)
             {
-                MessageBox.Show("Please enter a valid URL.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                dynamicAppsPanel = new Panel
+                {
+                    Name = "dynamicAppsHostPanel",
+                    Location = new Point(10, 450), // Adjust location as needed
+                    Size = new Size(700, 300),
+                    BorderStyle = BorderStyle.FixedSingle,
+                    AutoScroll = true
+                };
+                this.Controls.Add(dynamicAppsPanel);
+                dynamicAppsPanel.BringToFront();
+            }
+            dynamicAppsPanel.Controls.Clear(); // Clear previous dynamic app
+
+            // Dispose of previous loaded assembly and instance to prevent memory leaks and conflicts
+            if (_loadedAppAssembly != null)
+            {
+                // In .NET Core/.NET 5+, you can unload assemblies via AssemblyLoadContext
+                // In .NET Framework, unloading is more complex and often requires AppDomains.
+                // For simplicity here, we're not explicitly unloading, which means
+                // if you load many apps, memory might accumulate.
+                _loadedAppAssembly = null;
+                _loadedAppInstance = null;
             }
 
-            string url = txtAppUrl.Text;
-            _lastLoadedPackageUrl = url;
-            _lastLoadedPackagePath = string.Empty;
-            await LoadPackageFromUrl(url);
-        }
-
-        private async Task LoadPackageFromUrl(string url)
-        {
-            try
+            GroupBox newAppGroupBox = new GroupBox
             {
-                using (HttpClient client = new HttpClient())
+                Text = appPackage.AppName,
+                Name = $"App_{appPackage.AppName.Replace(" ", "")}", // Create a unique name
+                Size = new Size(dynamicAppsPanel.Width - 20, dynamicAppsPanel.Height - 20),
+                Location = new Point(10, 10),
+                Tag = appPackage // Store the package for later saving
+            };
+            dynamicAppsPanel.Controls.Add(newAppGroupBox);
+            _currentLoadedAppGroupBox = newAppGroupBox; // Store reference to the current app's GroupBox
+
+            // Dictionary to hold references to dynamically created controls by their name
+            Dictionary<string, Control> createdControls = new Dictionary<string, Control>();
+
+            // Dynamically create controls based on ControlInfo
+            foreach (var controlInfo in appPackage.Controls)
+            {
+                Control newControl = null;
+                switch (controlInfo.Type)
                 {
-                    System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls;
+                    case "Button":
+                        newControl = new Button();
+                        break;
+                    case "Label":
+                        newControl = new Label();
+                        break;
+                    case "TextBox":
+                        newControl = new TextBox();
+                        break;
+                    case "PictureBox":
+                        newControl = new PictureBox();
+                        ((PictureBox)newControl).SizeMode = PictureBoxSizeMode.StretchImage;
+                        break;
+                    case "ComboBox":
+                        newControl = new ComboBox();
+                        ((ComboBox)newControl).DropDownStyle = ComboBoxStyle.DropDownList; // Common default
+                        break;
+                    case "CheckBox":
+                        newControl = new CheckBox();
+                        break;
+                    case "CheckedListBox":
+                        newControl = new CheckedListBox();
+                        break;
+                    case "ListBox":
+                        newControl = new ListBox();
+                        break;
+                    case "WebBrowser":
+                        newControl = new WebBrowser();
+                        ((WebBrowser)newControl).ScriptErrorsSuppressed = true; // Suppress script errors for cleaner experience
+                        break;
+                    case "DateTimePicker":
+                        newControl = new DateTimePicker();
+                        break;
+                    case "ProgressBar":
+                        newControl = new ProgressBar();
+                        break;
+                    case "TrackBar":
+                        newControl = new TrackBar();
+                        break;
+                    case "NumericUpDown":
+                        newControl = new NumericUpDown();
+                        break;
+                    case "RadioButton":
+                        newControl = new RadioButton();
+                        break;
+                    case "Panel":
+                        newControl = new Panel();
+                        ((Panel)newControl).BorderStyle = BorderStyle.FixedSingle; // Panels can have borders
+                        break;
+                    case "TabControl":
+                        newControl = new TabControl();
+                        break;
+                    // Add more control types as needed
+                    default:
+                        Console.WriteLine($"Unsupported control type: {controlInfo.Type}");
+                        continue;
+                }
 
-                    // Add a timeout for the HTTP request
-                    client.Timeout = TimeSpan.FromSeconds(10);
+                if (newControl != null)
+                {
+                    newControl.Name = controlInfo.Name;
+                    newControl.Text = controlInfo.Text;
+                    newControl.Location = new Point(controlInfo.Left, controlInfo.Top);
+                    newControl.Size = new Size(controlInfo.Width, controlInfo.Height);
 
-                    string jsonContent = await client.GetStringAsync(url);
-                    AppPackage package = JsonConvert.DeserializeObject<AppPackage>(jsonContent);
+                    // Apply other properties from the dictionary
+                    foreach (var prop in controlInfo.Properties)
+                    {
+                        try
+                        {
+                            PropertyInfo propInfo = newControl.GetType().GetProperty(prop.Key);
+                            if (propInfo != null && propInfo.CanWrite)
+                            {
+                                // Handle specific types like Color, Font, Boolean, Enum
+                                if (propInfo.PropertyType == typeof(Color))
+                                {
+                                    propInfo.SetValue(newControl, ColorTranslator.FromHtml(prop.Value));
+                                }
+                                else if (propInfo.PropertyType == typeof(Font))
+                                {
+                                    // Example: "Arial, 10pt, style=Bold"
+                                    // This is a simplified parser. For full Font parsing, use TypeConverter.
+                                    string[] fontParts = prop.Value.Split(',');
+                                    string familyName = fontParts[0].Trim();
+                                    float emSize = 8.25f; // Default
+                                    FontStyle fontStyle = FontStyle.Regular;
 
-                    DisplayApps(package);
+                                    if (fontParts.Length > 1 && float.TryParse(fontParts[1].Trim().Replace("pt", ""), out float size))
+                                    {
+                                        emSize = size;
+                                    }
+                                    if (fontParts.Length > 2 && fontParts[2].Trim().StartsWith("style="))
+                                    {
+                                        Enum.TryParse(fontParts[2].Trim().Replace("style=", ""), out fontStyle);
+                                    }
+                                    propInfo.SetValue(newControl, new Font(familyName, emSize, fontStyle));
+                                }
+                                else if (propInfo.PropertyType == typeof(bool))
+                                {
+                                    propInfo.SetValue(newControl, bool.Parse(prop.Value));
+                                }
+                                else if (propInfo.PropertyType.IsEnum)
+                                {
+                                    propInfo.SetValue(newControl, Enum.Parse(propInfo.PropertyType, prop.Value));
+                                }
+                                else if (propInfo.PropertyType == typeof(int))
+                                {
+                                    propInfo.SetValue(newControl, int.Parse(prop.Value));
+                                }
+                                else if (propInfo.PropertyType == typeof(string))
+                                {
+                                    propInfo.SetValue(newControl, prop.Value);
+                                }
+                                else if (propInfo.PropertyType == typeof(decimal) && newControl is NumericUpDown nud)
+                                {
+                                    nud.Value = decimal.Parse(prop.Value);
+                                }
+                                else if (propInfo.PropertyType == typeof(DateTime) && newControl is DateTimePicker dtp)
+                                {
+                                    dtp.Value = DateTime.Parse(prop.Value);
+                                }
+                                else if (propInfo.PropertyType == typeof(string[]) && newControl is ComboBox cb)
+                                {
+                                    // For ComboBox items
+                                    string[] items = JsonConvert.DeserializeObject<string[]>(prop.Value);
+                                    cb.Items.AddRange(items);
+                                }
+                                else if (propInfo.PropertyType == typeof(string[]) && newControl is ListBox lb)
+                                {
+                                    // For ListBox items
+                                    string[] items = JsonConvert.DeserializeObject<string[]>(prop.Value);
+                                    lb.Items.AddRange(items);
+                                }
+                                else if (propInfo.PropertyType == typeof(string[]) && newControl is CheckedListBox clb)
+                                {
+                                    // For CheckedListBox items
+                                    string[] items = JsonConvert.DeserializeObject<string[]>(prop.Value);
+                                    clb.Items.AddRange(items);
+                                }
+                                else
+                                {
+                                    // Fallback for other types
+                                    object convertedValue = Convert.ChangeType(prop.Value, propInfo.PropertyType);
+                                    propInfo.SetValue(newControl, convertedValue);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Warning: Could not set property '{prop.Key}' for control '{controlInfo.Name}' ({newControl.GetType().Name}): {ex.Message}");
+                        }
+                    }
+
+                    // Handle specific control initialization (e.g., WebBrowser navigation)
+                    if (newControl is WebBrowser webBrowser && controlInfo.Properties.ContainsKey("Url"))
+                    {
+                        try
+                        {
+                            webBrowser.Navigate(controlInfo.Properties["Url"]);
+                        }
+                        catch (UriFormatException)
+                        {
+                            Console.WriteLine($"Invalid URL for WebBrowser: {controlInfo.Properties["Url"]}");
+                        }
+                    }
+                    else if (newControl is TabControl tabControl && controlInfo.Properties.ContainsKey("TabPages"))
+                    {
+                        // TabPages are complex; they are collections of TabPage objects.
+                        // For simplicity, we'll assume "TabPages" property contains a JSON array of tab page texts.
+                        // A more robust solution would define a separate TabPageInfo class.
+                        try
+                        {
+                            List<string> tabPageTexts = JsonConvert.DeserializeObject<List<string>>(controlInfo.Properties["TabPages"]);
+                            foreach (string text in tabPageTexts)
+                            {
+                                tabControl.TabPages.Add(new TabPage(text));
+                            }
+                        }
+                        catch (Exception tabEx)
+                        {
+                            Console.WriteLine($"Error loading TabPages for TabControl: {tabEx.Message}");
+                        }
+                    }
+
+                    newAppGroupBox.Controls.Add(newControl);
+                    createdControls[newControl.Name] = newControl; // Store control reference
                 }
             }
-            catch (HttpRequestException httpEx)
-            {
-                MessageBox.Show($"Error downloading package: {httpEx.Message}\nMake sure the URL is correct and accessible.", "Network Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (TaskCanceledException) // Catches timeouts
-            {
-                MessageBox.Show("The request to download the package timed out. Please check your internet connection or the URL.", "Timeout Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (JsonSerializationException jsonEx)
-            {
-                MessageBox.Show($"Error parsing package content: {jsonEx.Message}\nEnsure the file is a valid JSON .npkg format.", "Parsing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        private async void BtnUploadPackage_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "NATO OS Package Files (*.npkg)|*.npkg|All Files (*.*)|*.*";
-                openFileDialog.Title = "Select NATO OS Package File";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string filePath = openFileDialog.FileName;
-                    _lastLoadedPackagePath = filePath;
-                    _lastLoadedPackageUrl = string.Empty;
-                    await LoadPackageFromFile(filePath);
-                }
-            }
-        }
-
-        private async Task LoadPackageFromFile(string filePath)
-        {
-            try
-            {
-                AppPackage package = RewritePkg.LoadPackageFromFile(filePath);
-                DisplayApps(package);
-            }
-            catch (IOException ioEx)
-            {
-                MessageBox.Show($"Error reading file: {ioEx.Message}\nCheck file permissions or if the file is open elsewhere.", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (JsonSerializationException jsonEx)
-            {
-                MessageBox.Show($"Error parsing file content: {jsonEx.Message}\nEnsure the file is a valid JSON .npkg format.", "Parsing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private async void BtnPreviewApp_Click(object sender, EventArgs e)
-        {
-            AppPackage package = null;
-
-            if (!string.IsNullOrWhiteSpace(_lastLoadedPackageUrl))
+            // Compile and load the app code
+            if (!string.IsNullOrWhiteSpace(appPackage.AppCode))
             {
                 try
                 {
-                    using (HttpClient client = new HttpClient())
+                    _loadedAppAssembly = CompileAppCode(appPackage.AppCode);
+                    if (_loadedAppAssembly != null)
                     {
-                        System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls;
-                        client.Timeout = TimeSpan.FromSeconds(10);
-                        string jsonContent = await client.GetStringAsync(_lastLoadedPackageUrl);
-                        package = JsonConvert.DeserializeObject<AppPackage>(jsonContent);
+                        // Find the main app class (assuming it's named 'AppLogic' or similar)
+                        Type appLogicType = _loadedAppAssembly.GetType("DynamicApp.AppLogic");
+                        if (appLogicType != null)
+                        {
+                            // Create an instance of the app logic class
+                            _loadedAppInstance = Activator.CreateInstance(appLogicType);
+
+                            // Set a reference to the main form and the app's groupbox in the app logic
+                            // This allows the app code to interact with the UI and the OS
+                            PropertyInfo mainFormProp = appLogicType.GetProperty("MainForm");
+                            if (mainFormProp != null && mainFormProp.CanWrite)
+                            {
+                                mainFormProp.SetValue(_loadedAppInstance, this);
+                            }
+                            PropertyInfo appGroupBoxProp = appLogicType.GetProperty("AppGroupBox");
+                            if (appGroupBoxProp != null && appGroupBoxProp.CanWrite)
+                            {
+                                appGroupBoxProp.SetValue(_loadedAppInstance, newAppGroupBox);
+                            }
+
+                            // Wire up event handlers
+                            foreach (var controlInfo in appPackage.Controls)
+                            {
+                                if (createdControls.TryGetValue(controlInfo.Name, out Control control))
+                                {
+                                    foreach (var eventHandler in controlInfo.EventHandlers)
+                                    {
+                                        string eventName = eventHandler.Key;
+                                        string methodName = eventHandler.Value;
+
+                                        EventInfo eventInfo = control.GetType().GetEvent(eventName);
+                                        if (eventInfo != null)
+                                        {
+                                            MethodInfo methodInfo = appLogicType.GetMethod(methodName, BindingFlags.Public | BindingFlags.Instance);
+                                            if (methodInfo != null)
+                                            {
+                                                // Create a delegate for the event handler
+                                                Delegate handler = Delegate.CreateDelegate(eventInfo.EventHandlerType, _loadedAppInstance, methodInfo);
+
+                                                // Wrap the event handler in a try-catch for error handling
+                                                // This creates an anonymous method that calls the actual handler
+                                                // and catches any exceptions.
+                                                var wrappedHandler = new EventHandler((s, args) =>
+                                                {
+                                                    try
+                                                    {
+                                                        // Dynamically invoke the method on the loaded instance
+                                                        methodInfo.Invoke(_loadedAppInstance, new object[] { s, args });
+                                                    }
+                                                    catch (TargetInvocationException tie) // Catches exceptions from the invoked method
+                                                    {
+                                                        MessageBox.Show($"An error occurred in the app '{appPackage.AppName}' code for control '{control.Name}' event '{eventName}':\n{tie.InnerException?.Message ?? tie.Message}", "App Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                        Console.WriteLine($"App Code Error (Inner): {tie.InnerException?.ToString() ?? tie.ToString()}");
+                                                    }
+                                                    catch (Exception ex) // Catches other unexpected exceptions during invocation
+                                                    {
+                                                        MessageBox.Show($"An unexpected error occurred while running app '{appPackage.AppName}' code for control '{control.Name}' event '{eventName}':\n{ex.Message}", "App Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                        Console.WriteLine($"App Code Error (General): {ex}");
+                                                    }
+                                                });
+
+                                                // Add the wrapped handler
+                                                eventInfo.AddEventHandler(control, wrappedHandler);
+                                                Console.WriteLine($"Wired event '{eventName}' for control '{control.Name}' to method '{methodName}'.");
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine($"Method '{methodName}' not found in compiled app code for event '{eventName}'.");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine($"Event '{eventName}' not found on control '{control.Name}'.");
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Call an optional 'Initialize' method in the app logic
+                            MethodInfo initializeMethod = appLogicType.GetMethod("Initialize");
+                            if (initializeMethod != null)
+                            {
+                                try
+                                {
+                                    initializeMethod.Invoke(_loadedAppInstance, new object[] { createdControls }); // Pass controls dictionary
+                                }
+                                catch (TargetInvocationException tie)
+                                {
+                                    MessageBox.Show($"An error occurred during app '{appPackage.AppName}' initialization:\n{tie.InnerException?.Message ?? tie.Message}", "App Initialization Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    Console.WriteLine($"App Initialization Error (Inner): {tie.InnerException?.ToString() ?? tie.ToString()}");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"An unexpected error occurred during app '{appPackage.AppName}' initialization:\n{ex.Message}", "App Initialization Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    Console.WriteLine($"App Initialization Error (General): {ex}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Could not find 'DynamicApp.AppLogic' class in the compiled app code.", "Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
-                catch (HttpRequestException httpEx)
-                {
-                    MessageBox.Show($"Error downloading URL for preview: {httpEx.Message}\nMake sure the URL is correct and accessible.", "Preview Network Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                catch (TaskCanceledException) // Catches timeouts
-                {
-                    MessageBox.Show("The request to download the package timed out. Please check your internet connection or the URL.", "Preview Timeout", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                catch (JsonSerializationException jsonEx)
-                {
-                    MessageBox.Show($"Error parsing URL content for preview: {jsonEx.Message}\nEnsure the URL content is a valid JSON .npkg format.", "Preview Parsing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An unexpected error occurred while loading URL for preview: {ex.Message}", "Preview Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show($"Error compiling or loading app code: {ex.Message}", "Code Compilation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine($"Code Compilation Error: {ex}");
                 }
             }
-            else if (!string.IsNullOrWhiteSpace(_lastLoadedPackagePath))
+
+
+            // After loading, ensure the new app group box is visible
+            newAppGroupBox.Show();
+            newAppGroupBox.BringToFront();
+            // Subscribe to KeyDown event for the form to capture Ctrl+Shift+Alt+P
+            this.KeyDown -= Form2_KeyDownForPackageSave; // Unsubscribe to prevent multiple subscriptions
+            this.KeyDown += Form2_KeyDownForPackageSave;
+
+            return newAppGroupBox; // Return the created GroupBox
+        }
+
+        /// <summary>
+        /// Compiles the provided C# source code into an in-memory assembly.
+        /// </summary>
+        /// <param name="sourceCode">The C# source code string.</param>
+        /// <returns>The compiled Assembly, or null if compilation fails.</returns>
+        private Assembly CompileAppCode(string sourceCode)
+        {
+            // Define the assembly name for the dynamic app
+            string assemblyName = Path.GetRandomFileName() + ".dll";
+
+            // Add necessary references for WinForms and common .NET types
+            List<MetadataReference> references = new List<MetadataReference>();
+
+            // Get references from the current application's loaded assemblies
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
                 try
                 {
-                    package = RewritePkg.LoadPackageFromFile(_lastLoadedPackagePath);
+                    if (!assembly.IsDynamic && !string.IsNullOrEmpty(assembly.Location))
+                    {
+                        references.Add(MetadataReference.CreateFromFile(assembly.Location));
+                    }
                 }
-                catch (IOException ioEx)
+                catch (NotSupportedException)
                 {
-                    MessageBox.Show($"Error reading file for preview: {ioEx.Message}\nCheck file permissions or if the file is open elsewhere.", "Preview File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    // Ignore dynamic assemblies or assemblies that don't have a location
                 }
-                catch (JsonSerializationException jsonEx)
+            }
+
+            // Ensure essential WinForms and System assemblies are referenced
+            references.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location)); // System.Runtime
+            references.Add(MetadataReference.CreateFromFile(typeof(Form).Assembly.Location)); // System.Windows.Forms
+            references.Add(MetadataReference.CreateFromFile(typeof(System.Drawing.Point).Assembly.Location)); // System.Drawing
+            references.Add(MetadataReference.CreateFromFile(typeof(System.Net.Http.HttpClient).Assembly.Location)); // System.Net.Http
+            references.Add(MetadataReference.CreateFromFile(typeof(Newtonsoft.Json.JsonConvert).Assembly.Location)); // Newtonsoft.Json
+            references.Add(MetadataReference.CreateFromFile(typeof(System.Diagnostics.Process).Assembly.Location)); // System.Diagnostics for Process
+
+            // Define the C# compilation options
+            CSharpCompilation compilation = CSharpCompilation.Create(
+                assemblyName,
+                new[] { CSharpSyntaxTree.ParseText(sourceCode) },
+                references,
+                new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
+            using (var ms = new MemoryStream())
+            {
+                Microsoft.CodeAnalysis.Emit.EmitResult result = compilation.Emit(ms);
+
+                if (!result.Success)
                 {
-                    MessageBox.Show($"Error parsing file content for preview: {jsonEx.Message}\nEnsure the file is a valid JSON .npkg format.", "Preview Parsing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    IEnumerable<Diagnostic> failures = result.Diagnostics.Where(diagnostic =>
+                        diagnostic.IsWarningAsError ||
+                        diagnostic.Severity == DiagnosticSeverity.Error);
+
+                    string errorMessages = "Compilation Errors:\n";
+                    foreach (Diagnostic diagnostic in failures)
+                    {
+                        errorMessages += $"{diagnostic.Id}: {diagnostic.GetMessage()} (Line {diagnostic.Location.GetLineSpan().StartLinePosition.Line + 1})\n";
+                    }
+                    MessageBox.Show(errorMessages, "App Code Compilation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+                else
+                {
+                    ms.Seek(0, SeekOrigin.Begin);
+                    // Load the assembly into the current application domain
+                    // In .NET Core/.NET 5+, AssemblyLoadContext is preferred for unloading
+                    // For simplicity, we use Assembly.Load here.
+                    return Assembly.Load(ms.ToArray());
+                }
+            }
+        }
+
+        /// <summary>
+        /// Performs a very basic, illustrative static scan for potentially malicious keywords in the app code.
+        /// THIS IS NOT A SUBSTITUTE FOR A REAL ANTIVIRUS SCAN.
+        /// </summary>
+        /// <param name="appCode">The C# source code of the app.</param>
+        /// <returns>True if potential malicious code is detected, false otherwise.</returns>
+        public bool ScanAppCodeForViruses(string appCode)
+        {
+            if (string.IsNullOrWhiteSpace(appCode))
+            {
+                return false;
+            }
+
+            // Convert code to lowercase for case-insensitive checking
+            string lowerCaseCode = appCode.ToLowerInvariant();
+
+            // Illustrative list of potentially dangerous keywords/patterns
+            // (easily bypassable, for demonstration purposes only)
+            string[] dangerousKeywords = new string[]
+            {
+                "system.io.file.delete",
+                "system.io.directory.delete",
+                "system.diagnostics.process.start",
+                "system.net.sockets",
+                "system.runtime.interopservices", // Potential for P/Invoke to native code
+                "environment.exit",
+                "application.exit", // Could exit the host OS app
+                "system.security.cryptography", // Could be used for malicious encryption
+                "system.reflection.assembly.loadfile", // Loading external assemblies
+                "system.reflection.assembly.loadfrom",
+                "system.net.webclient.downloadfile", // Downloading files
+                "system.net.httpclient.getstringasync", // Could be used to exfiltrate data
+                "system.windows.forms.sendkeys", // Simulating key presses
+                "system.threading.thread.sleep" // Could be used to stall
+            };
+
+            foreach (string keyword in dangerousKeywords)
+            {
+                if (lowerCaseCode.Contains(keyword))
+                {
+                    MessageBox.Show($"Security Warning: Detected '{keyword}' in app code. This is a potentially dangerous operation. App will not be loaded.", "Security Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true; // Detected potential threat
+                }
+            }
+
+            // Basic check for very long strings that might hide obfuscated code
+            if (lowerCaseCode.Length > 10000) // Arbitrary threshold
+            {
+                // This is a very weak heuristic and will likely have false positives/negatives
+                // but demonstrates a concept.
+                // MessageBox.Show("Security Warning: App code is unusually large. This could indicate obfuscation or malicious intent. App will not be loaded.", "Security Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // return true;
+            }
+
+            return false; // No immediate threats detected by this basic scanner
+        }
+
+        /// <summary>
+        /// Pins an installed app to the desktop (pnlPinnedApps) as an icon.
+        /// Takes a screenshot of the app's GroupBox as the icon.
+        /// </summary>
+        /// <param name="appPackage">The AppPackage object for the installed app.</param>
+        /// <param name="appGroupBox">The GroupBox control representing the loaded app's UI.</param>
+        public async void PinAppToDesktop(AppPackage appPackage, GroupBox appGroupBox)
+        {
+            Console.WriteLine($"[DEBUG] PinAppToDesktop called for app: {appPackage.AppName}");
+
+            // Check if an icon for this app already exists to prevent duplicates
+            if (pnlPinnedApps.Controls.Find($"AppIcon_{appPackage.AppName.Replace(" ", "")}", true).Any())
+            {
+                Console.WriteLine($"[DEBUG] Icon for '{appPackage.AppName}' already exists. Skipping pinning.");
+                return;
+            }
+
+            Panel appIconPanel = new Panel
+            {
+                Name = $"AppIcon_{appPackage.AppName.Replace(" ", "")}",
+                Size = new Size(80, 90), // Size for the icon panel
+                Margin = new Padding(5),
+                BorderStyle = BorderStyle.FixedSingle,
+                Tag = appPackage, // Store the AppPackage for later retrieval
+                Cursor = Cursors.Hand // Indicate it's clickable
+            };
+
+            PictureBox appPictureBox = new PictureBox
+            {
+                Name = $"AppPictureBox_{appPackage.AppName.Replace(" ", "")}",
+                Size = new Size(70, 70), // Size for the screenshot
+                Location = new Point(5, 5),
+                SizeMode = PictureBoxSizeMode.Zoom, // Zoom to fit, maintain aspect ratio
+                BorderStyle = BorderStyle.None,
+                Tag = appPackage // Also store here for easy access in click event
+            };
+
+            Label appNameLabel = new Label
+            {
+                Name = $"AppNameLabel_{appPackage.AppName.Replace(" ", "")}",
+                Text = appPackage.AppName,
+                Location = new Point(0, 75), // Below the picture box
+                Size = new Size(80, 15),
+                TextAlign = ContentAlignment.MiddleCenter,
+                AutoSize = false,
+                Font = new Font("Segoe UI", 7, FontStyle.Regular),
+                Tag = appPackage // Also store here
+            };
+
+            appIconPanel.Controls.Add(appPictureBox);
+            appIconPanel.Controls.Add(appNameLabel);
+
+            // Attach click event to the panel and picture box
+            appIconPanel.Click += AppIcon_Click;
+            appPictureBox.Click += AppIcon_Click;
+            appNameLabel.Click += AppIcon_Click; // Also make label clickable
+
+            pnlPinnedApps.Controls.Add(appIconPanel);
+            Console.WriteLine($"[DEBUG] Icon panel added to pnlPinnedApps for '{appPackage.AppName}'.");
+
+
+            // Capture screenshot as a background task
+            await Task.Run(() =>
+            {
+                try
+                {
+                    Console.WriteLine($"[DEBUG] Starting screenshot task for '{appPackage.AppName}'.");
+
+                    // All UI operations must be on the UI thread.
+                    // Ensure the GroupBox is visible and drawn before taking a screenshot
+                    if (appGroupBox.InvokeRequired)
+                    {
+                        Console.WriteLine($"[DEBUG] Invoking UI thread for Show/BringToFront/Refresh/DoEvents/Sleep for '{appPackage.AppName}'.");
+                        appGroupBox.Invoke(new Action(() =>
+                        {
+                            appGroupBox.Show();
+                            appGroupBox.BringToFront(); // Ensure it's on top for screenshot
+                            appGroupBox.Refresh(); // Force immediate redraw
+                            Application.DoEvents(); // Process all pending UI messages
+                            Console.WriteLine($"[DEBUG] UI thread: DoEvents() called for '{appPackage.AppName}'.");
+                            Thread.Sleep(500); // Increased delay to allow rendering to complete
+                            Console.WriteLine($"[DEBUG] UI thread: Sleep(500) completed for '{appPackage.AppName}'.");
+                        }));
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[DEBUG] Direct call for Show/BringToFront/Refresh/DoEvents/Sleep for '{appPackage.AppName}'.");
+                        appGroupBox.Show();
+                        appGroupBox.BringToFront(); // Ensure it's on top for screenshot
+                        appGroupBox.Refresh(); // Force immediate redraw
+                        Application.DoEvents(); // Process all pending UI messages
+                        Console.WriteLine($"[DEBUG] Direct: DoEvents() called for '{appPackage.AppName}'.");
+                        Thread.Sleep(500); // Increased delay
+                        Console.WriteLine($"[DEBUG] Direct: Sleep(500) completed for '{appPackage.AppName}'.");
+                    }
+
+                    // Check if the handle is created and control is visible before screenshotting
+                    bool isHandleCreated = false;
+                    bool isVisible = false;
+                    int actualWidth = 0;
+                    int actualHeight = 0;
+
+                    if (appGroupBox.InvokeRequired)
+                    {
+                        appGroupBox.Invoke(new Action(() => {
+                            isHandleCreated = appGroupBox.IsHandleCreated;
+                            isVisible = appGroupBox.Visible;
+                            actualWidth = appGroupBox.Width;
+                            actualHeight = appGroupBox.Height;
+                        }));
+                    }
+                    else
+                    {
+                        isHandleCreated = appGroupBox.IsHandleCreated;
+                        isVisible = appGroupBox.Visible;
+                        actualWidth = appGroupBox.Width;
+                        actualHeight = appGroupBox.Height;
+                    }
+
+                    Console.WriteLine($"[DEBUG] appGroupBox.IsHandleCreated: {isHandleCreated}, appGroupBox.Visible: {isVisible}");
+                    Console.WriteLine($"[DEBUG] appGroupBox.Width: {actualWidth}, appGroupBox.Height: {actualHeight}");
+
+                    if (!isHandleCreated || !isVisible || actualWidth <= 0 || actualHeight <= 0)
+                    {
+                        throw new InvalidOperationException($"Cannot take screenshot: GroupBox handle not created, not visible, or has zero dimensions. HandleCreated: {isHandleCreated}, Visible: {isVisible}, Size: {actualWidth}x{actualHeight}");
+                    }
+
+                    Console.WriteLine($"[DEBUG] Attempting DrawToBitmap for '{appPackage.AppName}' (Size: {actualWidth}x{actualHeight}).");
+                    Bitmap screenshot = new Bitmap(actualWidth, actualHeight);
+                    appGroupBox.DrawToBitmap(screenshot, new Rectangle(0, 0, actualWidth, actualHeight));
+                    Console.WriteLine($"[DEBUG] DrawToBitmap completed for '{appPackage.AppName}'.");
+
+                    // Verify if the screenshot actually contains non-transparent pixels
+                    bool hasContent = false;
+                    // Only check if screenshot has valid dimensions
+                    if (screenshot.Width > 0 && screenshot.Height > 0)
+                    {
+                        for (int x = 0; x < screenshot.Width; x += Math.Max(1, screenshot.Width / 10)) // Check every 10th of width
+                        {
+                            for (int y = 0; y < screenshot.Height; y += Math.Max(1, screenshot.Height / 10)) // Check every 10th of height
+                            {
+                                if (screenshot.GetPixel(x, y).A > 0) // Check if alpha is not zero (i.e., not fully transparent)
+                                {
+                                    hasContent = true;
+                                    break;
+                                }
+                            }
+                            if (hasContent) break;
+                        }
+                    }
+                    Console.WriteLine($"[DEBUG] Screenshot for '{appPackage.AppName}' has content (non-transparent pixels): {hasContent}.");
+
+
+                    // Set the image on the PictureBox on the UI thread
+                    if (appPictureBox.InvokeRequired)
+                    {
+                        Console.WriteLine($"[DEBUG] Invoking UI thread to set PictureBox Image for '{appPackage.AppName}'.");
+                        appPictureBox.Invoke(new Action(() => appPictureBox.Image = screenshot));
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[DEBUG] Direct call to set PictureBox Image for '{appPackage.AppName}'.");
+                        appPictureBox.Image = screenshot;
+                    }
+                    Console.WriteLine($"[DEBUG] PictureBox Image set for '{appPackage.AppName}'.");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An unexpected error occurred while loading file for preview: {ex.Message}", "Preview Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    Console.WriteLine($"[ERROR] Error taking screenshot for app '{appPackage.AppName}': {ex.Message}");
+                    Console.WriteLine($"[ERROR] Stack Trace: {ex.StackTrace}");
+                    // Fallback: Use a placeholder image or leave blank
+                    if (appPictureBox.InvokeRequired)
+                    {
+                        appPictureBox.Invoke(new Action(() => appPictureBox.Image = null)); // Or a default icon
+                    }
+                    else
+                    {
+                        appPictureBox.Image = null; // Or a default icon
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please load a package from URL or file first to preview an app.", "No Package Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            });
+        }
 
-            if (package != null && package.Apps != null && package.Apps.Count > 0)
+        /// <summary>
+        /// Handles the click event for pinned app icons.
+        /// Loads the corresponding app when clicked.
+        /// </summary>
+        private void AppIcon_Click(object sender, EventArgs e)
+        {
+            Control clickedControl = (Control)sender;
+            if (clickedControl.Tag is AppPackage appToLoad)
             {
-                // Take the first app for preview
-                AppInfo appToPreview = package.Apps[0];
-
-                // Create a NEW GroupBox instance for the preview dialog
-                GroupBox previewGroupBox = RewritePkg.CreateGroupBoxFromAppInfo(appToPreview);
-
-                // Create and show the preview dialog
-                using (AppPreviewDialog previewDialog = new AppPreviewDialog(previewGroupBox))
-                {
-                    previewDialog.ShowDialog(this);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No apps found in the loaded package to preview.", "Preview Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Load the app
+                LoadAppFromPackage(appToLoad);
             }
         }
 
 
-        private void DisplayApps(AppPackage package)
+        // Event handler for saving the package
+        private void Form2_KeyDownForPackageSave(object sender, KeyEventArgs e) // Changed EventArgs to KeyEventArgs
         {
-            flowLayoutPanelApps.Controls.Clear();
-            _selectedAppInfo = null;
-
-            if (package == null || package.Apps == null || package.Apps.Count == 0)
-            {
-                Label noAppsLabel = new Label();
-                noAppsLabel.Text = "No apps found in this package.";
-                noAppsLabel.AutoSize = true;
-                noAppsLabel.Font = new Font("Segoe UI", 10F, FontStyle.Italic, GraphicsUnit.Point, ((byte)(0)));
-                noAppsLabel.ForeColor = Color.DarkRed;
-                flowLayoutPanelApps.Controls.Add(noAppsLabel);
-                return;
-            }
-
-            foreach (AppInfo app in package.Apps)
-            {
-                // Create a new GroupBox instance for display in the FlowLayoutPanel
-                GroupBox appGroupBox = RewritePkg.CreateGroupBoxFromAppInfo(app);
-
-                // Re-add click handlers for the new groupbox and its controls
-                appGroupBox.Click += AppGroupBox_Click;
-                foreach (Control control in appGroupBox.Controls)
-                {
-                    control.Click += AppGroupBox_Click;
-                }
-
-                flowLayoutPanelApps.Controls.Add(appGroupBox);
-            }
-        }
-
-        private void AppGroupBox_Click(object sender, EventArgs e)
-        {
-            foreach (Control control in flowLayoutPanelApps.Controls)
-            {
-                if (control is GroupBox gb)
-                {
-                    gb.BackColor = SystemColors.Control;
-                    gb.ForeColor = SystemColors.ControlText;
-                }
-            }
-
-            GroupBox clickedGroupBox = sender as GroupBox;
-            if (clickedGroupBox == null)
-            {
-                Control clickedControl = sender as Control;
-                clickedGroupBox = clickedControl?.Parent as GroupBox;
-            }
-
-            if (clickedGroupBox != null)
-            {
-                clickedGroupBox.BackColor = Color.DodgerBlue;
-                clickedGroupBox.ForeColor = Color.White;
-                // Store the original AppInfo (which now includes ControlInfo)
-                _selectedAppInfo = clickedGroupBox.Tag as AppInfo;
-                this.Focus();
-            }
-        }
-
-        private void Form2_KeyDown(object sender, KeyEventArgs e)
-        {
+            // Check for Ctrl+Shift+Alt+P
             if (e.Control && e.Shift && e.Alt && e.KeyCode == Keys.P)
             {
-                SaveSelectedAppAsPackage();
-                e.Handled = true;
+                // We'll save the currently loaded app's GroupBox
+                if (_currentLoadedAppGroupBox != null && _currentLoadedAppGroupBox.Tag is AppPackage appPackageToSave)
+                {
+                    SaveAppPackage(appPackageToSave, _currentLoadedAppGroupBox);
+                }
+                else
+                {
+                    MessageBox.Show("Please load an app first to save its package.", "No App Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                e.Handled = true; // Mark the event as handled
             }
-            // Add your existing KeyDown logic here if any
         }
 
-        // MODIFIED: SaveSelectedAppAsPackage to extract ControlInfo and GroupBox size
-        private async void SaveSelectedAppAsPackage()
+        private void SaveAppPackage(AppPackage appPackage, GroupBox sourceGroupBox)
         {
-            if (_selectedAppInfo == null)
-            {
-                MessageBox.Show("Please select an app groupbox first to save.", "No App Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                saveFileDialog.Filter = "NATO OS Package Files (*.npkg)|*.npkg";
-                saveFileDialog.Title = $"Save {_selectedAppInfo.AppName} Package";
-                saveFileDialog.FileName = $"{_selectedAppInfo.AppName.Replace(" ", "")}_{_selectedAppInfo.Version.Replace(".", "")}.npkg";
+                saveFileDialog.Filter = "NATO OS Package Files (*.npkg)|*.npkg|All Files (*.*)|*.*";
+                saveFileDialog.Title = "Save App Package";
+                saveFileDialog.FileName = $"{appPackage.AppName.Replace(" ", "")}.npkg"; // Suggest a filename
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        // Get the currently selected GroupBox from flowLayoutPanelApps
-                        GroupBox sourceGroupBox = null;
-                        foreach (Control control in flowLayoutPanelApps.Controls)
+                        // Clear existing controls info to re-populate from current UI state
+                        appPackage.Controls.Clear();
+
+                        // Iterate through controls in the sourceGroupBox (the dynamically loaded app's UI)
+                        foreach (Control control in sourceGroupBox.Controls)
                         {
-                            if (control is GroupBox gb && gb.Tag == _selectedAppInfo)
-                            {
-                                sourceGroupBox = gb;
-                                break;
-                            }
-                        }
-
-                        if (sourceGroupBox == null)
-                        {
-                            MessageBox.Show("Could not find the selected app's groupbox to save its controls.", "Save Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        // Capture the GroupBox's own size
-                        _selectedAppInfo.GroupBoxWidth = sourceGroupBox.Width;
-                        _selectedAppInfo.GroupBoxHeight = sourceGroupBox.Height;
-
-                        // Clear existing controls info in case of previous saves
-                        _selectedAppInfo.Controls.Clear();
-
-                        // Populate ControlInfo for each child control within the source GroupBox
-                        foreach (Control childControl in sourceGroupBox.Controls)
-                        {
-                            // Initialize ControlInfo with common properties
                             ControlInfo ci = new ControlInfo
                             {
-                                ControlType = childControl.GetType().FullName,
-                                Name = childControl.Name,
-                                Text = childControl.Text,
-                                X = childControl.Location.X,
-                                Y = childControl.Location.Y,
-                                Width = childControl.Size.Width,
-                                Height = childControl.Size.Height,
-                                Enabled = childControl.Enabled,
-                                Visible = childControl.Visible,
-                                BackColorHex = RewritePkg.ColorToHexString(childControl.BackColor),
-                                ForeColorHex = RewritePkg.ColorToHexString(childControl.ForeColor),
-                                FontString = RewritePkg.FontToString(childControl.Font)
+                                Type = control.GetType().Name,
+                                Name = control.Name,
+                                Text = control.Text,
+                                Left = control.Left,
+                                Top = control.Top,
+                                Width = control.Width,
+                                Height = control.Height
                             };
 
-                            // Add specific properties for certain control types during serialization
-                            if (childControl is CheckBox checkBox)
+                            // Save common properties and specific properties
+                            // Note: EventHandlers are NOT saved here from the UI, as they are defined in the AppCode.
+                            // If you want to allow UI changes to event handlers, that's a much more complex feature.
+                            // We are saving the *original* AppCode from the loaded package.
+
+                            // Properties for various controls
+                            if (control is TextBox txtBox)
                             {
-                                ci.Checked = checkBox.Checked;
+                                ci.Properties["Multiline"] = txtBox.Multiline.ToString();
+                                ci.Properties["ReadOnly"] = txtBox.ReadOnly.ToString();
+                                ci.Properties["AcceptsReturn"] = txtBox.AcceptsReturn.ToString();
+                                ci.Properties["AcceptsTab"] = txtBox.AcceptsTab.ToString();
+                                ci.Properties["PasswordChar"] = txtBox.PasswordChar.ToString();
+                                ci.Properties["ScrollBars"] = txtBox.ScrollBars.ToString();
+                                ci.Properties["TextAlign"] = txtBox.TextAlign.ToString();
+                                ci.Properties["UseSystemPasswordChar"] = txtBox.UseSystemPasswordChar.ToString();
+                                ci.Properties["WordWrap"] = txtBox.WordWrap.ToString();
                             }
-                            else if (childControl is RadioButton radioButton)
+                            else if (control is Button btn)
                             {
-                                ci.Checked = radioButton.Checked;
+                                // No specific properties for a basic button beyond common ones
                             }
-                            else if (childControl is ProgressBar progressBar)
+                            else if (control is Label lbl)
                             {
-                                ci.Value = progressBar.Value;
-                                ci.Minimum = progressBar.Minimum;
-                                ci.Maximum = progressBar.Maximum;
+                                ci.Properties["AutoSize"] = lbl.AutoSize.ToString();
+                                ci.Properties["ForeColor"] = ColorTranslator.ToHtml(lbl.ForeColor);
+                                ci.Properties["BackColor"] = ColorTranslator.ToHtml(lbl.BackColor);
+                                ci.Properties["TextAlign"] = lbl.TextAlign.ToString();
                             }
-                            else if (childControl is NumericUpDown numericUpDown)
+                            else if (control is PictureBox pb)
                             {
-                                ci.Value = numericUpDown.Value; // NumericUpDown.Value is decimal
-                                ci.Minimum = numericUpDown.Minimum;
-                                ci.Maximum = numericUpDown.Maximum;
+                                ci.Properties["SizeMode"] = pb.SizeMode.ToString();
+                                // Saving actual image data would require Base64 encoding or saving to a separate file
+                                // For simplicity, we're not saving image data here.
                             }
-                            else if (childControl is TrackBar trackBar)
+                            else if (control is ComboBox cb)
                             {
-                                ci.Value = trackBar.Value;
-                                ci.Minimum = trackBar.Minimum;
-                                ci.Maximum = trackBar.Maximum;
+                                ci.Properties["DropDownStyle"] = cb.DropDownStyle.ToString();
+                                ci.Properties["MaxDropDownItems"] = cb.MaxDropDownItems.ToString();
+                                // Save items as a JSON array string
+                                ci.Properties["Items"] = JsonConvert.SerializeObject(cb.Items.Cast<string>().ToArray());
                             }
-                            else if (childControl is MaskedTextBox maskedTextBox)
+                            else if (control is CheckBox chkBox)
                             {
-                                ci.Mask = maskedTextBox.Mask;
+                                ci.Properties["Checked"] = chkBox.Checked.ToString();
+                                ci.Properties["CheckAlign"] = chkBox.CheckAlign.ToString();
+                                ci.Properties["ThreeState"] = chkBox.ThreeState.ToString();
                             }
-                            else if (childControl is PictureBox pictureBox)
+                            else if (control is CheckedListBox clb)
                             {
-                                // Convert PictureBox image to Base64 string for serialization
-                                ci.ImageData = RewritePkg.ImageToBase64(pictureBox.Image);
+                                // Save items as a JSON array string
+                                ci.Properties["Items"] = JsonConvert.SerializeObject(clb.Items.Cast<string>().ToArray());
+                                // Saving checked states would be more complex, needing a separate array.
+                                // For now, only items are saved.
                             }
-                            // Add a placeholder for EventAction when saving.
-                            // In a real scenario, you'd have a UI for defining these actions,
-                            // or you'd manually add them to the .npkg file.
-                            // For this example, let's pre-define some example actions for buttons
-                            if (childControl is Button button)
+                            else if (control is ListBox lb)
                             {
-                                // Example: If a button is named "btnToggleLabel", give it a toggle action
-                                if (button.Name == "btnToggleLabel")
-                                { // Assuming a label named "lblTogglable" in your test groupbox
-                                    ci.EventAction = "ToggleVisibility:lblTogglable";
-                                }
-                                else
+                                ci.Properties["Items"] = JsonConvert.SerializeObject(lb.Items.Cast<string>().ToArray());
+                                ci.Properties["SelectionMode"] = lb.SelectionMode.ToString();
+                            }
+                            else if (control is WebBrowser wb)
+                            {
+                                if (wb.Url != null)
                                 {
-                                    ci.EventAction = "ShowMessageBox"; // Default action for other buttons
+                                    ci.Properties["Url"] = wb.Url.AbsoluteUri;
                                 }
+                                ci.Properties["ScriptErrorsSuppressed"] = wb.ScriptErrorsSuppressed.ToString();
                             }
-                            else if (childControl is LinkLabel linkLabel)
+                            else if (control is DateTimePicker dtp)
                             {
-                                ci.EventAction = "ShowMessageBox"; // Default action for LinkLabels
+                                ci.Properties["Value"] = dtp.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                                ci.Properties["Format"] = dtp.Format.ToString();
+                                ci.Properties["ShowUpDown"] = dtp.ShowUpDown.ToString();
                             }
-                            else if (childControl is PictureBox clickablePictureBox)
+                            else if (control is ProgressBar pbar)
                             {
-                                // If a PictureBox is intended to be clickable, assign it an action
-                                if (clickablePictureBox.Name == "pbSampleImage")
+                                ci.Properties["Minimum"] = pbar.Minimum.ToString();
+                                ci.Properties["Maximum"] = pbar.Maximum.ToString();
+                                ci.Properties["Value"] = pbar.Value.ToString();
+                                ci.Properties["Step"] = pbar.Step.ToString();
+                                ci.Properties["Style"] = pbar.Style.ToString();
+                            }
+                            else if (control is TrackBar tbar)
+                            {
+                                ci.Properties["Minimum"] = tbar.Minimum.ToString();
+                                ci.Properties["Maximum"] = tbar.Maximum.ToString();
+                                ci.Properties["Value"] = tbar.Value.ToString();
+                                ci.Properties["TickFrequency"] = tbar.TickFrequency.ToString();
+                                ci.Properties["TickStyle"] = tbar.TickStyle.ToString();
+                                ci.Properties["Orientation"] = tbar.Orientation.ToString();
+                            }
+                            else if (control is NumericUpDown nud)
+                            {
+                                ci.Properties["Minimum"] = nud.Minimum.ToString();
+                                ci.Properties["Maximum"] = nud.Maximum.ToString();
+                                ci.Properties["Value"] = nud.Value.ToString();
+                                ci.Properties["DecimalPlaces"] = nud.DecimalPlaces.ToString();
+                                ci.Properties["Increment"] = nud.Increment.ToString();
+                            }
+                            else if (control is RadioButton rbtn)
+                            {
+                                ci.Properties["Checked"] = rbtn.Checked.ToString();
+                            }
+                            else if (control is Panel pnl)
+                            {
+                                ci.Properties["BorderStyle"] = pnl.BorderStyle.ToString();
+                                ci.Properties["AutoScroll"] = pnl.AutoScroll.ToString();
+                            }
+                            else if (control is TabControl tc)
+                            {
+                                // Save TabPage texts. This is a simplified representation.
+                                // For full fidelity, you'd need to serialize each TabPage and its controls.
+                                List<string> tabPageTexts = new List<string>();
+                                foreach (TabPage tp in tc.TabPages)
                                 {
-                                    ci.EventAction = "ShowMessageBox";
+                                    tabPageTexts.Add(tp.Text);
                                 }
+                                ci.Properties["TabPages"] = JsonConvert.SerializeObject(tabPageTexts);
+                                ci.Properties["SelectedIndex"] = tc.SelectedIndex.ToString();
                             }
 
-                            _selectedAppInfo.Controls.Add(ci);
+                            // Add common properties that all controls might have
+                            ci.Properties["Enabled"] = control.Enabled.ToString();
+                            ci.Properties["Visible"] = control.Visible.ToString();
+                            ci.Properties["ForeColor"] = ColorTranslator.ToHtml(control.ForeColor);
+                            ci.Properties["BackColor"] = ColorTranslator.ToHtml(control.BackColor);
+                            if (control.Font != null)
+                            {
+                                ci.Properties["Font"] = $"{control.Font.FontFamily.Name}, {control.Font.SizeInPoints}pt, style={control.Font.Style}";
+                            }
+
+                            appPackage.Controls.Add(ci);
                         }
 
-                        // Now save the updated AppInfo
-                        RewritePkg.SaveAppInfoToPackage(_selectedAppInfo, saveFileDialog.FileName);
-
-                        MessageBox.Show($"App '{_selectedAppInfo.AppName}' saved successfully to:\n{saveFileDialog.FileName}", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string jsonString = JsonConvert.SerializeObject(appPackage, Formatting.Indented);
+                        File.WriteAllText(saveFileDialog.FileName, jsonString);
+                        MessageBox.Show($"App package saved to: {saveFileDialog.FileName}", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -1539,11 +2092,14 @@ namespace NATO_OS_7
                 }
             }
         }
-
-
         //App Retriever
         //System Desktop Icons
 
+        private void InitDesktopIcons()
+        {
+            
+
+        }
         //System Desktop Icons
         //BeatLab
         //BeatLab Piano
@@ -11789,18 +12345,7 @@ namespace NATO_OS_7
 
         private void OnThisKeyDown(object sender, KeyEventArgs e)
         {
-            //App Retrieve
-            // Check for Ctrl+Shift+Alt+P combination for the entire form
-            if (e.Control && e.Shift && e.Alt && e.KeyCode == Keys.P)
-            {
-                SaveSelectedAppAsPackage();
-                e.Handled = true; // Consume the key event
-            }
-            // Add your existing KeyDown logic here if any
-            // Example from Form2.cs snippet:
-            // if (e.KeyCode == Keys.Up) { /* ... */ }
-            // etc.
-            //App Retrieve
+            
             string keyInfo = $"Key Pressed: {e.KeyCode}";
             appstatisticsgroup.Items.Add(keyInfo);
             // Only log "Key Pressed" if the key is not already being tracked
@@ -18931,7 +19476,17 @@ namespace MyWindowsCode
             installer.Text = "NATO OS 7 - App Installer";
             installer.Show(); // non-modal, change to ShowDialog() if you want modal
             */
-            OpenAppInstallerGroupBox(sender, e); // This line calls the method to show the groupbox
+            // OpenAppInstallerGroupBox(sender, e); // This line calls the method to show the groupbox
+
+                AppInstallerDialog installerDialog = new AppInstallerDialog(this);
+                installerDialog.ShowDialog(); // This opens the dialog modally
+
+                // After the dialog closes, retrieve the app info from the dialog's public properties
+                if (installerDialog.AppPackageToPin != null && installerDialog.AppGroupBoxToPin != null)
+                {
+                    this.PinAppToDesktop(installerDialog.AppPackageToPin, installerDialog.AppGroupBoxToPin);
+                }
+            
         }
 
         private void kickdrumbeatlab_Click(object sender, EventArgs e)
