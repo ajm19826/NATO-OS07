@@ -86,10 +86,7 @@ namespace NATO_OS_7
 
 
         //App Retrieve
-        private GroupBox appInstallerGroupBox;
-        private TextBox txtAppUrl;
-        private FlowLayoutPanel flowLayoutPanelApps;
-        private AppInfo _selectedAppInfo; // This will now hold the full AppInfo including ControlInfo
+        
         private string _lastLoadedPackagePath = string.Empty;
         private string _lastLoadedPackageUrl = string.Empty;
         //System Desktop Icons
@@ -305,15 +302,16 @@ namespace NATO_OS_7
             pnlPinnedApps = new FlowLayoutPanel
             {
                 Name = "pnlPinnedApps",
-                Location = new Point(10, 10), // Adjust this location to where you want the icons to appear
-                Size = new Size(this.ClientSize.Width - 20, 100), // Example size, adjust as needed
-                BorderStyle = BorderStyle.FixedSingle,
+                BackColor = Color.Transparent,
+                Location = new Point(20, 20), // Adjust this location to where you want the icons to appear
+                Size = new Size(this.ClientSize.Width - 20, this.ClientSize.Height - 100), // Example size, adjust as needed
+                BorderStyle = BorderStyle.FixedSingle,            
                 AutoScroll = true,
                 FlowDirection = FlowDirection.LeftToRight,
                 WrapContents = true // Allow icons to wrap to the next row
             };
+            pnlPinnedApps.SendToBack();
             this.Controls.Add(pnlPinnedApps);
-            pnlPinnedApps.BringToFront(); // Ensure it's on top of other controls, but behind loaded apps
 
 
             //designer copilot
