@@ -763,7 +763,7 @@ namespace NATO_OS_7
             };
 
             _timer.Start();
-
+             
             UpdateWeather();
             this.ContextMenuStrip = RightClickMenuNATO;
             this.BackgroundImageLayout = ImageLayout.Stretch;
