@@ -755,7 +755,7 @@ namespace NATO_OS_7
 
             // Load the current month
             LoadCalendar();
-            // Initialize components 
+            // Initialize components  
             _random = new Random();
             _timer = new Timer
             {
