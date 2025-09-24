@@ -19791,5 +19791,4 @@ public class ScriptClass {{
         
     }
     
-    delegate float afabe();
 }
