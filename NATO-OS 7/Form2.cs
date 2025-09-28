@@ -311,7 +311,7 @@ namespace NATO_OS_7
                 WrapContents = true // Allow icons to wrap to the next row
             };
             pnlPinnedApps.SendToBack();
-            this.Controls.Add(pnlPinnedApps);
+            //this.Controls.Add(pnlPinnedApps); Discontinued Method
 
 
             //designer copilot
