@@ -7911,14 +7911,23 @@ namespace NATO_OS_7
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
-            epLocal = new IPEndPoint(IPAddress.Parse(TextLocalIP.Text), Convert.ToInt32(TextLocalPort.Text));
-            sck.Bind(epLocal);
+            try
+            {
+                epLocal = new IPEndPoint(IPAddress.Parse(TextLocalIP.Text), Convert.ToInt32(TextLocalPort.Text));
+                sck.Bind(epLocal);
 
-            epRemote = new IPEndPoint(IPAddress.Parse(TextRemoteIP.Text), Convert.ToInt32(TextRemotePort.Text));
-            sck.Connect(epRemote);
+                epRemote = new IPEndPoint(IPAddress.Parse(TextRemoteIP.Text), Convert.ToInt32(TextRemotePort.Text));
+                sck.Connect(epRemote);
 
-            buffer = new byte[1500];
-            sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new AsyncCallback(MessageCallBack), buffer);
+                buffer = new byte[1500];
+                sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new AsyncCallback(MessageCallBack), buffer);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Phone");
+                
+            }
+            
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
