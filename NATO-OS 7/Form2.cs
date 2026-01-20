@@ -7924,7 +7924,6 @@ namespace NATO_OS_7
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex}", "Phone");
                 
             }
             
@@ -7932,13 +7931,22 @@ namespace NATO_OS_7
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            ASCIIEncoding aEncoding = new ASCIIEncoding();
-            byte[] sendingMessage = new byte[1500];
-            sendingMessage = aEncoding.GetBytes(textMessage.Text);
+            try
+            {
+                ASCIIEncoding aEncoding = new ASCIIEncoding();
+                byte[] sendingMessage = new byte[1500];
+                sendingMessage = aEncoding.GetBytes(textMessage.Text);
 
-            sck.Send(sendingMessage);
-            listMessage.Items.Add("Me: " + textMessage.Text);
-            textMessage.Text = "";
+                sck.Send(sendingMessage);
+                listMessage.Items.Add("Me: " + textMessage.Text);
+                textMessage.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}", "Phone");
+
+            }
+
         }
 
         private void HideAuthenticMessager_Click(object sender, EventArgs e)
